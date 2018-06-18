@@ -1,1 +1,1 @@
-# kdd2018-tutorial
+# Hands-on Tutorial
