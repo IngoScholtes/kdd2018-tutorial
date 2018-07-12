@@ -6,7 +6,7 @@ permalink: /
 
 On this companion page you can find accompanying software, data, and `jupyter` notebooks for the KDD2018 Hands-on Tutorial [Beyond Graph Mining: Higher-Order Data Analytics for Temporal Network Data](). The detailed program of this tutorial is as follows:
 
-**Session 1: Introduction to Higher-Order Network Analytics**
+**Session 1: Introduction to Higher-Order Network Analytics**  
 * 08:30 - 10:00 *
 
 *Higher-Order Network Analytics: A Primer* (30 minutes) [download slides](http://...)
@@ -26,10 +26,10 @@ On this companion page you can find accompanying software, data, and `jupyter` n
 - passenger itineraries in the London Tube metro network [download](http://...)
 - clickstreams of Wikipedia users [download](http://...)
 
-**Coffee break**
+**Coffee break**  
 *10:00 - 10:30*
 
-**Session 2: Higher-Order Temporal Network Analysis**
+**Session 2: Higher-Order Temporal Network Analysis**  
 *10:30 - 10:00*
 
 *Introduction to Temporal Network Analysis* (30 minutes) [download slides](http://...)
@@ -49,10 +49,10 @@ On this companion page you can find accompanying software, data, and `jupyter` n
 - Time-stamped proximity relations of hospital staff [download data](http://...)
 - Time-stamped E-Mail communication in a company [download data](http://...)
 
-**Lunch break**
+**Lunch break**  
 *12:00 - 13:30*
 
-**Session 3: Graph Clustering with InfoMap**
+**Session 3: Graph Clustering with InfoMap**  
 *13:30 - 15:00*
 
 *Introduction to Flow Compression with the MapEquation* (30 minutes) [download slides](http://...)
@@ -70,10 +70,10 @@ On this companion page you can find accompanying software, data, and `jupyter` n
 *Data Sets*
 - ...
 
-**Coffee break**
+**Coffee break**  
 *15:00 - 15:30*
 
-**Session 4: Higher-order Graph Clustering and Visualisation**
+**Session 4: Higher-order Graph Clustering and Visualisation**  
 *15:30 - 17:00*
 
 *Higher-Order Community Detection with InfoMap* (30 minutes) [download slides](http://...)
@@ -91,7 +91,7 @@ On this companion page you can find accompanying software, data, and `jupyter` n
 *Data Sets*
 - ...
 
-**Closing**
+**Closing**  
 *17:00 - 17:30*
 
 # Setting up the environment
