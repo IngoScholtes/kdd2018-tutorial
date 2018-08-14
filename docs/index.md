@@ -10,50 +10,42 @@ On this companion page you can find accompanying software, data, and `jupyter` n
 * 08:30 - 10:00 *
 
 *Higher-Order Network Analytics: A Primer* (30 minutes) [download slides](http://...)
-- Network analytics for time series data
 - Non-Markovian paths in temporal data streams
-- From graphs to higher-order generative models for paths 
-- Higher-order representation learning
+- From graphs to higher-order generative models for paths
+- Higher-order centrality measures for time series data
 
-*Hands-on Coding Session* (60 minutes)
-- Task 1: Getting started with Visual Studio Code, `jupyter` and `pathpy` [download notebook](http://...)
-- Task 2: Working with path data in `pathpy` [download notebook](http://...)
-- Task 3: Multi-order representation learning [download notebook](http://...)
-- Task 4: Visualising higher-order network models and non-Markovian paths [download notebook](http://...)
-
-*Data sets*
-- flight itinerary data of a major US airline [download](http://...)
-- passenger itineraries in the London Tube metro network [download](http://...)
-- clickstreams of Wikipedia users [download](http://...)
+*Hands-on Coding Session* (60 minutes) [download jupyter notebook](http://...)
+- Getting started with Visual Studio Code, `jupyter` and `pathpy`
+- Path analysis and visualisation
+- Fitting Higher-Order Models
+- Exploration: Analysis of flight ticket and Metro passenger data [download data](http://...)
 
 **Coffee break**  
 *10:00 - 10:30*
 
-**Session 2: Higher-Order Temporal Network Analysis**  
+**Session 2: Multi-order Representation Learning**  
 *10:30 - 10:00*
 
-*Introduction to Temporal Network Analysis* (30 minutes) [download slides](http://...)
-- Causal paths in time-stamped network data
-- Inference of inherent time scales in temporal networks
-- Causal paths and temporal centrality measures
-- Higher-order generalisations of centrality measures
+*Learning optimal higher-order models* (30 minutes) [download slides](http://...)
+- Multi-order graphical model inference
+- Model selection and representation learning
 
-*Hands-on Coding Session* (60 minutes)
-- Task 1: Working with temporal network data in `pathpy` [download notebook](http://...)
-- Task 2: Interactive visualisation of temporal networks in `pathpy` [download notebook](http://...)
-- Task 3: Calculating causal paths in temporal networks [download notebook](http://...)
-- Task 4: Higher-order node ranking in dynamic social networks [download notebook](http://...)
-
-*Data sets* 
-- Time-stamped developer communication in an OpenSource community [download data](http://...)
-- Time-stamped proximity relations of hospital staff [download data](http://...)
-- Time-stamped E-Mail communication in a company [download data](http://...)
+*Hands-on Coding Session* (60 minutes) [download notebook](http://...)
+- Analysis and Visualisation of temporal networks in `pathpy`
+- Path analysis and multi-order models 
+- Exploration: Higher-order node ranking in dynamic social networks [download data](http://...)
 
 **Lunch break**  
 *12:00 - 13:30*
 
-**Session 3: Graph Clustering with InfoMap**  
-*13:30 - 15:00*
+**Session 3: Variable-order Models with BuildHON and HONViz**  
+*13:30 - 14:30*
+
+**Coffee break**  
+*14:30 - 15:00*
+
+**Session 4: Graph Clustering with InfoMap**  
+*15:00 - 16:30*
 
 *Introduction to Flow Compression with the MapEquation* (30 minutes) [download slides](http://...)
 - Introduction to graph clustering
@@ -61,20 +53,20 @@ On this companion page you can find accompanying software, data, and `jupyter` n
 - Minimisation of Modular Description Length
 - Second-order Flow Compression in trigram data
 
-*Hands-on Coding Session* (60 minutes)
-- Getting started with `InfoMap` [download notebook](http://...)
-- Community detection in first-order models [download notebook](http://...)
-- ... [download notebook](http://...)
-- ... [download notebook](http://...)
+*Hands-on Coding Session* (60 minutes)  [download notebook](http://...)
+- Getting started with `InfoMap`
+- Community detection in first-order models
+- Community detection in higher-order models
+
 
 *Data Sets*
 - ...
 
 **Coffee break**  
-*15:00 - 15:30*
+*16:30 - 17:00*
 
 **Session 4: Higher-order Graph Clustering and Visualisation**  
-*15:30 - 17:00*
+*17:00 - 18:30*
 
 *Higher-Order Community Detection with InfoMap* (30 minutes) [download slides](http://...)
 - Memory Networks and the Higher-Order MapEquation
@@ -88,35 +80,6 @@ On this companion page you can find accompanying software, data, and `jupyter` n
 - Task 3: ... [download notebook](http://...)
 - Task 4: Interactive Visualisation with InfoBaleen [download notebook](http://...)
 
-*Data Sets*
-- ...
-
-**Closing**  
-*17:00 - 17:30*
-
 # Setting up the environment
 
-To complete the hands-on exercises, you will need a working `python 3.x` environment, installed under the operating system of your choice. For Windows, macOS, and Linux users we recommend using the latest [Anaconda 5.2](https://www.anaconda.com/download/) installation. 
-
-To complete the exercises, we highly recommend using the development environment [Visual Studio Code](https://code.visualstudio.com/Download), an OpenSource code editor available for Windows, macOS, and Linux. Once you have installed Visual Studio Code, please install the [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and [Jupyter](https://marketplace.visualstudio.com/items?itemName=donjayamanne.jupyter) extensions, which are available free of charge via Visual Studio Code's integrated extension marketplace.
-
-To apply higher-order data analytics to real data, we finally need to set up two additional software packages, which can be installed via gitHub.
-
-[pathpy](http://www.pathpy.net) is a python package for the analysis of time-stamped and sequential data on complex networks. [InfoMap](http://www.mapequation.org) provides code to reveal overlapping modular patterns in higher-order network flows through complex systems. In the following, we explain how you can set up these two packages: 
-
-## Setting up InfoMap
-
-...
-
-## Setting up pathpy
-
-`pathpy` is pure python code. It has no platform-specific dependencies and should thus work on all platforms. It builds on `numpy` and `scipy` which come preinstalled in the Anaconda 5.2 environment. Assuming that a `python 3.x` environment has been successfully installed as described above, the latest version of `pathpy` can be installed in either of the following ways, both of which are identical for the sake of this tutorial.
-
-The first method uses the latest version available via the [python package index pypi](https://pypi.org/). For this, you should open a termin window on your machine and type:
-
-`> pip install pathpy`
-
-The second method installs the latest development version directly from the `pathpy` gitHub repository. For this you should type 
-
-`> pip install git+git://github.com/IngoScholtes/pathpy.git`
-
+Hands-on sessions will be completed in `python`. A detailed description on how to set up the environment can be found [here](/setup).
