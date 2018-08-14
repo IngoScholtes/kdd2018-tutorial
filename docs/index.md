@@ -82,4 +82,4 @@ On this companion page you can find accompanying software, data, and `jupyter` n
 
 # Setting up the environment
 
-Hands-on sessions will be completed in `python`. A detailed description on how to set up the environment can be found [here](/setup).
+Hands-on sessions will be completed in `python`. A detailed description on how to set up the environment can be found [here](/kdd2018-tutorial/setup).
