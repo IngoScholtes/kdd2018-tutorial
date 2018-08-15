@@ -37,9 +37,9 @@ Tutor: [Ingo Scholtes, University of Zurich](http://ifi.uzh.ch/dag)
 
 Unit | Topic | Notebook | Live Solution
 ----|----|----|----
-1.1 | Getting started with Visual Studio Code and `jupyter` | [download](http://...) | [download](http://)  
-1.2 | Analysis and visualisation of paths and temporal networks in `pathpy` | [download](http://...) | [download](http://)  
-1.3 | Fitting and visualising Higher-Order models | [download](http://...) | [download](http://)  
+1.1 | Getting started with Visual Studio Code and `jupyter` | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_1_vscode_jupyter.py) | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/1_1_vscode_jupyter.py)  
+1.2 | Analysis and visualisation of paths and temporal networks in `pathpy` | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_2_pathpy.py) | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/1_2_pathpy.py)  
+1.3 | Fitting and visualising Higher-Order models | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_3_higher_order.py) | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/1_3_higher_order.py)  
 1.4 | Exploration: Analysis of flight ticket and Metro passenger data | [download](http://...) | [download](http://)  
 
 **Coffee break**  
@@ -59,10 +59,10 @@ Tutor: [Ingo Scholtes, University of Zurich](http://ifi.uzh.ch/dag)
 
 Unit | Topic | Notebook | Live Solution
 ----|----|----|----
-2.1 | Model selection and order detection in temporal data | [download](http://...) | [download](http://)  
-2.2 | Multi-order network model learning in `pathpy` | [download](http://...) | [download](http://)  
-2.3 | Multi-order visualisation of network data | [download](http://...) | [download](http://)  
-2.4 | Exploration: Optimal node ranking in dynamic social networks | [download](http://...) | [download](http://)  
+2.1 | Model selection and order detection in temporal data | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_1_temporal_networks.py) | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_1_temporal_networks.py)  
+2.2 | Multi-order network model learning in `pathpy` | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_2_multi_order.py) | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_2_multi_order.py)  
+2.3 | Multi-order visualisation of network data | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_3_cross_validation.py) | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_3_cross_validation.py)  
+2.4 | Exploration: Optimal node ranking in dynamic social networks | [download](https://) | [download](https://)  
 
 **Lunch break**  
 *12:00 - 13:30*
