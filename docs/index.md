@@ -42,7 +42,7 @@ Unit | Topic | Notebook | Live Solution
 1.3 | Fitting and visualising Higher-Order models | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_3_higher_order.py) | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/1_3_higher_order.py)  
 1.4 | Exploration: Analysis of flight ticket and Metro passenger data | [download](http://...) | [download](http://)  
 
-**Coffee break**  
+### Coffee break
 *10:00 - 10:30*
 
 ### Session 2: Multi-order Representation Learning
@@ -64,7 +64,7 @@ Unit | Topic | Notebook | Live Solution
 2.3 | Multi-order visualisation of network data | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_3_cross_validation.py) | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_3_cross_validation.py)  
 2.4 | Exploration: Optimal node ranking in dynamic social networks | [download](https://) | [download](https://)  
 
-**Lunch break**  
+### Lunch break
 *12:00 - 13:30*
 
 ### Session 3: Variable-order Models with BuildHON and HONViz
@@ -72,7 +72,7 @@ Unit | Topic | Notebook | Live Solution
 
 Tutor: [Nitesh Chawla, University of Notre Dame](https://www3.nd.edu/~nchawla/)
 
-**Coffee break**  
+### Coffee break
 *14:30 - 15:00*
 
 **Session 4: Graph Clustering with InfoMap**  
@@ -92,7 +92,7 @@ Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-
 - Community detection in higher-order models
 - Exploration: ... 
 
-**Coffee break**  
+### Coffee break
 *16:30 - 17:00*
 
 ### Session 4: Higher-order Graph Clustering and Visualisation
