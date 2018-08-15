@@ -2,17 +2,31 @@
 title: KDD 2018 - Hands-on Tutorial on Higher-Order Data Analytics
 permalink: /
 ---
+
 # Tutorial Outline
 
-On this companion page you can find accompanying software, data, and `jupyter` notebooks for the KDD2018 Hands-on Tutorial Beyond Graph Mining: Higher-Order Data Analytics for Temporal Network Data. A summary of the tutorial can be found in the [detailed proposal](https://www.researchgate.net/publication/325168357_Beyond_Graph_Mining_Higher-Order_Data_Analytics_for_Temporal_Network_Data).
+Network-based data mining techniques such as graph mining, (social) network analysis, link prediction and graph clustering form an important foundation for data science applications in computer science, computational social science, and the life sciences. They help to detect patterns in large data sets that capture dyadic relations between pairs of genes, species, humans, or documents and they have improved our understanding of complex networks.
 
-The detailed schedule of the tutorial is planned as follows:
+While the potential of analysing graph or network representations of relational data is undisputed, we increasingly have access to data on networks that contain more than just dyadic relations. Consider, e.g., data on user click streams in the Web, time-stamped social networks, gene regulatory pathways, or time-stamped financial transactions. These are examples for time-resolved or sequential data that not only tell us who is related to whom but also when and in which order relations occur. Recent works have exposed that the timing and ordering of relations in such data can introduce higher-order, non-dyadic dependencies that are not captured by state-of-the-art graph representations. This oversimplification questions the validity of graph mining techniques in time series data and poses a threat for interdisciplinary applications of network analytics.
+
+
+To address this challenge, researchers have developed advanced graph modelling and representation techniques based on higher- and variable-order Markov models, which enable us to model non-Markovian characteristics in time series data on networks. Introducing this exciting research field, the goal of this tutorial is to give an overview of cutting-edge higher-order data analytics techniques. Key takeaways for attendees will be (i) a solid understanding of higher-order network modelling and representation learning techniques, (ii) hands-on experience with state-of-the-art higher-order network analytics and visualisation packages, and (iii) a clear demonstration of the benefits of higher-order data analytics in real-world time series data on technical, social, and ecological systems.
+
+A detailed summary of the topics, literature, and tools covered in this hands-on tutorial can be found in the [tutorial paper](https://www.researchgate.net/publication/325168357_Beyond_Graph_Mining_Higher-Order_Data_Analytics_for_Temporal_Network_Data).
+
+# When and where
+
+The tutorial will take place on **Wednesday August 22, 2018** in ICC Capital Suite Room 2+3+4 of the [ExCel London](https://www.excel.london/organiser/venue-map), 1 Western Gateway, Royal Victoria Dock, London, E16 1FR.
+
+# Schedule
+
+The schedule of the tutorial is as follows:
 
 **Session 1: Introduction to Higher-Order Network Analytics**  
 
 Tutor: [Ingo Scholtes, University of Zurich](http://ifi.uzh.ch/dag)
 
-* 08:30 - 10:00 *
+*08:30 - 10:00*
 
 *Higher-Order Network Analytics: A Primer* (30 minutes) [download slides](http://...)
 - Non-Markovian paths in temporal network data
@@ -34,12 +48,12 @@ Tutor: [Ingo Scholtes, University of Zurich](http://ifi.uzh.ch/dag)
 
 *10:30 - 12:00*
 
-*Learning optimal higher-order models* (30 minutes) [download slides](http://...)
+*Learning optimal higher-order models* (30 minutes) | [slides](http://...)
 - Higher- vs. multi-order graphical models
 - Representation learning in temporal network data
 - Cross-validation of multi-order models
 
-*Hands-on Coding Session* (60 minutes) [download notebook](http://...) [live solution](http://)
+*Hands-on Coding Session* (60 minutes) | [notebook](http://...) | [live solution](http://)
 - Model selection and order detection in temporal data
 - Multi-order network model learning in `pathpy`
 - Multi-order visualisation of network data
@@ -62,13 +76,13 @@ Tutor: [Nitesh Chawla, University of Notre Dame](https://www3.nd.edu/~nchawla/)
 
 Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-edler/)
 
-*Introduction to Flow Compression with the MapEquation* (30 minutes) [download slides](http://...)
+*Introduction to Flow Compression with the MapEquation* (30 minutes) | [slides](http://...)
 - Introduction to graph clustering
 - Flow Compression: The MapEquation
 - Minimisation of Modular Description Length
 - Second-order Flow Compression in trigram data
 
-*Hands-on Coding Session* (60 minutes)  [download notebook](http://...)
+*Hands-on Coding Session* (60 minutes) | [notebook](http://...)
 - Getting started with `InfoMap`
 - Community detection in first-order models
 - Community detection in higher-order models
@@ -82,7 +96,7 @@ Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-
 
 Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-edler/)
 
-*Higher-Order Community Detection with InfoMap* (30 minutes) [download slides](http://...)
+*Higher-Order Community Detection with InfoMap* (30 minutes) | [slides](http://...)
 - Memory Networks and the Higher-Order MapEquation
 - State Lumping Algorithms
 - ... 
