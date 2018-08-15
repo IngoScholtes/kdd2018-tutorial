@@ -74,7 +74,7 @@ For more information about installation and usage, see [www.mapequation.org/code
 
 Now that we have installed all necessary tools and packages, let us verify that our environment is set up properly. 
 
-For this, you can either create a new file `environment_test.py` in Visual Studio Code and copy the following code:
+For this, you can either create a new file in Visual Studio Code and copy the following code:
 
 `#%%`  
 `import pathpy as pp` 
@@ -83,7 +83,7 @@ For this, you can either create a new file `environment_test.py` in Visual Studi
 `#%%`  
 `print(paths)`  
 
-Or you can simply open your local copy of the tutorial repository in Visual Studio Code as described above. In the `code` directory, you can then directly open the file `environment_test.py`.
+Or you can simply open your local copy of the tutorial repository in Visual Studio Code as described above. In the `code` directory, you will find the file `0_test_environment.py`, which contains the code above.
 
 If the `python` extension of Visual Studio Code has been installed correctly, you should see the `python` code properly highlighted and colored. If the `jupyter` extension has been set up properly, two code lenses `Run cell` will appear above the `#%%` tags. These tags mark the start of a cell in a `jupyter` notebook that we can execute directly fron within Visual Studio Code.
 
