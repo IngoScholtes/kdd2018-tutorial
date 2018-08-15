@@ -35,7 +35,7 @@ Tutor: [Ingo Scholtes, University of Zurich](http://ifi.uzh.ch/dag)
 
 **Hands-on Coding Session** (70 minutes)  
 Unit | Topic | Notebook | Live Solution
-----|----|---- |----
+----|----|----|----
 1.1 | Getting started with Visual Studio Code and `jupyter` | [download](http://...) | [download](http://)  
 1.2 | Analysis and visualisation of paths and temporal networks in `pathpy` | [download](http://...) | [download](http://)  
 1.3 | Fitting and visualising Higher-Order models | [download](http://...) | [download](http://)  
