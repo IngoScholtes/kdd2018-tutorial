@@ -75,7 +75,7 @@ Tutor: [Nitesh Chawla, University of Notre Dame](https://www3.nd.edu/~nchawla/)
 ### Coffee break
 *14:30 - 15:00*
 
-**Session 4: Graph Clustering with InfoMap**  
+### Session 4: Graph Clustering with InfoMap
 *15:00 - 16:30*
 
 Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-edler/)
@@ -95,7 +95,7 @@ Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-
 ### Coffee break
 *16:30 - 17:00*
 
-### Session 4: Higher-order Graph Clustering and Visualisation
+### Session 5: Higher-order Graph Clustering and Visualisation
 *17:00 - 18:30*
 
 Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-edler/)
