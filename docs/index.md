@@ -23,12 +23,12 @@ The tutorial will take place on **Wednesday August 22, 2018** in ICC Capital S
 The schedule of the tutorial is as follows:
 
 **Session 1: Introduction to Higher-Order Network Analytics**  
+*08:30 - 10:00*
 
 Tutor: [Ingo Scholtes, University of Zurich](http://ifi.uzh.ch/dag)
 
-*08:30 - 10:00*
-
 *Higher-Order Network Analytics: A Primer* (30 minutes) [download slides](http://...)
+- Welcome and introduction
 - Non-Markovian paths in temporal network data
 - From graphs to higher-order generative models for paths
 - Higher-order centrality measures for temporal network data
@@ -43,10 +43,9 @@ Tutor: [Ingo Scholtes, University of Zurich](http://ifi.uzh.ch/dag)
 *10:00 - 10:30*
 
 **Session 2: Multi-order Representation Learning**  
+*10:30 - 12:00*
 
 Tutor: [Ingo Scholtes, University of Zurich](http://ifi.uzh.ch/dag)
-
-*10:30 - 12:00*
 
 *Learning optimal higher-order models* (30 minutes) | [slides](http://...)
 - Higher- vs. multi-order graphical models
@@ -63,10 +62,9 @@ Tutor: [Ingo Scholtes, University of Zurich](http://ifi.uzh.ch/dag)
 *12:00 - 13:30*
 
 **Session 3: Variable-order Models with BuildHON and HONViz**  
+*13:30 - 14:30*
 
 Tutor: [Nitesh Chawla, University of Notre Dame](https://www3.nd.edu/~nchawla/)
-
-*13:30 - 14:30*
 
 **Coffee break**  
 *14:30 - 15:00*
