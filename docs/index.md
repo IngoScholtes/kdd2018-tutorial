@@ -56,8 +56,8 @@ Tutor: [Ingo Scholtes, University of Zurich](http://ifi.uzh.ch/dag)
 
 **Hands-on Coding Session** (70 minutes)
 
-Unit | Topic | Notebook | Live Solution  
---- | --- | ---  | ---  
+Unit | Topic | Notebook | Live Solution
+----|----|----|----
 2.1 | Model selection and order detection in temporal data | [download](http://...) | [download](http://)  
 2.2 | Multi-order network model learning in `pathpy` | [download](http://...) | [download](http://)  
 2.3 | Multi-order visualisation of network data | [download](http://...) | [download](http://)  
