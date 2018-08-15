@@ -27,7 +27,7 @@ The schedule of the tutorial is as follows:
 
 Tutor: [Ingo Scholtes, University of Zurich](http://ifi.uzh.ch/dag)
 
-**Higher-Order Network Analytics: A Primer** (20 minutes) | [slides](http://...)
+**Pitch: Higher-Order Network Analytics: A Primer** (20 minutes) | [slides](http://...)
 - Welcome and introduction
 - Non-Markovian paths in temporal network data
 - From graphs to higher-order generative models for paths
@@ -35,7 +35,7 @@ Tutor: [Ingo Scholtes, University of Zurich](http://ifi.uzh.ch/dag)
 
 **Hands-on Coding Session** (70 minutes)  
 Unit | Topic | Notebook | Live Solution
---- | --- | ---  | ---  
+----|----|---- |----  
 1.1 | Getting started with Visual Studio Code and `jupyter` | [download](http://...) | [download](http://)  
 1.2 | Analysis and visualisation of paths and temporal networks in `pathpy` | [download](http://...) | [download](http://)  
 1.3 | Fitting and visualising Higher-Order models | [download](http://...) | [download](http://)  
@@ -49,7 +49,7 @@ Unit | Topic | Notebook | Live Solution
 
 Tutor: [Ingo Scholtes, University of Zurich](http://ifi.uzh.ch/dag)
 
-**Learning Optimal Multi-order Models** (20 minutes) | [slides](http://...)
+**Pitch: Multi-order Representation Learning** (20 minutes) | [slides](http://...)
 - Higher- vs. multi-order graphical models
 - Representation learning in temporal network data
 - Cross-validation of multi-order models
