@@ -34,6 +34,7 @@ Tutor: [Ingo Scholtes, University of Zurich](http://ifi.uzh.ch/dag)
 - Higher-order centrality measures for temporal network data
 
 **Hands-on Coding Session** (70 minutes)  
+
 Unit | Topic | Notebook | Live Solution
 ----|----|----|----
 1.1 | Getting started with Visual Studio Code and `jupyter` | [download](http://...) | [download](http://)  
