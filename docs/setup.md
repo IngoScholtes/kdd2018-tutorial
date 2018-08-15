@@ -60,5 +60,10 @@ If you see this output, all is set up properly, and you are all set to complete 
 
 ## Setting up InfoMap
 
-...
+Infomap is written in C++ but inludes a python interface. The easiest way to install it is via [PyPI](https://pypi.org/project/infomap/):
 
+```
+pip install infomap
+```
+
+For more information about installation and usage, see [www.mapequation.org/code.html](http://www.mapequation.org/code.html).
