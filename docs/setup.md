@@ -11,11 +11,11 @@ While you can also manually download all necessary files, we strongly recommend 
 
 If you don't have `git` installed already, here you can find information on [how to set up git](https://help.github.com/articles/set-up-git/).
 
-Prior to the hands-on tutorial, you will get access to skeleton `python` files, that we will complete together throughout the tutorial sessions. At specific *synchronisation points, we will push a commit of the current solution to this `gitHub` repository. You can thus simply execute the terminal command
+Prior to the hands-on tutorial, you will get access to skeleton `python` files, that we will complete together throughout the tutorial sessions. At specific *sync points*, we will push a commit of the current solution to this `gitHub` repository. You can thus simply execute the terminal command
 
 `git pull`
 
-in the directory of your local copy to receive a *sample solution* that is growing as the hands-on tutorial moves forward.
+in the directory of your local copy to receive a *sample solution* that is growing as the hands-on tutorial moves forward. If you are using Visual Studio Code (see below) things are even easier: You can just click the **sync** symbol in the status bar, to get the current sample solution shown on the tutor's screen! This will allow you to quickly correct any potential errors.
 
 # Installing python 3.X
 
