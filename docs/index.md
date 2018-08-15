@@ -22,7 +22,7 @@ The tutorial will take place on **Wednesday August 22, 2018** in ICC Capital S
 
 The schedule of the tutorial is as follows:
 
-### Session 1: Introduction to Higher-Order Network Analytics**  
+### Session 1: Introduction to Higher-Order Network Analytics
 *08:30 - 10:00*
 
 Tutor: [Ingo Scholtes, University of Zurich](http://ifi.uzh.ch/dag)
@@ -34,15 +34,17 @@ Tutor: [Ingo Scholtes, University of Zurich](http://ifi.uzh.ch/dag)
 - Higher-order centrality measures for temporal network data
 
 **Hands-on Coding Session** (70 minutes)  
-1.1 Getting started with Visual Studio Code and `jupyter` | [notebook](http://...) | [live solution](http://)
-1.2 Analysis and visualisation of paths and temporal networks in `pathpy` | [notebook](http://...) | [live solution](http://)
-1.3 Fitting and visualising Higher-Order models | [notebook](http://...) | [live solution](http://)
-1.4 Exploration: Analysis of flight ticket and Metro passenger data | [notebook](http://...) | [live solution](http://)
+Unit | Topic | Notebook | Live Solution
+--- | --- | ---  | ---  
+1.1 | Getting started with Visual Studio Code and `jupyter` | [download](http://...) | [download](http://)  
+1.2 | Analysis and visualisation of paths and temporal networks in `pathpy` | [download](http://...) | [download](http://)  
+1.3 | Fitting and visualising Higher-Order models | [download](http://...) | [download](http://)  
+1.4 | Exploration: Analysis of flight ticket and Metro passenger data | [download](http://...) | [download](http://)  
 
 **Coffee break**  
 *10:00 - 10:30*
 
-**Session 2: Multi-order Representation Learning**  
+### Session 2: Multi-order Representation Learning
 *10:30 - 12:00*
 
 Tutor: [Ingo Scholtes, University of Zurich](http://ifi.uzh.ch/dag)
@@ -53,15 +55,17 @@ Tutor: [Ingo Scholtes, University of Zurich](http://ifi.uzh.ch/dag)
 - Cross-validation of multi-order models
 
 **Hands-on Coding Session** (70 minutes)
-2.1 Model selection and order detection in temporal data | [notebook](http://...) | [live solution](http://)
-2.2 Multi-order network model learning in `pathpy` | [notebook](http://...) | [live solution](http://)
-2.3 Multi-order visualisation of network data | [notebook](http://...) | [live solution](http://)
-2.4 Exploration: Optimal node ranking in dynamic social networks | [notebook](http://...) | [live solution](http://)
+Unit | Topic | Notebook | Live Solution
+--- | --- | ---  | ---  
+2.1 | Model selection and order detection in temporal data | [download](http://...) | [download](http://)
+2.2 | Multi-order network model learning in `pathpy` | [download](http://...) | [download](http://)
+2.3 | Multi-order visualisation of network data | [download](http://...) | [download](http://)
+2.4 | Exploration: Optimal node ranking in dynamic social networks | [download](http://...) | [download](http://)
 
 **Lunch break**  
 *12:00 - 13:30*
 
-**Session 3: Variable-order Models with BuildHON and HONViz**  
+### Session 3: Variable-order Models with BuildHON and HONViz
 *13:30 - 14:30*
 
 Tutor: [Nitesh Chawla, University of Notre Dame](https://www3.nd.edu/~nchawla/)
@@ -89,7 +93,7 @@ Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-
 **Coffee break**  
 *16:30 - 17:00*
 
-**Session 4: Higher-order Graph Clustering and Visualisation**  
+### Session 4: Higher-order Graph Clustering and Visualisation
 *17:00 - 18:30*
 
 Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-edler/)
