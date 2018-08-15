@@ -22,22 +22,22 @@ The tutorial will take place on **Wednesday August 22, 2018** in ICC Capital S
 
 The schedule of the tutorial is as follows:
 
-**Session 1: Introduction to Higher-Order Network Analytics**  
+### Session 1: Introduction to Higher-Order Network Analytics**  
 *08:30 - 10:00*
 
 Tutor: [Ingo Scholtes, University of Zurich](http://ifi.uzh.ch/dag)
 
-*Higher-Order Network Analytics: A Primer* (20 minutes) | [slides](http://...)
+**Higher-Order Network Analytics: A Primer** (20 minutes) | [slides](http://...)
 - Welcome and introduction
 - Non-Markovian paths in temporal network data
 - From graphs to higher-order generative models for paths
 - Higher-order centrality measures for temporal network data
 
-*Hands-on Coding Session* (70 minutes)
-- 1.1 Getting started with Visual Studio Code and `jupyter` | [notebook](http://...) | [live solution](http://)
-- 1.2 Analysis and visualisation of paths and temporal networks in `pathpy` | [notebook](http://...) | [live solution](http://)
-- 1.3 Fitting and visualising Higher-Order models | [notebook](http://...) | [live solution](http://)
-- 1.4 Exploration: Analysis of flight ticket and Metro passenger data | [notebook](http://...) | [live solution](http://)
+**Hands-on Coding Session** (70 minutes)  
+1.1 Getting started with Visual Studio Code and `jupyter` | [notebook](http://...) | [live solution](http://)
+1.2 Analysis and visualisation of paths and temporal networks in `pathpy` | [notebook](http://...) | [live solution](http://)
+1.3 Fitting and visualising Higher-Order models | [notebook](http://...) | [live solution](http://)
+1.4 Exploration: Analysis of flight ticket and Metro passenger data | [notebook](http://...) | [live solution](http://)
 
 **Coffee break**  
 *10:00 - 10:30*
@@ -47,16 +47,16 @@ Tutor: [Ingo Scholtes, University of Zurich](http://ifi.uzh.ch/dag)
 
 Tutor: [Ingo Scholtes, University of Zurich](http://ifi.uzh.ch/dag)
 
-*Learning Optimal Multi-order Models* (20 minutes) | [slides](http://...)
+**Learning Optimal Multi-order Models** (20 minutes) | [slides](http://...)
 - Higher- vs. multi-order graphical models
 - Representation learning in temporal network data
 - Cross-validation of multi-order models
 
-*Hands-on Coding Session* (70 minutes)
-- 2.1 Model selection and order detection in temporal data | [notebook](http://...) | [live solution](http://)
-- 2.2 Multi-order network model learning in `pathpy` | [notebook](http://...) | [live solution](http://)
-- 2.3 Multi-order visualisation of network data | [notebook](http://...) | [live solution](http://)
-- 2.4 Exploration: Optimal node ranking in dynamic social networks | [notebook](http://...) | [live solution](http://)
+**Hands-on Coding Session** (70 minutes)
+2.1 Model selection and order detection in temporal data | [notebook](http://...) | [live solution](http://)
+2.2 Multi-order network model learning in `pathpy` | [notebook](http://...) | [live solution](http://)
+2.3 Multi-order visualisation of network data | [notebook](http://...) | [live solution](http://)
+2.4 Exploration: Optimal node ranking in dynamic social networks | [notebook](http://...) | [live solution](http://)
 
 **Lunch break**  
 *12:00 - 13:30*
