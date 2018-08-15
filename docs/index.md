@@ -9,6 +9,9 @@ On this companion page you can find accompanying software, data, and `jupyter` n
 The detailed schedule of the tutorial is planned as follows:
 
 **Session 1: Introduction to Higher-Order Network Analytics**  
+
+Tutor: [Ingo Scholtes, University of Zurich](http://ifi.uzh.ch/dag)
+
 * 08:30 - 10:00 *
 
 *Higher-Order Network Analytics: A Primer* (30 minutes) [download slides](http://...)
@@ -26,6 +29,9 @@ The detailed schedule of the tutorial is planned as follows:
 *10:00 - 10:30*
 
 **Session 2: Multi-order Representation Learning**  
+
+Tutor: [Ingo Scholtes, University of Zurich](http://ifi.uzh.ch/dag)
+
 *10:30 - 12:00*
 
 *Learning optimal higher-order models* (30 minutes) [download slides](http://...)
@@ -43,6 +49,9 @@ The detailed schedule of the tutorial is planned as follows:
 *12:00 - 13:30*
 
 **Session 3: Variable-order Models with BuildHON and HONViz**  
+
+Tutor: [Nitesh Chawla, University of Notre Dame](https://www3.nd.edu/~nchawla/)
+
 *13:30 - 14:30*
 
 **Coffee break**  
@@ -50,6 +59,8 @@ The detailed schedule of the tutorial is planned as follows:
 
 **Session 4: Graph Clustering with InfoMap**  
 *15:00 - 16:30*
+
+Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-edler/)
 
 *Introduction to Flow Compression with the MapEquation* (30 minutes) [download slides](http://...)
 - Introduction to graph clustering
@@ -69,6 +80,8 @@ The detailed schedule of the tutorial is planned as follows:
 **Session 4: Higher-order Graph Clustering and Visualisation**  
 *17:00 - 18:30*
 
+Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-edler/)
+
 *Higher-Order Community Detection with InfoMap* (30 minutes) [download slides](http://...)
 - Memory Networks and the Higher-Order MapEquation
 - State Lumping Algorithms
@@ -76,11 +89,8 @@ The detailed schedule of the tutorial is planned as follows:
 - ... 
 
 *Hands-on Coding Session* (60 minutes)
-- Task 1: ... [download notebook](http://...)
-- Task 2: ... [download notebook](http://...)
-- Task 3: ... [download notebook](http://...)
-- Task 4: Interactive Visualisation with InfoBaleen [download notebook](http://...)
+- Interactive Visualisation with InfoBaleen
 
 # Setting up the environment
 
-Hands-on sessions will be completed in `python`. A detailed description on how to set up the environment can be found [here](/kdd2018-tutorial/setup).
+Hands-on sessions will be completed in `python`. A detailed description on how to set up the environment can be found in the [setup instructions](/kdd2018-tutorial/setup).
