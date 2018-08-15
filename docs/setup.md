@@ -2,9 +2,20 @@
 title: KDD 2018 - Hands-on Tutorial on Higher-Order Data Analytics
 permalink: /setup
 ---
-# Installing 
 
 To complete the hands-on exercises, you will need a working `python 3.x` environment running on an operating system of your choice. For Windows, MacOS, and Linux users we recommend [Anaconda 5.2](https://www.anaconda.com/download/) distribution, an OpenSource `python` 3.6 distribution that comes pre-configured for data science and machine learning tasks.
+
+While you can also manually download all necessary files, we strongly recommend to clone this repository to obtain a local, sychronised copy of all material via `git`. Assuming you have a local `git` installation, you can do this as follows:  
+
+`git clone https://github.com/IngoScholtes/kdd2018-tutorial`
+
+If you don't have `git` installed already, you can find [setup instructions here](https://help.github.com/articles/set-up-git/).
+
+Prior to the hands-on tutorial, you will get access to skeleton `python` files, that we will complete together throughout the tutorial sessions. At specific *synchronisation points, we will push a commit of the current solution to this `gitHub` repository. You can thus simply execute the terminal command
+
+`git pull`
+
+in the directory of your local copy to receive a *sample solution* that is growing as the hands-on tutorial moves forward.
 
 
 # Installing Visual Studio Code
@@ -15,12 +26,15 @@ To conveniently work with `python` and `jupyter` notebooks in Visual Studio Code
 
 To install these two extensions, click the "module" icon in the bottom of the left menu bar or press `Ctrl+Shift+X`. This will bring up the Extensions window. Type `python` and click the top-most search result [Python 2018.7.1](https://marketplace.visualstudio.com/items?itemName=ms-python.python). In the window on the right, click install. Repeat this procedure with the jupyter extension, i.e. search for `jupyter`, click the top-most result [Jupyter 1.1.4](https://marketplace.visualstudio.com/items?itemName=donjayamanne.jupyter) by user Don Jayamanne and install the extension. A restart of Visual Studio Code completes the installation.
 
+Once the installation is finished, open Visual Studio Code, click `File -> Open Folder` and navigate to your local copy of the cloned github repository. In the *Explorer* panel (the files symbol in the left bar) you can then find the notebook files that you need to complete the tutorial.
 
-# Installing higher-order data analytics packages
+Conveniently, Visual Studio Code comes with integrated support for `git`. This means you can fetch the current, growing sample solution simply by navigating to the *Source Control* panel (the fork symbol in the left bar). In the *...* menu extension you just have to click *Pull*.
 
-To apply higher-order data analytics to real data, we finally need to set up additional ``python`` packages.
+# Installing higher-order data analytics packages for python
 
-Sessions 1 and 2 will introduce [pathpy](http://www.pathpy.net), an OpenSource `python` package providing higher-order network analysis and visualisation methods for sequence and path data.
+To apply higher-order data analytics to real data, we need to set up additional ``python`` packages.
+
+Sessions 1 and 2 will introduce [pathpy](http://www.pathpy.net), an OpenSource `python` package providing higher-order network analysis and visualisation tools for sequence, path, and temporal network data.
 
 Sessions 4 and 5 will introduce [InfoMap](http://www.mapequation.org), an OpenSource package that can be used to reveal overlapping modular patterns in higher-order network flows through complex systems. In the following, we explain how you can set up these two packages:
 

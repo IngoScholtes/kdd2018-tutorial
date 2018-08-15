@@ -4,21 +4,23 @@ permalink: /
 ---
 # Tutorial Outline
 
-On this companion page you can find accompanying software, data, and `jupyter` notebooks for the KDD2018 Hands-on Tutorial [Beyond Graph Mining: Higher-Order Data Analytics for Temporal Network Data](). The detailed program of this tutorial is as follows:
+On this companion page you can find accompanying software, data, and `jupyter` notebooks for the KDD2018 Hands-on Tutorial Beyond Graph Mining: Higher-Order Data Analytics for Temporal Network Data. A summary of the tutorial can be found in the [detailed proposal](https://www.researchgate.net/publication/325168357_Beyond_Graph_Mining_Higher-Order_Data_Analytics_for_Temporal_Network_Data).
+
+The detailed schedule of the tutorial is planned as follows:
 
 **Session 1: Introduction to Higher-Order Network Analytics**  
 * 08:30 - 10:00 *
 
 *Higher-Order Network Analytics: A Primer* (30 minutes) [download slides](http://...)
-- Non-Markovian paths in temporal data streams
+- Non-Markovian paths in temporal network data
 - From graphs to higher-order generative models for paths
-- Higher-order centrality measures for time series data
+- Higher-order centrality measures for temporal network data
 
-*Hands-on Coding Session* (60 minutes) [download jupyter notebook](http://...)
+*Hands-on Coding Session* (60 minutes) [download notebook](http://...) [live solution](http://)
 - Getting started with Visual Studio Code, `jupyter` and `pathpy`
-- Path analysis and visualisation
-- Fitting Higher-Order Models
-- Exploration: Analysis of flight ticket and Metro passenger data [download data](http://...)
+- Analysis and visualisation of paths and temporal networks in `pathpy`
+- Fitting and visualising Higher-Order models
+- Exploration: Analysis of flight ticket and Metro passenger data
 
 **Coffee break**  
 *10:00 - 10:30*
@@ -27,13 +29,15 @@ On this companion page you can find accompanying software, data, and `jupyter` n
 *10:30 - 12:00*
 
 *Learning optimal higher-order models* (30 minutes) [download slides](http://...)
-- Multi-order graphical model inference
-- Model selection and representation learning
+- Higher- vs. multi-order graphical models
+- Representation learning in temporal network data
+- Cross-validation of multi-order models
 
-*Hands-on Coding Session* (60 minutes) [download notebook](http://...)
-- Analysis and Visualisation of temporal networks in `pathpy`
-- Path analysis and multi-order models 
-- Exploration: Higher-order node ranking in dynamic social networks [download data](http://...)
+*Hands-on Coding Session* (60 minutes) [download notebook](http://...) [live solution](http://)
+- Model selection and order detection in temporal data
+- Multi-order network model learning in `pathpy`
+- Multi-order visualisation of network data
+- Exploration: Optimal node ranking in dynamic social networks
 
 **Lunch break**  
 *12:00 - 13:30*
