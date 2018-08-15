@@ -24,7 +24,7 @@ On this companion page you can find accompanying software, data, and `jupyter` n
 *10:00 - 10:30*
 
 **Session 2: Multi-order Representation Learning**  
-*10:30 - 10:00*
+*10:30 - 12:00*
 
 *Learning optimal higher-order models* (30 minutes) [download slides](http://...)
 - Multi-order graphical model inference
@@ -57,10 +57,7 @@ On this companion page you can find accompanying software, data, and `jupyter` n
 - Getting started with `InfoMap`
 - Community detection in first-order models
 - Community detection in higher-order models
-
-
-*Data Sets*
-- ...
+- Exploration: ... 
 
 **Coffee break**  
 *16:30 - 17:00*
