@@ -37,7 +37,7 @@ Tutor: [Ingo Scholtes, University of Zurich](http://ifi.uzh.ch/dag)
 
 Unit | Topic | Notebook | Live Solution
 ----|----|----|----
-1.1 | Getting started with Visual Studio Code and `jupyter` | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_1_vscode_jupyter.py) | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/1_1_vscode_jupyter.py)  
+1.1 | Getting started with Visual Studio Code and `jupyter` | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_1_vscode_jupyter.py) | NA
 1.2 | Analysis and visualisation of paths and temporal networks in `pathpy` | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_2_pathpy.py) | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/1_2_pathpy.py)  
 1.3 | Fitting and visualising Higher-Order models | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_3_higher_order.py) | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/1_3_higher_order.py)  
 1.4 | Exploration: Analysis of flight ticket and Metro passenger data | [download](http://...) | [download](http://)  
