@@ -50,6 +50,24 @@ def convert(ipynb_file, output_file=None, blank_code = False, todo_msg = '# TODO
     print('Done.')
 
 
-# To use the script just execute the following cell:
-#%% 
+# To apply the script to the sample solutions, just execute the following cells:
+#%% Unit 1.2
 convert('code/1_2_pathpy.ipynb', 'code/1_2_pathpy.py', blank_code=True, todo_msg=None)
+
+#%% Unit 1.3
+convert('code/1_3_higher_order.ipynb', 'code/1_3_higher_order.py', blank_code=True, todo_msg=None)
+
+#%% Unit 1.4
+convert('code/1_4_exploration.ipynb', 'code/1_4_exploration.py', blank_code=False, todo_msg=None)
+
+#%% Unit 2.1
+convert('code/2_1_temporal_networks.ipynb', 'code/2_1_temporal_networks.py', blank_code=True, todo_msg=None)
+
+#%% Unit 2.2
+convert('code/2_2_multi_order.ipynb', 'code/2_2_multi_order.py', blank_code=True, todo_msg=None)
+
+#%% Unit 2.3
+convert('code/2_3_cross_validation.ipynb', 'code/2_3_cross_validation.py', blank_code=True, todo_msg=None)
+
+#%% Unit 2.4
+convert('code/2_4_exploration.ipynb', 'code/2_4_exploration.py', blank_code=False, todo_msg=None)

@@ -80,7 +80,7 @@ print(x)
 # available at the current point in your code. Try it by uncommenting the next line,
 # move the cursor after the dot and hit CTRL+SPACE.
 
-x.
+# x.
 
 # We are now ready to start the tutorial with unit 1.2. You can now navigate to the file 
 # code/1_2_pathpy.py in the repository.

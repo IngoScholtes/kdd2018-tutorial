@@ -87,7 +87,7 @@ Apart from adding paths as a tuple, we can also add them as string-encoded n-gra
 <span style="color:red">**TODO:** Create a new `Paths` instance `ngram_paths`, add 10 path observations using the ngram `"b-c-e"`, and print a summary of the resulting instance.</span>
 """)
 
-#%% In [6]
+#%% In [5]
 
 
 #%%
@@ -98,13 +98,21 @@ We obtain a `Paths` object with 10 observations of path $b\rightarrow c \rightar
 <span style="color:red">**TODO:** Use arithmetic operators to add `toy_paths` and `ngram_paths` and print a summary of the result.</span>
 """)
 
-#%% In [7]
+#%% In [6]
 
 
 #%%
 md("""
-We obtain a new `Paths` instance with $20$ observed paths between five nodes $a$, $b$, $c$, $d$, and $e$ across four edges $(a,c)$, $(c,d)$, $(b,c)$ and $(c,e)$. 
+We obtain a new `Paths` instance with $20$ observed paths between five nodes $a$, $b$, $c$, $d$, and $e$ across four edges $(a,c)$, $(c,d)$, $(b,c)$ and $(c,e)$. Let us first use the function `Paths.write_file` to save these paths for later use.
 
+<span style="color:red">**TODO:** Save the paths to an ngram file `data/toy_paths.ngram`.</span>
+""")
+
+#%% In [8]
+
+
+#%%
+md("""
 We often analyse or visualise graph or network topologies in which the observed paths have occurred. For this, `pathpy` provides the class `Network`, which you can use to read, manipulate, analyse, and visualise directed, undirected, weighted, and unweighted networks.
 
 We can easily turn any `Paths` instance into a network by using the class method `Network.from_paths`. This will cut each path $v_0 \rightarrow v_1 \rightarrow v_2 \rightarrow$  into directed *dyadic relations* $(v_i, v_{i+1})$ that are represented by directed edges.
@@ -201,8 +209,5 @@ Once we are satsfied with our visualisation, we can use the method `pp.visualisa
 """)
 
 #%% In [16]
-
-
-#%% In [17]
 
 
