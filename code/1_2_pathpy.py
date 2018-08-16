@@ -31,7 +31,7 @@ In the first two sessions of our tutorial we introduce ``pathpy``, an OpenSource
 <span style="color:red">**TODO:** Import the package `pathpy` and rename it to `pp`</span>
 """)
 
-#%% In [1]
+#%% In [19]
 
 
 #%%
@@ -41,7 +41,7 @@ A core functionality of `pathpy` is to read, calculate, store, manipulate, and m
 <span style="color:red">**TODO:** Use the `help` function to obtain a description of the class `Paths`.</span>
 """)
 
-#%% In [2]
+#%% In [20]
 
 
 #%%
@@ -51,7 +51,7 @@ In Visual Studio Code, the documentation of classes, methods, and properties is 
 <span style="color:red">**TODO:** Create an empty `Paths` instance `toy_paths` by calling the constructor with no arguments.</span>
 """)
 
-#%% In [3]
+#%% In [21]
 
 
 #%%
@@ -61,7 +61,7 @@ We now have an empty `Paths` instance `toy_paths` that we can use to add path st
 <span style="color:red">**TODO:** Add 10 observations of a path $a \rightarrow c \rightarrow e$ between three nodes $a$, $c$, and $e$ to the `toy_paths` instance.</span>
 """)
 
-#%% In [4]
+#%% In [22]
 
 
 #%%
@@ -71,7 +71,7 @@ Each class in `pathpy` provides a properly formatted string representation, whic
 <span style="color:red">**TODO**: Print a string summary of the instance `toy_paths`</span>
 """)
 
-#%% In [5]
+#%% In [23]
 
 
 #%%
@@ -87,7 +87,7 @@ Apart from adding paths as a tuple, we can also add them as string-encoded n-gra
 <span style="color:red">**TODO:** Create a new `Paths` instance `ngram_paths`, add 10 path observations using the ngram `"b-c-e"`, and print a summary of the resulting instance.</span>
 """)
 
-#%% In [5]
+#%% In [24]
 
 
 #%%
@@ -98,7 +98,7 @@ We obtain a `Paths` object with 10 observations of path $b\rightarrow c \rightar
 <span style="color:red">**TODO:** Use arithmetic operators to add `toy_paths` and `ngram_paths` and print a summary of the result.</span>
 """)
 
-#%% In [6]
+#%% In [25]
 
 
 #%%
@@ -108,7 +108,7 @@ We obtain a new `Paths` instance with $20$ observed paths between five nodes $a$
 <span style="color:red">**TODO:** Save the paths to an ngram file `data/toy_paths.ngram`.</span>
 """)
 
-#%% In [8]
+#%% In [26]
 
 
 #%%
@@ -120,7 +120,7 @@ We can easily turn any `Paths` instance into a network by using the class method
 <span style="color:red">**TODO**: Create a `Network` instance `toy_graph` from the `toy_paths` instance and print a summary of the network.</span>
 """)
 
-#%% In [8]
+#%% In [27]
 
 
 #%%
@@ -130,7 +130,7 @@ We obtain a network with five nodes $a$, $b$, $c$, $d$, and $e$ and four directe
 <span style="color:red">**TODO:** Print the `weight` of edge `(a, c)` in `toy_graph`.</span>
 """)
 
-#%% In [9]
+#%% In [28]
 
 
 #%%
@@ -140,7 +140,7 @@ In fact, since each edge can be viewed as a path of length one, the edge weights
 <span style="color:red">**TODO:** Verify that the sub-path frequency of path `(a,c)` in `toy_paths` coincides with the weight of edge `(a,c)` in `toy_graph`.</span>
 """)
 
-#%% In [10]
+#%% In [29]
 
 
 #%%
@@ -152,7 +152,7 @@ The attribute `x` of a node `v` or an edge `e` in a network instance `net` can b
 <span style="color:red">**TODO:** Set the node and edge attributes of some nodes and edges in `toy_graph`, and use `find_nodes` and `find_edges` to identify nodes and edges that have certain attributes.</span>
 """)
 
-#%% In [11]
+#%% In [30]
 
 
 #%%
@@ -164,7 +164,7 @@ Note that you can interact with the generated graph using the mouse. We can drag
 <span style="color:red">**TODO**: Visualise the network `toy_graph`, drag a node, hover above a node, and pan and zoom.</span>
 """)
 
-#%% In [12]
+#%% In [31]
 
 
 #%%
@@ -178,7 +178,7 @@ We can also programmatically style our network by using the generic `plot` funct
 <span style="color:red">**TODO**: Check the documentation of `pp.visualisation.plot` and change the color of nodes to red.</span>
 """)
 
-#%% In [13]
+#%% In [32]
 
 
 #%%
@@ -190,7 +190,7 @@ Let us explore some of the features supported by `pathpy`'s default visualisatio
 <span style="color:red">**TODO**: Use the `help` function to show which parameters are supported by the function `pp.visualisation.plot`.</span>
 """)
 
-#%% In [14]
+#%% In [33]
 
 
 #%%
@@ -198,7 +198,7 @@ md("""
 <span style="color:red">**TODO**: Create a parameter dictionary `style` that changes the plot size, switches off edge arrows, assigns individual colors to nodes, changes label position, color and font size, and adjust node size and edge width.</span>
 """)
 
-#%% In [15]
+#%% In [34]
 
 
 #%%
@@ -208,6 +208,6 @@ Once we are satsfied with our visualisation, we can use the method `pp.visualisa
 <span style="color:red">**TODO**: Save your visualisation to a file `test_network.html`. Reuse the visualisation parameters from above.</span>
 """)
 
-#%% In [16]
+#%% In [35]
 
 

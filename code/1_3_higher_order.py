@@ -66,7 +66,7 @@ To understand this better, let us consider our toy example from before.
 
 #%%
 md("""
-We obtain a simple first-ordermodel of our paths, with five nodes $a,b,c,d$ and $e$, and four links $(a,c), (b,c), (c,d), (c,e)$. This is identicaly to the `Network` instance that we have created using the `Network.from_paths` function in unit 1.1. Indeed, each `HigherOrderNetwork` instance is derived from the class `Network`, which means we can store edge and node attributes and visualise it using exactly the same methods:
+We obtain a simple first-order model of our paths, with five nodes $a,b,c,d$ and $e$, and four links $(a,c), (b,c), (c,d), (c,e)$. This is identicaly to the `Network` instance that we have created using the `Network.from_paths` function in unit 1.1. Indeed, each `HigherOrderNetwork` instance is derived from the class `Network`, which means we can store edge and node attributes and visualise it using exactly the same methods:
 
 <span style="color:red">**TODO:** Plot the `HigherOrderModel` instance `hon_1` and print the weight of all edges.</span>
 """)
