@@ -1,6 +1,18 @@
 #%%
 import json
 
+def remove_code(ipynb_file, output_file):
+    print('Removing code from ipynb file ...')   
+    with open(ipynb_file, 'r') as f:
+        notebook = json.load(f)
+        for cell in notebook['cells']:
+            if cell['cell_type'] == 'code':               
+               cell['source'] = []
+               cell['outputs'] = []
+    with open(output_file, 'w') as f:
+        json.dump(notebook, f)  
+    print('Done.')
+
 def convert(ipynb_file, output_file=None, blank_code = False, todo_msg = '# TODO: Fill code here'):
     """
     Converts an ipython notebook file to a plain .py file that 
@@ -54,10 +66,12 @@ def convert(ipynb_file, output_file=None, blank_code = False, todo_msg = '# TODO
 # To apply the script to the sample solutions, just execute the following cells:
 #%% Unit 1.2
 convert('solutions/1_2_pathpy.ipynb', 'code/1_2_pathpy.py', blank_code=True, todo_msg=None)
+remove_code('solutions/1_2_pathpy.ipynb', 'code/1_2_pathpy.ipynb')
 convert('solutions/1_2_pathpy.ipynb', 'solutions/1_2_pathpy.py', blank_code=False, todo_msg=None)
 
 #%% Unit 1.3
 convert('solutions/1_3_higher_order.ipynb', 'code/1_3_higher_order.py', blank_code=True, todo_msg=None)
+remove_code('solutions/1_3_higher_order.ipynb', 'code/1_3_higher_order.ipynb')
 convert('solutions/1_3_higher_order.ipynb', 'solutions/1_3_higher_order.py', blank_code=False, todo_msg=None)
 
 #%% Unit 1.4
@@ -66,14 +80,17 @@ convert('solutions/1_4_exploration.ipynb', 'solutions/1_4_exploration.py', blank
 
 #%% Unit 2.1
 convert('solutions/2_1_temporal_networks.ipynb', 'code/2_1_temporal_networks.py', blank_code=True, todo_msg=None)
+remove_code('solutions/2_1_temporal_networks.ipynb', 'code/2_1_temporal_networks.ipynb')
 convert('solutions/2_1_temporal_networks.ipynb', 'solutions/2_1_temporal_networks.py', blank_code=False, todo_msg=None)
 
 #%% Unit 2.2
 convert('solutions/2_2_multi_order.ipynb', 'code/2_2_multi_order.py', blank_code=True, todo_msg=None)
+remove_code('solutions/2_2_multi_order.ipynb', 'code/2_2_multi_order.ipynb')
 convert('solutions/2_2_multi_order.ipynb', 'solutions/2_2_multi_order.py', blank_code=False, todo_msg=None)
 
 #%% Unit 2.3
 convert('solutions/2_3_cross_validation.ipynb', 'code/2_3_cross_validation.py', blank_code=True, todo_msg=None)
+remove_code('solutions/2_3_cross_validation.ipynb', 'code/2_3_cross_validation.ipynb')
 convert('solutions/2_3_cross_validation.ipynb', 'solutions/2_3_cross_validation.py', blank_code=False, todo_msg=None)
 
 #%% Unit 2.4

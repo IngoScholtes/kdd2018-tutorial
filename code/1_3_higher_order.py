@@ -26,7 +26,7 @@ The real purpose of `pathpy` is to fit and analyse higher-order network models. 
 <span style="color:red">**TODO:** Import the module pathpy and print the documentation of class `pp.HigherOrderNetwork`</span>
 """)
 
-#%% In [None]
+#%% In [1]
 
 
 #%%
@@ -61,7 +61,7 @@ To understand this better, let us consider our toy example from before.
 <span style="color:red">**TODO:** Read the toy example from unit 1.2 from the file `data/toy_paths.ngram`, generate a **first-order** model instance `hon_1` and print a summary of the resulting instance.</span>
 """)
 
-#%% In [None]
+#%% In [2]
 
 
 #%%
@@ -71,7 +71,7 @@ We obtain a simple first-order model of our paths, with five nodes $a,b,c,d$ and
 <span style="color:red">**TODO:** Plot the `HigherOrderModel` instance `hon_1` and print the weight of all edges.</span>
 """)
 
-#%% In [None]
+#%% In [3]
 
 
 #%%
@@ -87,7 +87,7 @@ The result is a $k$-dimensional De Bruijn graph model for paths. Let us try this
 <span style="color:red">**TODO:** Create a second-order model `hon_2` for `toy_paths`. Visualise the model and print the weights of all edges.</span>
 """)
 
-#%% In [None]
+#%% In [13]
 
 
 #%%
@@ -103,7 +103,7 @@ We can actually represent this **null-model** for paths as a second-order model,
 <span style="color:red">**TODO:** Use the `null_model` parameter in the constructor of `HigherOrderNetwork` to generate a second-order null model `hon_2_null` for `toy_paths`. Visualise the model and output all edge weights.</span>
 """)
 
-#%% In [None]
+#%% In [15]
 
 
 #%%
@@ -115,10 +115,10 @@ We can now easily find out which of the paths of length two occur more or less o
 <span style="color:green">**Hint:** Use the function `HigherOrderNetwork.node_to_name_map()` to map node names to matrix indices.</span>
 """)
 
-#%% In [None]
+#%% In [16]
 
 
-#%% In [None]
+#%% In [17]
 
 
 #%%
@@ -128,13 +128,13 @@ md("""
 <span style="color:red">**TODO:** Calculate the betweenness centrality of node `c` and the closeness centrality of node `d` in a first- and second-order model, as well as in the null model for `toy_paths`.</span>
 """)
 
-#%% In [None]
+#%% In [18]
 
 
-#%% In [None]
+#%% In [19]
 
 
-#%% In [None]
+#%% In [20]
 
 
 #%%
@@ -146,10 +146,10 @@ This confirms our intuition that two of the paths of length two actually occur t
 md("""
 FInally, to fit higher-order models with order $k$, we need observations of paths with length at least k (as we account for the statistics of **sub-paths** of length $k$). In our toy example we have onyl observed paths with length two, so the attempt to generate a third-order model will fail with a `PathsTooShort` exception:
 
-<span style="color:red">**TODO:** Try to generate a `HigherOrderModel` with order $k=1$ for `toy_paths`.</span>
+<span style="color:red">**TODO:** Try to generate a `HigherOrderModel` with order $k=3$ for `toy_paths`.</span>
 """)
 
-#%% In [None]
+#%% In [21]
 
 
 #%%
