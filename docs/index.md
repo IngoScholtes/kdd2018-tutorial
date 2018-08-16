@@ -22,7 +22,7 @@ The tutorial will take place on **Wednesday August 22, 2018** in ICC Capital S
 
 The schedule of the tutorial is as follows:
 
-### Session 1: Introduction to Higher-Order Network Analytics
+## Session 1: Introduction to Higher-Order Network Analytics
 *08:30 - 10:00*
 
 Tutor: [Ingo Scholtes, Data Analytics Group, University of Zurich](http://ifi.uzh.ch/dag)
@@ -46,7 +46,7 @@ Unit | Topic | Notebook | Live Solution
 ### Coffee break
 *10:00 - 10:30*
 
-### Session 2: Multi-order Representation Learning
+## Session 2: Multi-order Representation Learning
 *10:30 - 12:00*
 
 Tutor: [Ingo Scholtes, Data Analytics Group, University of Zurich](http://ifi.uzh.ch/dag)
@@ -68,7 +68,7 @@ Unit | Topic | Notebook | Live Solution
 ### Lunch break
 *12:00 - 13:30*
 
-### Session 3: Variable-order Models with BuildHON and HONViz
+## Session 3: Variable-order Models with BuildHON and HONViz
 *13:30 - 14:30*
 
 Tutor: [Nitesh Chawla, University of Notre Dame](https://www3.nd.edu/~nchawla/)
@@ -76,7 +76,7 @@ Tutor: [Nitesh Chawla, University of Notre Dame](https://www3.nd.edu/~nchawla/)
 ### Coffee break
 *14:30 - 15:00*
 
-### Session 4: Graph Clustering with InfoMap
+## Session 4: Graph Clustering with InfoMap
 *15:00 - 16:30*
 
 Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-edler/)
@@ -96,7 +96,7 @@ Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-
 ### Coffee break
 *16:30 - 17:00*
 
-### Session 5: Higher-order Graph Clustering and Visualisation
+## Session 5: Higher-order Graph Clustering and Visualisation
 *17:00 - 18:30*
 
 Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-edler/)
