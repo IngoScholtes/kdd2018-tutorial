@@ -110,6 +110,10 @@ Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-
 *Hands-on Coding Session* (60 minutes)
 - Interactive Visualisation with InfoBaleen
 
+# Data sets
+
+A description of data sets that will be provided to tutorial participants, and that will be analysed in the tutorial is available [here](https://github.com/IngoScholtes/kdd2018-tutorial/tree/master/data).
+
 # Setting up the environment
 
 Hands-on sessions will be completed in `python`. A detailed description on how to set up the environment can be found in the [setup instructions](/kdd2018-tutorial/setup).
