@@ -25,22 +25,23 @@ The schedule of the tutorial is as follows:
 ### Session 1: Introduction to Higher-Order Network Analytics
 *08:30 - 10:00*
 
-Tutor: [Ingo Scholtes, University of Zurich](http://ifi.uzh.ch/dag)
+Tutor: [Ingo Scholtes, Data Analytics Group, University of Zurich](http://ifi.uzh.ch/dag)
 
-**Pitch: Higher-Order Network Analytics: A Primer** (20 minutes) | [slides](http://...)
-- Welcome and introduction
+**Pitch:** Higher-Order Network Analytics for Temporal Network Data** (20 minutes) | [slides](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/talks/)
+- Welcome note
 - Non-Markovian paths in temporal network data
 - From graphs to higher-order generative models for paths
-- Higher-order centrality measures for temporal network data
+- Higher-order network analytics for time series data
+- Tutorial Overview
 
-**Hands-on Coding Session** (70 minutes)  
+**Live Coding** (75 minutes)  
 
 Unit | Topic | Notebook | Live Solution
 ----|----|----|----
-1.1 | Getting started with Visual Studio Code and `jupyter` | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_1_vscode_jupyter.py) | NA
-1.2 | Analysis and visualisation of paths and temporal networks in `pathpy` | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_2_pathpy.py) | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/1_2_pathpy.py)  
-1.3 | Fitting and visualising Higher-Order models | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_3_higher_order.py) | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/1_3_higher_order.py)  
-1.4 | Exploration: Analysis of flight ticket and Metro passenger data | [download](http://...) | [download](http://)  
+1.1 | Primer: Visual Studio Code, `python` and `jupyter` (15 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_1_vscode_jupyter.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_1_vscode_jupyter.ipynb) | N/A
+1.2 | Analysis and visualisation of paths and temporal networks in `pathpy` (15 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_2_pathpy.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_2_pathpy.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/1_2_pathpy.py)  
+1.3 | Fitting and visualising Higher-Order models (15 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_3_higher_order.py),  [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_3_higher_order.py) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/1_3_higher_order.py)
+1.4 | Exploration: Higher-order analysis of real-world pathway data (30 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_4_exploration.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_4_exploration.ipynb) | N/A
 
 ### Coffee break
 *10:00 - 10:30*
@@ -48,21 +49,21 @@ Unit | Topic | Notebook | Live Solution
 ### Session 2: Multi-order Representation Learning
 *10:30 - 12:00*
 
-Tutor: [Ingo Scholtes, University of Zurich](http://ifi.uzh.ch/dag)
+Tutor: [Ingo Scholtes, Data Analytics Group, University of Zurich](http://ifi.uzh.ch/dag)
 
-**Pitch: Multi-order Representation Learning** (20 minutes) | [slides](http://...)
+**Pitch:** Representation Learning: From Higher-Order to Optimal Network Models (15 minutes) | [slides](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/talks/)
 - Higher- vs. multi-order graphical models
 - Representation learning in temporal network data
 - Cross-validation of multi-order models
 
-**Hands-on Coding Session** (70 minutes)
+**Live Coding** (75 minutes)
 
 Unit | Topic | Notebook | Live Solution
 ----|----|----|----
-2.1 | Model selection and order detection in temporal data | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_1_temporal_networks.py) | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_1_temporal_networks.py)  
-2.2 | Multi-order network model learning in `pathpy` | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_2_multi_order.py) | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_2_multi_order.py)  
-2.3 | Multi-order visualisation of network data | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_3_cross_validation.py) | [download](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_3_cross_validation.py)  
-2.4 | Exploration: Optimal node ranking in dynamic social networks | [download](https://) | [download](https://)  
+2.1 | Higher-order analysis of time-stamped network data in `pathpy` (15 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_1_temporal_networks.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_1_temporal_networks.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_1_temporal_networks.py)  
+2.2 | Multi-order representation learning in `pathpy` (15 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_2_multi_order.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_2_multi_order.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_2_multi_order.py)  
+2.3 | Optimal node ranking in dynamic social networks (15 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_3_cross_validation.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_3_cross_validation.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_3_cross_validation.py)
+2.4 | Exploration: Higher-order analysis of time-stamped social network data (30 min) | [.py](https://),  [.ipynb](https://) | N/A
 
 ### Lunch break
 *12:00 - 13:30*
