@@ -74,7 +74,7 @@ print(x)
 
 # x:= 42
 
-# Finally, VS Code will automatically show documentation extracted from the docstring of 
+# VS Code will automatically show documentation extracted from the docstring of 
 # python classes and methods. Try it by typing print(...
 # With STRG+SPACE you will see a list of variables, methods, symbols that are 
 # available at the current point in your code. Try it by uncommenting the next line,
@@ -82,5 +82,18 @@ print(x)
 
 # x.
 
+# Finally, VS Code comes with integrated support for git repository. In fact, in the bottom left
+# corner of the status bar, you should see a branch symbol "master" and next to it a small 
+# sync icon. Whenever you click this icon, you will automatically receive updates to all files in 
+# the repository. We will use this mechanism to distribute a live solution as we move forward with 
+# the tutorial. For this, you should work on the .py or .ipynb files in the "code" folder. We will 
+# work on the corresponding files in the "live_solution" folder. Whenver we sync our solution to 
+# the repository, you shall be able to directly sync it to your machine. If you keep the code file 
+# in the "live_solution" folder open (e.g. in a side panel) you will see the code update live to 
+# the version shown on the tutors screen. Let's try this with the file "1_2_pathpy.nb" in the 
+# "live_solutions" folder. I will edit the file and tell you to click the sync icon. You should see
+# the file updating in VS Code.
+
 # We are now ready to start the tutorial with unit 1.2. You can now navigate to the file 
-# code/1_2_pathpy.py in the repository.
+# code/1_2_pathpy.py in the repository, which you will edit. You can keep the live_solution open as
+# well if you want to have the tutor's version next to your version.
