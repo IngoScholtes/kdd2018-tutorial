@@ -28,11 +28,10 @@ The schedule of the tutorial is as follows:
 Tutor: [Ingo Scholtes, Data Analytics Group, University of Zurich](http://ifi.uzh.ch/dag)
 
 **Pitch:** Higher-Order Network Analytics for Temporal Network Data (20 min) | [slides](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/talks/)
-- Welcome note
-- Non-Markovian paths in temporal network data
+- Welcome note and Tutorial Overview
+- Higher-order dependencies and Non-Markovian paths in temporal network data
 - From graphs to higher-order generative models for paths
 - Higher-order network analytics for time series data
-- Tutorial Overview
 
 **Live Coding** (75 min)  
 
