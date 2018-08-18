@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html><body>
 <style>
-    text.active_fleZMtEQ {
+    text.active_TCcDWATc {
         text-anchor: middle;
         font-size: 24px;
         font-family: Arial, Helvetica, sans-serif;
         fill: #ffffff;
         opacity: 1.0;
     }
-    text.hidden_fleZMtEQ {
+    text.hidden_TCcDWATc {
         opacity: 0;
     }
-    line.tlinks_fleZMtEQ {
+    line.tlinks_TCcDWATc {
         stroke: #cccccc;
         stroke-opacity: 0.4;
         stroke-width: 2;
     }
-    line.active_fleZMtEQ {
+    line.active_TCcDWATc {
         stroke: #ff0000;
         stroke-opacity: 1.0;
         stroke-width: 4;
     }
-    line.hidden_fleZMtEQ {
+    line.hidden_TCcDWATc {
         stroke: rgb(255, 255, 255);
         stroke-opacity: 0;
         stroke-width: 0px;
     }
-    circle.active_fleZMtEQ {
+    circle.active_TCcDWATc {
         stroke: #222;
         fill: #ff0000;
         fill-opacity: 1;
@@ -40,13 +40,13 @@
     }
 </style>
 
-<svg width="400" height="400" id="fleZMtEQ">
+<svg width="400" height="400" id="TCcDWATc">
     <text x="10" y="20" font-family="sans-serif" font-size="14px" fill="red" 
-        id='fleZMtEQ_time_txt'>t</text>
+        id='TCcDWATc_time_txt'>t</text>
     <text x="120" y="20" font-family="sans-serif" font-size="14px" fill="#9999bb" style="cursor: pointer"
-        id='fleZMtEQ_start_txt'>stop</text>
+        id='TCcDWATc_start_txt'>stop</text>
     <text x="170" y="20" font-family="sans-serif" font-size="14px" fill="#9999bb" style="cursor: pointer"
-        id='fleZMtEQ_restart_txt'>restart</text>
+        id='TCcDWATc_restart_txt'>restart</text>
 </svg>
 
 <script charset="utf-8" src="https://d3js.org/d3.v4.min.js"></script>
@@ -97,13 +97,13 @@ require(["d3"], function(d3) {
         });
     };
 
-    var svg = d3.select("#fleZMtEQ"),
+    var svg = d3.select("#TCcDWATc"),
         width = +svg.attr("width"),
         height = +svg.attr("height"),
         radius = 15,
         color = d3.scaleOrdinal(d3.schemeCategory20b);
 
-    var temporal_net = {"nodes": [{"group": 1, "id": "a"}, {"group": 1, "id": "b"}, {"group": 1, "id": "c"}, {"group": 1, "id": "d"}], "links": [{"source": "a", "time": 1, "target": "b", "width": 1}, {"source": "b", "time": 3, "target": "a", "width": 1}, {"source": "b", "time": 3, "target": "c", "width": 1}, {"source": "d", "time": 4, "target": "c", "width": 1}, {"source": "c", "time": 5, "target": "d", "width": 1}, {"source": "c", "time": 6, "target": "b", "width": 1}]};
+    var temporal_net = {"nodes": [{"group": 1, "id": "a"}, {"group": 1, "id": "b"}, {"group": 1, "id": "c"}, {"group": 1, "id": "d"}], "links": [{"width": 1, "target": "b", "time": 1, "source": "a"}, {"width": 1, "target": "a", "time": 3, "source": "b"}, {"width": 1, "target": "c", "time": 3, "source": "b"}, {"width": 1, "target": "c", "time": 4, "source": "d"}, {"width": 1, "target": "d", "time": 5, "source": "c"}, {"width": 1, "target": "b", "time": 6, "source": "c"}]};
     var tsperframe = 1;
     var msperframe = 2000;
     var look_ahead = 2;
@@ -153,13 +153,13 @@ require(["d3"], function(d3) {
         .attr("class", "everything");
 
     var link = g.append("g")
-        .attr("class", "tlinks_fleZMtEQ")
+        .attr("class", "tlinks_TCcDWATc")
         .selectAll("line")
         .data(links, function(d){return d.id;})
         .enter().append("line")
         .attr("id", function(d) { return d.id; });
 
-    var node_g = g.append("g").attr("class", "tnodes_fleZMtEQ")
+    var node_g = g.append("g").attr("class", "tnodes_TCcDWATc")
         .selectAll("circle")
         .data(temporal_net.nodes, function(d){return d.id;})
         .enter()
@@ -169,7 +169,7 @@ require(["d3"], function(d3) {
             .attr('id', function(d) { return d.id; })
             .attr("r", radius)
             // .attr("fill", function(d) { return color(d.group); })
-            .attr("class", "tnodes_fleZMtEQ")
+            .attr("class", "tnodes_TCcDWATc")
             .call(d3.drag()
                 .on("start", dragstarted)
                 .on("drag", dragged)
@@ -179,7 +179,7 @@ require(["d3"], function(d3) {
     .attr("x", [0, 5][0])
     .attr("y", [0, 5][1])
     .attr("id", function(d) {return d.id; })
-    .attr("class", "active_fleZMtEQ")
+    .attr("class", "active_TCcDWATc")
     .text(function(d) { return d.id; });
     
     node.append("title").text(function(d) { return d.id; });
@@ -190,21 +190,21 @@ require(["d3"], function(d3) {
 
     // build mapping to DOM objects once 
     // for performance reasons
-    var time_txt = d3.select('#fleZMtEQ_time_txt');
+    var time_txt = d3.select('#TCcDWATc_time_txt');
     var edges_to_dom = {};
     var nodes_to_dom = {};    
 
     links.forEach(function(link){    
-        edges_to_dom[link.id] = d3.select('#fleZMtEQ #'+link.id);
+        edges_to_dom[link.id] = d3.select('#TCcDWATc #'+link.id);
     });
 
     temporal_net.nodes.forEach(function(n){    
-        nodes_to_dom[n.id] = d3.select('#fleZMtEQ #'+n.id);
+        nodes_to_dom[n.id] = d3.select('#TCcDWATc #'+n.id);
     });
 
     // attach event handlers
-    d3.select('#fleZMtEQ_start_txt').on("click", pauseAnimation);
-    d3.select('#fleZMtEQ_restart_txt').on("click", restartAnimation);    
+    d3.select('#TCcDWATc_start_txt').on("click", pauseAnimation);
+    d3.select('#TCcDWATc_restart_txt').on("click", restartAnimation);    
 
     simulation.nodes(temporal_net.nodes).on("tick", ticked);
     // simulation.force("link").links(links);
@@ -231,7 +231,7 @@ require(["d3"], function(d3) {
             try {
                 // edges_to_dom[l.id].attr('class', 'links');
                 links_by_id[id].strength = hidden_link_strength;
-                edges_to_dom[id].attr('class', 'hidden_fleZMtEQ');              
+                edges_to_dom[id].attr('class', 'hidden_TCcDWATc');              
             }
             catch(err){
                 console.log('Error: Could not find DOM object with id ' + id);
@@ -240,7 +240,7 @@ require(["d3"], function(d3) {
         // reset all nodes to inactive
         for (id in nodes_to_dom) {
             try{
-                nodes_to_dom[id].attr("class", "tnodes_fleZMtEQ");
+                nodes_to_dom[id].attr("class", "tnodes_TCcDWATc");
             }
             catch(err){
                 console.log('Error: Could not find DOM object with id ' + id);
@@ -257,19 +257,19 @@ require(["d3"], function(d3) {
                     if (ti >= time-tsperframe+1 && ti <= time) {
                         node_ids = id.split('-');
                         try {
-                            edges_to_dom[id].attr('class', 'active_fleZMtEQ').moveToFront();
+                            edges_to_dom[id].attr('class', 'active_TCcDWATc').moveToFront();
                         }
                         catch(err){
                             console.log('Error: Could not find DOM link with id ' + id);
                         }
                         try {
-                            nodes_to_dom[node_ids[0]].attr('class', 'active_fleZMtEQ').moveToFront();
+                            nodes_to_dom[node_ids[0]].attr('class', 'active_TCcDWATc').moveToFront();
                         }
                         catch(err){
                             console.log('Error: Could not find DOM node with id ' + node_ids[0]);
                         }
                         try {
-                            nodes_to_dom[node_ids[1]].attr('class', 'active_fleZMtEQ').moveToFront();                            
+                            nodes_to_dom[node_ids[1]].attr('class', 'active_TCcDWATc').moveToFront();                            
                         }
                         catch(err){
                             console.log('Error: Could not find DOM node with id ' + node_ids[1]);
@@ -277,7 +277,7 @@ require(["d3"], function(d3) {
                     }
                     // links in current time slice that are not active
                     else{
-                        edges_to_dom[id].attr('class', 'tlinks_fleZMtEQ');
+                        edges_to_dom[id].attr('class', 'tlinks_TCcDWATc');
                     }
                 });
             }
@@ -295,13 +295,13 @@ require(["d3"], function(d3) {
         if (run_status) {
             run_status = false;
             clearInterval(intervl);
-            d3.select('#fleZMtEQ_start_txt').html('start');
+            d3.select('#TCcDWATc_start_txt').html('start');
             console.log('Paused animation.')
         }
         else {
             intervl = setInterval(time_step, msperframe);
             run_status = true;
-            d3.select('#fleZMtEQ_start_txt').html('stop');
+            d3.select('#TCcDWATc_start_txt').html('stop');
             console.log('Resumed animation.')
         }
         
@@ -316,7 +316,7 @@ require(["d3"], function(d3) {
             clearInterval(intervl);
         time = mintime;
         time_txt.html('t = ' + time);
-        d3.select('#fleZMtEQ_start_txt').html('stop');
+        d3.select('#TCcDWATc_start_txt').html('stop');
         run_status = true;
         intervl = setInterval(time_step, msperframe);
         console.log('Restarted animation.')
