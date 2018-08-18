@@ -50,7 +50,7 @@ Unit | Topic | Notebook | Live Solution
 
 Tutor: [Ingo Scholtes, Data Analytics Group, University of Zurich](http://ifi.uzh.ch/dag)
 
-**Pitch:** Representation Learning: From Higher-Order to Optimal Network Models (15 min) | [slides](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/talks/)
+**Pitch:** Representation Learning: From Higher- to Optimal Multi-Order Models (15 min) | [slides](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/talks/)
 - Higher- vs. multi-order graphical models
 - Representation learning in temporal network data
 - Cross-validation of multi-order models
@@ -60,9 +60,9 @@ Tutor: [Ingo Scholtes, Data Analytics Group, University of Zurich](http://ifi.uz
 Unit | Topic | Notebook | Live Solution
 ----|----|----|----
 2.1 | Higher-order analysis of time-stamped network data in [`pathpy`](http://www.pathpy.net) (15 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_1_temporal_networks.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_1_temporal_networks.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_1_temporal_networks.py)  
-2.2 | Multi-order representation learning in [`pathpy`](http://www.pathpy.net) (15 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_2_multi_order.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_2_multi_order.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_2_multi_order.py)  
+2.2 | Multi-order representation learning with [`pathpy`](http://www.pathpy.net) (15 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_2_multi_order.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_2_multi_order.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_2_multi_order.py)  
 2.3 | Optimal node ranking in dynamic social networks (15 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_3_cross_validation.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_3_cross_validation.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_3_cross_validation.py)
-2.4 | Exploration: Higher-order analysis of [time-stamped social network data](https://github.com/IngoScholtes/kdd2018-tutorial/tree/master/data) (30 min) | [.py](https://),  [.ipynb](https://) | N/A
+2.4 | Exploration: Multi-order representation learning in [time-stamped social networks](https://github.com/IngoScholtes/kdd2018-tutorial/tree/master/data) (30 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_4_exploration.py),  [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_4_exploration.py) | N/A
 
 ### Lunch break
 *12:00 - 13:30*
