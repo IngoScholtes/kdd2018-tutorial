@@ -10,11 +10,9 @@
 ### Demo of HON: please visit http://www.HigherOrderNetwork.com
 ### Latest code: please visit https://github.com/xyjprc/hon
 
-### See details in README
 
-import BuildRulesFastParameterFree
-import BuildRulesFastParameterFreeFreq
-import BuildNetwork
+from dependencies.ExtractVariableOrderRules import *
+from dependencies.NetworkRewiring import *
 import itertools
 
 
@@ -24,20 +22,10 @@ MaxOrder = 99
 MinSupport = 10
 
 ## Initialize user parameters
-#InputFileName = '../data/traces-simulated-mesh-v100000-t100-mo4.csv'
-#OutputRulesFile = '../data/rules-syn.csv'
-#OutputNetworkFile = '../data/network-syn.csv'
+InputFileName = '../data/SyntheticTrajectoriesVariableOrdersSmall.csv'
 
-## Initialize user parameters
-#InputFileName = '../../../../C2/data/synthetic/1098_ModifyMixedOrder.csv'
-InputFileName = '../data/subpath_30_notime.txt'
-
-#InputFileName = '../data/synthetic-major/9999.csv'
-#InputFileName = '../data/synthetic-major/1000_ModifyMixedOrder.csv'
-#InputFileName = '../data/traces-test.csv'
-#InputFileName = '../data/traces-lloyds.csv'
-OutputRulesFile = '../data/rules-cell30.csv'
-OutputNetworkFile = '../data/network-cell30.csv'
+OutputRulesFile = '../data/SyntheticTrajectoriesVariableOrders_rules.csv'
+OutputNetworkFile = '../data/SyntheticTrajectoriesVariableOrders_network.csv'
 
 LastStepsHoldOutForTesting = 0
 MinimumLengthForTraining = 1
@@ -156,11 +144,11 @@ def BuildHONfreq(InputFileName, OutputNetworkFile):
 ###########################################
 
 if __name__ == "__main__":
-    print('FREQ mode!!!!!!')
+    #print('FREQ mode!!!!!!')
     RawTrajectories = ReadSequentialData(InputFileName)
     TrainingTrajectory, TestingTrajectory = BuildTrainingAndTesting(RawTrajectories)
     VPrint(len(TrainingTrajectory))
-    Rules = BuildRulesFastParameterFreeFreq.ExtractRules(TrainingTrajectory, MaxOrder, MinSupport)
+    Rules = ExtractRules(TrainingTrajectory, MaxOrder, MinSupport)
     DumpRules(Rules, OutputRulesFile)
-    Network = BuildNetwork.BuildNetwork(Rules)
+    Network = BuildNetwork(Rules)
     DumpNetwork(Network, OutputNetworkFile)
