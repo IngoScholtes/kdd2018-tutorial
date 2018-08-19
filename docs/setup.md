@@ -21,6 +21,10 @@ in the directory of your local copy to receive a *sample solution* that is growi
 
 To complete the hands-on exercises, you will need a working `python 3.x` environment running on an operating system of your choice. For Windows, MacOS, and Linux users we recommend [Anaconda 5.2](https://www.anaconda.com/download/) distribution, an OpenSource `python` 3.6 distribution that comes pre-configured for data science and machine learning tasks.
 
+The only additional package that you may need for this tutorial is the package [markdown](https://pypi.org/project/Markdown/). We use it to produce nicely formatted output with the python skeleton files. You can just install it by typing: 
+
+``pip install markdown`` 
+
 # Installing Visual Studio Code
 
 To complete the exercises, we highly recommend using the development environment [Visual Studio Code](https://code.visualstudio.com/Download), a platform-independent Open Source code editor available for Windows, MacOS, and Linux. Just download the installation file and run the setup. Once the installation has completed, run Visual Studio Code either by clicking the icon or by typing `code` in the terminal.
@@ -43,21 +47,11 @@ Sessions 4 and 5 will introduce [InfoMap](http://www.mapequation.org), an OpenSo
 
 ## Setting up pathpy
 
-`pathpy` is pure python code. It has no platform-specific dependencies and thus work on all platforms. It builds on `numpy` and `scipy` which come preinstalled in the Anaconda 5.2 environment. Assuming that a `python 3.x` environment has been successfully installed as described above, the latest version of `pathpy` can be installed in two ways:
-
-### Option 1: Installation via Python Package Index (pip)
-
-The simplest way is to install the package `pathpy2` via the [python package index pypi](https://pypi.org/). For this, you just need to open a terminal window of your operating system. Make sure that you have a `python` 3.x environment properly set up. Then run the command:
+`pathpy` is pure python code. It has no platform-specific dependencies and thus work on all platforms. It builds on `numpy` and `scipy` which come preinstalled in the Anaconda 5.2 environment. Assuming that a `python 3.x` environment has been successfully installed as described above, the latest version of `pathpy` can be installed via the [python package index pypi](https://pypi.org/). For this, you just need to open a terminal window of your operating system. Make sure that you have a `python` 3.x environment properly set up. Then run the command:
 
 `pip install pathpy2`
 
 Unfortunately, the `pypi` name `pathpy` has been name squatted after a previous version of `pathpy` had been released to the pypi test servers. While we are working to resolve this issue, we will have to use the package `pathpy2`. So make sure that you install the pypi package `pathpy2` rather than the empty (spam) package `pathpy`.
-
-### Option 2: Installation from gitHub
-
-A second option to install `pathpy` is to directly pull the latest development version from the [official gitHub repository](https://github.com/IngoScholtes/pathpy). To install the latest 2.0 version, just execute the following line in your terminal (after August 17):
-
-`pip install git+git://github.com/IngoScholtes/pathpy@pathpy2`
 
 ## Setting up InfoMap
 
