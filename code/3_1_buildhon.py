@@ -19,10 +19,10 @@ import itertools
 
 ## Initialize algorithm parameters
 MaxOrder = 99
-MinSupport = 10
+MinSupport = 1
 
 ## Initialize user parameters
-InputFileName = '../data/SyntheticTrajectoriesVariableOrdersSmall.csv'
+InputFileName = '../data/SyntheticTrajectoriesVariableOrders.csv'
 
 OutputRulesFile = '../data/SyntheticTrajectoriesVariableOrders_rules.csv'
 OutputNetworkFile = '../data/SyntheticTrajectoriesVariableOrders_network.csv'
@@ -98,7 +98,7 @@ def DumpNetwork(Network, OutputNetworkFile):
             for target in Network[source]:
                 f.write(','.join([SequenceToNode(source), SequenceToNode(target), str(Network[source][target])]) + '\n')
                 LineCount += 1
-    VPrint(str(LineCount) + ' lines written.')
+    VPrint(str(LineCount) + ' edges written.')
 
 def SequenceToNode(seq):
     curr = seq[-1]
@@ -139,16 +139,33 @@ def BuildHONfreq(InputFileName, OutputNetworkFile):
     DumpNetwork(Network, OutputNetworkFile)
     VPrint('Done: '+InputFileName)
 
+def RuleStats(Rules):
+    orders = defaultdict(int)
+    NumRules = 0
+    for key in Rules:
+        for val in Rules[key]:
+            order = len(key)
+            orders[order] += 1
+            NumRules += 1
+    keys = sorted(list(orders))
+    print('Total rules:', NumRules)
+    for key in keys:
+        print('Extracted', orders[key], 'rules of order', key)
+
 ###########################################
 # Main function
 ###########################################
 
 if __name__ == "__main__":
-    #print('FREQ mode!!!!!!')
+    print('Running parameter-free extraction of variable orders')
+    print('Max-order:', MaxOrder, 'MinSupport:', MinSupport)
     RawTrajectories = ReadSequentialData(InputFileName)
     TrainingTrajectory, TestingTrajectory = BuildTrainingAndTesting(RawTrajectories)
     VPrint(len(TrainingTrajectory))
     Rules = ExtractRules(TrainingTrajectory, MaxOrder, MinSupport)
+    RuleStats(Rules)
     DumpRules(Rules, OutputRulesFile)
+    print('Converting rules of variable orders of dependencies into a higher-order network')
     Network = BuildNetwork(Rules)
     DumpNetwork(Network, OutputNetworkFile)
+    print('Done!')

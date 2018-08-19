@@ -104,6 +104,7 @@ def BuildDistributions(MinSupport, order):
 def GenerateAllRules(MaxOrder, Trajectory, MinSupport):
     VPrint('generating rules')
     progress = len(Distribution)
+    VPrint('Total number of first-order states:')
     VPrint(progress)
     LoopCounter = 0
     for Source in tuple(Distribution.keys()):
