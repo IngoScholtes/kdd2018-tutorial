@@ -1,8 +1,6 @@
-### Major update: parameter free and magnitudes faster than previous versions.
-### Paper and pseudocode: https://arxiv.org/abs/1712.09658
-
-
 ### This package: Python implementation of the higher-order network (HON) construction algorithm.
+### This version of code is adapted for the KDD 2018 tutorial "Beyond Graph Mining: Higher-Order Data Analytics for Temporal Network Data" https://ingoscholtes.github.io/kdd2018-tutorial/
+
 ### Paper: "Representing higher-order dependencies in networks"
 ### Code written by Jian Xu, Apr 2017
 
@@ -10,6 +8,8 @@
 ### Demo of HON: please visit http://www.HigherOrderNetwork.com
 ### Latest code: please visit https://github.com/xyjprc/hon
 
+### Major update: parameter free and magnitudes faster than previous versions.
+### Paper and pseudocode: https://arxiv.org/abs/1712.09658
 
 from dependencies.ExtractVariableOrderRules import *
 from dependencies.NetworkRewiring import *
