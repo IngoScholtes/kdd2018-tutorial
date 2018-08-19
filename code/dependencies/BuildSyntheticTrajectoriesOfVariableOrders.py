@@ -539,9 +539,9 @@ def SynthesizeModifyMixedOrder(NetworkPrefixCounter):
 ################ main
 
 NetworkPrefixCounter = 0
-OutputFolder = '../data/synthetic/'
+OutputFolder = '../data/'
 iterations = 10
-vessels = 100000
+vessels = 10000
 steps = 100
 
 if __name__ == '__main__':
@@ -610,4 +610,3 @@ if __name__ == '__main__':
                      range(NetworkPrefixCounter, NetworkPrefixCounter + iterations))
 
     NetworkPrefixCounter += iterations
-
