@@ -35,7 +35,7 @@ Tutor: [Ingo Scholtes, Data Analytics Group, University of Zurich](http://ifi.uz
 
 **Welcome Note and Tutorial Overview**  
 
-**Intro: Higher-Order Network Analytics for Time Series Data** (30 min) | [slides]  (https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/talks/)  
+**Intro: Higher-Order Network Analytics for Time Series Data** (30 min) | [slides](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/talks/)  
 - The arrow of time in temporal networks
 - Higher-order dependencies in causal paths
 - From graphs to higher-order generative models
