@@ -68,7 +68,6 @@ pip install infomap
 ```
 
 If you are running on Windows 10, the easiest way to get the compilation tools needed to complete the installation is to [install the Ubuntu bash](https://docs.microsoft.com/en-us/windows/wsl/install-win10). This will set up a Linux subsystem on your Windows machine. After you have installed the distribution, just start the Ubuntu bash terminal and run the command above.
-`sudo apt-get install `
 
 For more detailed information about the installation and usage of `InfoMap`, see [www.mapequation.org/code.html](http://www.mapequation.org/code.html).
 
