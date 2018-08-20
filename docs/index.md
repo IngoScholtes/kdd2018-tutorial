@@ -24,7 +24,7 @@ Participants should bring a laptop with a python 3.x environment. See [setup ins
 
 # Schedule
 
-The tutorial consists of three parts that give an overvoew of different software frameworks for higher-order network analysis.
+The tutorial consists of three separate blocks that give an overview of different software frameworks for higher-order network analysis.
 
 ## Block I: Higher-Order Network Anlytics with [pathpy](http://www.pathpy.net)
 
@@ -70,24 +70,22 @@ Unit | Topic | Notebook | Live Solution
 ### Lunch break
 *12:00 - 13:30*
 
-## Part II: Introduction to Higher-Order Graph Clustering with [InfoMap](http://www.mapequation.org)
+## Block II: Introduction to Higher-Order Graph Clustering with [InfoMap](http://www.mapequation.org)
 
 ### Session: Introduction to MapEquation and InfoMap
 *13:30 - 15:00*
 
 Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-edler/)
 
-*Introduction to Flow Compression with the MapEquation* (30 minutes) | [slides](http://...)
+*Introduction to Flow Compression with the MapEquation* (45 minutes) | [slides](http://...)
 - Introduction to graph clustering
 - Flow Compression: The MapEquation
 - Minimisation of Modular Description Length
 - Second-order Flow Compression in trigram data
 
-*Hands-on Coding Session* (60 minutes) | [notebook](http://...)
-- Getting started with `InfoMap`
+**Live Coding** (45 min)
+- Introducing `InfoMap`
 - Community detection in first-order models
-- Community detection in higher-order models
-- Exploration: ... 
 
 ### Coffee break
 *15:00 - 15:30*
@@ -97,17 +95,12 @@ Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-
 
 Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-edler/)
 
-*Higher-Order Community Detection with InfoMap* (30 minutes) | [slides](http://...)
-- Memory Networks and the Higher-Order MapEquation
-- State Lumping Algorithms
-- ... 
-- ... 
-
-*Hands-on Coding Session* (60 minutes)
-- Interactive Visualisation with InfoBaleen
+**Live Coding** (90 min)
+- Higher-order clustering with InfoMap
+- Interactive Visualisation of hierarchical clusters
 
 
-## Part III: Variable-order Analytics with HONVis
+## Block III: Variable-order Analytics with HONVis
 
 Tutor: [Nitesh Chawla, University of Notre Dame](https://www3.nd.edu/~nchawla/)
 
