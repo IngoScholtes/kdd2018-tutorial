@@ -13,13 +13,21 @@ If you don't have `git` installed already, here you can find information on [how
 
 Prior to the start of the first tutorial session, we will add skeleton `python` files to the [`code` directory](https://github.com/IngoScholtes/kdd2018-tutorial/tree/master/code) of the repository. We will complete the code in these skeleton files together throughout the hands-on coding sessions. At specific *sync points*, we will push the current solution to our `gitHub` repository. You can thus simply execute the terminal command
 
-`git pull`
+```
+git pull
+```
 
 in the directory of your local copy to receive a *sample solution* that is growing as the hands-on tutorial moves forward. If you are using Visual Studio Code (see below) things are even easier: Just click the **sync** symbol in the status bar to update the current sample solution shown on the tutor's screen! This will allow you to quickly correct any potential errors.
 
 # Installing python 3.X
 
 To complete the hands-on exercises, you will need a working `python 3.x` environment running on an operating system of your choice. For Windows, MacOS, and Linux users we recommend [Anaconda 5.2](https://www.anaconda.com/download/) distribution, an OpenSource `python` 3.6 distribution that comes pre-configured for data science and machine learning tasks.
+
+The only additional package that you may need for this tutorial is the package [markdown](https://pypi.org/project/Markdown/). We use it to produce nicely formatted output with the python skeleton files. You can just install it by typing: 
+
+```
+pip install markdown
+```
 
 # Installing Visual Studio Code
 
@@ -45,21 +53,13 @@ Sessions 4 and 5 will introduce [InfoMap](http://www.mapequation.org), an OpenSo
 
 ## Setting up pathpy
 
-`pathpy` is pure python code. It has no platform-specific dependencies and thus work on all platforms. It builds on `numpy` and `scipy` which come preinstalled in the Anaconda 5.2 environment. Assuming that a `python 3.x` environment has been successfully installed as described above, the latest version of `pathpy` can be installed in two ways:
+`pathpy` is pure python code. It has no platform-specific dependencies and thus work on all platforms. It builds on `numpy` and `scipy` which come preinstalled in the Anaconda 5.2 environment. Assuming that a `python 3.x` environment has been successfully installed as described above, the latest version of `pathpy` can be installed via the [python package index pypi](https://pypi.org/). For this, you just need to open a terminal window of your operating system. Make sure that you have a `python` 3.x environment properly set up. Then run the command:
 
-### Option 1: Installation via Python Package Index (pip)
-
-The simplest way is to install the package `pathpy2` via the [python package index pypi](https://pypi.org/). For this, you just need to open a terminal window of your operating system. Make sure that you have a `python` 3.x environment properly set up. Then run the command:
-
-`pip install pathpy2`
+```
+pip install pathpy2
+```
 
 Unfortunately, the `pypi` name `pathpy` has been name squatted after a previous version of `pathpy` had been released to the pypi test servers. While we are working to resolve this issue, we will have to use the package `pathpy2`. So make sure that you install the pypi package `pathpy2` rather than the empty (spam) package `pathpy`.
-
-### Option 2: Installation from gitHub
-
-A second option to install `pathpy` is to directly pull the latest development version from the [official gitHub repository](https://github.com/IngoScholtes/pathpy). To install the latest 2.0 version, just execute the following line in your terminal (after August 17):
-
-`pip install git+git://github.com/IngoScholtes/pathpy@pathpy2`
 
 ## Setting up InfoMap
 
@@ -78,12 +78,14 @@ Now that we have installed all necessary tools and packages, let us verify that 
 
 For this, you can either create a new file in Visual Studio Code and copy the following code:
 
-`#%%`
-`import pathpy as pp`
-`paths = pp.Paths()`
-`paths.add_path('a,b,c')`
-`#%%`
-`print(paths)`
+```
+#%%  
+import pathpy as pp
+paths = pp.Paths()
+paths.add_path('a,b,c')
+#%%
+print(paths)
+```
 
 Or you can simply open your local copy of the tutorial repository in Visual Studio Code as described above. In the `code` directory, you will find the file `0_test_environment.py`, which contains the code above.
 
