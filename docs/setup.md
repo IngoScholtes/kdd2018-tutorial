@@ -104,13 +104,11 @@ python3 3_1_buildhon.py
 
 ## Setting up HONVis
 
-`HONVis` is built with C++ and available in binaries. It is compiled separately for Windows, Mac and Linux.
+`HONVis` is built with C++ and available in binaries. It is compiled separately for Windows, Mac and Linux. It is under code/3_2_HONVis
 
-For Mac, run
+For Windows, double click `HONVis_NYC_Taxi_Case_Jul_Aug.exe`, and follow the video tutorial `HONVis_KDD2018.mp4` at 5 mins.
+
+For Mac or Linux, run the following in Terminal (or your favorite shell)
 ```
 ./Jul_Aug
-```
-or
-```
-./Sunday
 ```
