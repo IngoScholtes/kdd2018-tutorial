@@ -26,7 +26,7 @@ Participants should bring a laptop with a python 3.x environment. See [setup ins
 
 The tutorial consists of three parts that give an overvoew of different software frameworks for higher-order network analysis.
 
-## Part I: Higher-Order Network Anlytics with [`pathpy`](http://www.pathpy.net)
+## Part I: Higher-Order Network Anlytics with [pathpy](http://www.pathpy.net)
 
 ### Session: Introduction to Higher-Order Network Analytics
 *08:30 - 10:00*
@@ -73,7 +73,7 @@ Unit | Topic | Notebook | Live Solution
 ### Lunch break
 *12:00 - 13:30*
 
-## Part II: Introduction to Higher-Order Graph Clustering with [`InfoMap`](http://www.mapequation.org)
+## Part II: Introduction to Higher-Order Graph Clustering with [InfoMap](http://www.mapequation.org)
 
 ### Session: Introduction to MapEquation and InfoMap
 *13:30 - 15:00*
