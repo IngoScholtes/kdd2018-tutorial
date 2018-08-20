@@ -19,13 +19,13 @@ University of Zurich
 
 #%%
 md("""
-In the previous session we have seen how we can use `pathpy`'s representation learning features to automatically learn the optimal maximum order of a multi-order network model. The resulting models are optimal in the sense that they offers -- in the spirit of William of Ockham -- the best compromise between model complexity and explanatory power.
+In the previous session we have seen how we can use `pathpy`'s representation learning features to **automatically learn the optimal maximum order of a multi-order network model**. The resulting models are optimal in the sense that they offer -- in the spirit of [William of Ockham](https://en.wikipedia.org/wiki/William_of_Ockham) -- the best compromise between model complexity and explanatory power.
 
-But how does this "optimality" translate to actionable insights into real-world data? In this session we answer this question by showing that the model with optimal order generalises best to unseeen data, i.e. we address the question by means of a cross-validation experiment.
+But does this "optimality" from a "philosophy of science" point of view also translate to actionable insights in real-world data? In this session we address this question. We will show that the model with optimal order "generalises" best to unseeen data, i.e. we will address the question by means of a cross-validation.
 
-With this session, we put together the pieces that we assembled so far: We will extract causal paths from temporal networks, fit higher- and multi-order models to the resulting path statistics, we learn the optimal order of the multi-order model, and show how this translates to an optimal ranking and visualisation of temporal data. 
+With this final session of our tutorial, we put together all of the pieces that we have introduced: We will extract causal path statistics from time-stamped network data, fit higher- and multi-order models to the resulting paths, learn the optimal maximum order of the multi-order model, and show that this translates to a meaningful higher-order ranking and visualisation for time series data. 
 
-Let us start with our example temporal network from session 2, which was synthethically generated to exclusively contain second-order dependencies between edges that give rise to temporal clusters. We have seen that we can visually identify these clusters if we generate a higher-order visualisation at the "correct" order. Now we know how we can learn this "correct" order from the data itself. We simply run the multi-order representation learning and visualise the layer of the multi-order that corresponds to the optimal maximum order. Let us try this.
+Let us start with our example temporal network from session 2, which was synthethically generated to *exclusively* contain second-order dependencies between edges that give rise to temporal clusters. We can visually identify these clusters if we generate a higher-order visualisation at the "correct" order of two. Thanks to the previous unit, we now know how we can learn this "correct" order from the data itself. We can run the multi-order representation learning algorithm and visualise the higher-order layer of the multi-order that corresponds to the optimal maximum order. Let us try this in practice.
 
 <span style="color:red">**TODO:** Import `pathpy`, read the `TemporalNetwork` file `data/temporal_clusters.edges` and extract causal paths for `delta=1`. Generate a multi-order model, learn the optimal order, and plot a higher-order visualisation at this order.</span>
 """)
@@ -35,47 +35,69 @@ Let us start with our example temporal network from session 2, which was synthet
 
 #%%
 md("""
-Neat! We can now automatically visualise -- and thus **explain** -- the pattern that is the reason why this temporal network requires a second-order network representation.
+Neat! We can automatically visualise -- and thus **explain** -- those patterns in the time series that are the reason why a second-order representation is needed.
 
-For those who are still sceptical whether it is really impossible to detect this pattern with standard graph mining techniques, let us confirm that it is solely due to the chronological ordering of events.
+For those of you who may still be sceptical whether it is really impossible to detect this cluster pattern with standard graph mining techniques, let us confirm that the pattern is solely due to the chronological ordering of events.
 
-We can do this by randomly shuffling time stamps of edges. This neither changes the inter-event time distribution, nor the frequency or topology of edges. It does, however, break any second-order dependencies in the chronological order of edges, thus changing the statistics of causal paths. Let's try this.
+We can test this by randomly shuffling the time stamps of all time-stamped edges. This neither changes the inter-event time distribution, nor the frequency or topology of edges. It does, however, break any second-order dependencies in the chronological ordering in which edges occur, thus changing the statistics of causal paths that we are trying to model. Let us try this in our example.
 
 <span style="color:red">**TODO:** Use the `random.shuffle` function to randomly shuffle the time stamps of edges in the temporal network `t`. Repeat the order detection and the optimal order visualisation from above for the shuffled temporal network.</span>
 """)
 
-#%% In [None]
+#%% In [2]
 
 
 #%%
 md("""
-The cluster pattern disappears, which confirms that **this pattern is exclusively due to the chronological ordering of time-stamped edges**. Moreover, the representation learning algorithm has correctly concluded that a simpler first-order network is the optimal model for the causal paths in the shuffled temporal network.
+The cluster pattern disappears, which confirms that **the cluster pattern is exclusively due to the chronological ordering of time-stamped edges**. Moreover, the representation learning algorithm correctly detects that a simple first-order network is sufficient to explain the causal paths in the shuffled temporal network. In this case, we can reasonably model the system as a static, directed and weighted graph!
 
-Concluding this session, we now study to what extent a model with optimal order translates to the best model for prediction tasks. For this, we will first define some utility functions that will simplfy the cross-validation.
+FInally, let us study to what extent a model with optimal order is actually also the best model for prediction tasks. For this, we first need to define some utility functions that will simplify our cross-validation. Let me highlight that for the sake of time, we take a couple of shortcuts in our analysis (no multiple random folds, overly simple splitting into test and validation data, simplistic performance measure, etc.). So please do not expect waterproof publication-grade results. We are rather interested in getting a quick idea about the optimality of multi-order models.
 
-Since the overlap between the nodes observed in the training data, and the nodes in the validation data may not be perfect, we first need to define a function that calculates the `kendalltau` rank correlation coefficient for the intersection of nodes in the training and validation sets.
+The general idea of our analysis is to use PageRank on a (higher-order) network model in a training data set, to predict the ranking of nodes according to visitation probabilities on actual paths in a validation data set. Like before, we want to evaluate the goodness of this prediction (in terms of the node ranking) using the [Kendall-Tau rank correlation coefficient](https://en.wikipedia.org/wiki/Kendall_rank_correlation_coefficient). Since the overlap between the nodes observed in the training data, and the nodes observed in the validation data may not be perfect, we first need a function that calculates the Kendall-Tau correlation for the intersection of nodes in the training and validation sets.
 
-<span style="color:red">**TODO:** Define a function `kendalltau(a,b)` that (i) calculates the intersection of nodes, passed in two dictionaries `a` and `b`, and (ii) returns the Kendall-Tau rank correlation for this intersection calculated by `scipy.stats.kendalltau`.</span>
+<span style="color:red">**TODO:** Define a function `kendalltau(a,b)` that calculates the intersection of node rankings passed via two dictionaries `a` and `b`, where `a[v]`  is the centrality score of node `v` in ranking `a`. Return the Kendall-Tau rank correlation for the intersection nodes calculated by `scipy.stats.kendalltau`.</span>
 """)
 
-#%% In [10]
+#%% In [3]
 
 
 #%%
 md("""
-To speed up the analysis, we can use ground truth node traversal frequencies, which we have precomputed for you and which we have stored in `json` files. We now write a function that can read these data, returning a dictionary.
+To speed up the analysis, we suggest to use ground truth node traversal frequencies, which we have precomputed for you and which we have stored in `json` files. We need a function that can read these data from a `json` file, returning a dictionary with node visitation frequences.
 
 <span style="color:red">**TODO:** Define a function `read_gt(filename)` that reads a file and returns the JSON-deserialised python-object.</span>
 """)
 
-#%% In [11]
+#%% In [4]
 
 
 #%%
 md("""
-Next, we need a function to calculate the kendall-tau rank correlation for different layers of a multi-order model. We will use this to verify that the detected optimal order yield an advantage over the predictions derived from the first-order model.
+Next, we need a function to calculate the kendall-tau rank correlation between the higher-order PageRank and the ground truth for each layer of a given multi-order model. We will use this to verify that the detected optimal order yield an advantage over the predictions derived from the first-order model.
 
-<span style="color:red">**TODO:** Define a function `validate(mog, gt)` that ...</span>
+<span style="color:red">**TODO:** Define a function `validate(mog, ground_truth)` that returns a dictionary `result`, where `result[k]` contains the Kendall-Tau rank correlation between (i) a $k$-th order PageRank calculated in the $k$-th layer of MOG and (ii) the ground truth.</span>
+""")
+
+#%% In [5]
+
+
+#%%
+md("""
+Finally, we want to plot our results (obviously in an `xkcd`-style plot). So let's define a plot function for this.
+
+<span style="color:red">**TODO:** Define a function `plot_results(result, optimal_order)` that uses `matplotlib` to generate a plot of Kendall-Tau rank correlations (y-axis) against the order $k$ (x-axis). Highlight the optimal order given by the parameter `optimal_order`.</span>
+""")
+
+#%% In [6]
+
+
+#%%
+md("""
+We are now ready to analyse our data. Let us start with a data set where we already know what to expect. For the data on US flight passenger trips, in unit 1.3 we have seen that the predictive performance of a higher-order model for the flight data saturates around order two. Moreover, using a multi-order model we have found that the optimal order to model the flight itineraries is two. Let us now plot the kendall-tau correlation of our ranking for different orders.
+
+To speed things up a little, read the ground truth for the airport rankings from the file `US_flights_gt.json`. You can then use the method `validate` to calculate the kendall-tau rank correlation with the ground truth for different layers of the multi-order model, and the method `plot_results` to plot the results and the detected optimal order.
+
+<span style="color:red">**TODO:** Read the training data set `US_flights_train.ngram`, generate a `MultiOrderModel` with maximum order three, and detect the optimal order. Cross-validate the obtained node ranking and plot the results.</span>
 """)
 
 #%% In [7]
@@ -83,9 +105,11 @@ Next, we need a function to calculate the kendall-tau rank correlation for diffe
 
 #%%
 md("""
-Finally, we want to plot our results (obviously in `xkcd`-style charts).
+This simply confirms what we have seen before. The predictive performance of our model saturates at the optimal order detected by our representation learning algorithm. Beyond this optimal order, the **additional complexity of a third-order model is not justified by the (marginal) increase of predictive power**.
 
-<span style="color:red">**TODO:** Define a function `plot_results(mog, gt)` that ...</span>
+Let us now consider some real-world time-stamped social networks. To simplify our life, let us again connect to our `SQLite` database. We start by an analysis of (directed) E-Mail exchanges, stored in table `manufacturing_email`. Let us repeat our analysis from above in this data. To make the analysis faster, let us use a time-rescaling parameter of `600` (i.e. we produce 10 minute time slices). Let us further consider `delta=12`, so we consider paths within a maximum time difference of two hours.
+
+<span style="color:red">**TODO:** Generate the same plot like above for the temporal network in the database table `data/manufacturing_email. Use the `TemporalNetworks.filter` function to limit the training data to the first half of the obsered interactions. Use the `sample_paths_from_temporal_network_dag` function to sample `2000` root nodes. Read the ground truth from file `data/manufacturing_email_gt.json`.</span>
 """)
 
 #%% In [8]
@@ -93,56 +117,39 @@ Finally, we want to plot our results (obviously in `xkcd`-style charts).
 
 #%%
 md("""
-We are now ready to analyse our data. Let us start with a data set where we know what to expect. For the data on US flight passenger trips, in unit 1.3 we have seen that the predictive performance of a higher-order model for the flight data saturated around order two. Moreover, using a multi-order model we have found that the optimal order to model the flight itineraries is two. Let us now plot the kendall-tau correlation of our ranking for different orders.
+We find that the model at optimal order two yields an approx. 13 % increase over a first-order graph model. In contrast, the representation learning algorithm correctly identified that a third-order model would overfit the causal path structures, which is expressed in the drop in predictive performance.
 
-To speed things up a little, you can read the ground truth for the airport rankings from the file `US_flights_gt.json`. You can then use the method `validate` to calculate the kendall-tau rank correlation with the ground truth for different layers of the multi-order model, and the method `plot_results` to plot the results.
+We next study another example for a dynamic social network. We again read the first half to train our model based on the contained causal paths. This time we rescale time to 10 second intervals, and use a `delta=6` to define a maximum time difference of 60 seconds. Since this data set is generating densely connected paths, we only need to sample `200` roots to do the path calculation.
 
-<span style="color:red">**TODO:** Read the training data set `US_flights_train.ngram`, generate a `MultiOrderModel` with maximum order three, and detect the optimal order. Cross-validate the obtained node ranking and plot the results.</span>
+<span style="color:red">**TODO:** Repeat your analysis for the table `haggle` in the `SQLite` database, using the values mentioned above. Read the ground truth from the file `data/haggle_gt.json`</span>
 """)
 
-#%% In [12]
+#%% In [9]
 
 
 #%%
 md("""
-This simply confirms what we have seen before. The predictive performance of our model reaches a plateau at the optimal order detected by the representation learning algorithm. Beyond that order, the additional complexity of a third-order model is not justified by the (marginal) increase of predictive power.
+Again we observe that a higher-order PageRank calculated at the optimal order learned by our multi-order representation learning algorithm performs best in terms of prediction. We again find that a second-order model yields the best prediction.
 
-Let us now consider some real time-stamped social networks. 
+In fact, especially for dynamic social networks we typically find that a second-order model is sufficient to explain causal paths. We attribute this to the inherent "one-step context memory" of humans, which means that depending on with whom we interacted last, we decide with whom to interact next. It is more difficult to imagine similar mechanisms for higher-order correlations that operate in a similar, distributed way.
 
-<span style="color:red">**TODO:** XXX.</span>
+This situation is different for paths in engineered systems. Such systems have often been built to optimise paths from start to end. Here, we often observe higher-order dependencies that go beyond a second-order model. Let us study this in the final example of this session: We reconsider our data set on paths in the London Tube network, extracted using Origin-Destination statistics of real passengers as explained before. Let us check whether a second-order model is sufficient to explain those paths, and how this translates to prediction performance.
+
+<span style="color:red">**TODO:** Repeat your analysis for the training paths contained in `data/tube_paths_train.ngram`. Read the ground truth from the file `data/tube_gt.json`.</span>
 """)
 
-#%% In [18]
+#%% In [10]
 
 
 #%%
 md("""
+The resulting plot is interesting for several reasons: 
 
+1. It shows that it a bad idea to model this transpotation system from a (first-order) network perspective. The paths that are relevant in this system are very different from the assumption of *transitive and Markovian* paths, which we make when we apply standard centrality measures, spectral methods, random walk based measures, clustering algorithms, etc. A network analysis of this system is misleading, as the network topology is not sufficient to understand paths!
+2. While a second-order model is better, it is not enough to explain the complex paths of passengers. Here we see that all of the four model layers that we tested are significant. So this is an example where we need higher-order network analytics beyonds a second-order model.
+3. If we were to use more data (and time) and test up to a higher maximum order, we would actually find that the optimal maximum order of a multi-order model is six. Here we did not use enough of the data to also show that this yields the best prediction in a reasonable time. Please refer to [this paper](http://dl.acm.org/citation.cfm?id=3098145) to see the result of the full analysis.
+4. You may spot the `pathpy` warning in the output above. `pathpy` realised that (i) the maximum tested order of four was significant, and (ii) the data contained paths that would allow to construct a model of order five. The warning highlights that there may still be higher-order dependencies in the data, that we cannot rule out based on our test.
 
-<span style="color:red">**TODO:** XXX.</span>
+This concludes block I of our hands-on tutorial on higher-order network analytics and we now move to the second exploration in unit 2.4.
 """)
-
-#%% In [22]
-
-
-#%%
-md("""
-We observe that a PageRank with the optimal order learned by our multi-order graphical model selection performs best in terms of prediction.
-
-<span style="color:red">**TODO:** XXX.</span>
-""")
-
-#%% In [23]
-
-
-#%%
-md("""
-This plot is interesting for several reasons ... 
-
-1. Network model is a bad model for paths in the real systems
-2. Second-order model is better, but still not good enough
-""")
-
-#%% In [None]
-
 
