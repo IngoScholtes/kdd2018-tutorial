@@ -18,11 +18,17 @@ A detailed summary of the topics, literature, and tools covered in this hands-on
 
 The tutorial will take place on **Wednesday August 22, 2018** in ICC Capital Suite Room 2+3+4 of the [ExCel London](https://www.excel.london/organiser/venue-map), 1 Western Gateway, Royal Victoria Dock, London, E16 1FR.
 
+# Prerequisites
+
+Participants should bring a laptop with a python 3.x environment. See [setup instructions](/kdd2018-tutorial/setup). Some basic prior exposure to python is beneficial. In the first session of the tutorial we will give a brief introduction to interactive data science with python, jupyter notebook, and VS Code.
+
 # Schedule
 
-The schedule of the tutorial is as follows:
+The tutorial consists of three parts that give an overvoew of different software frameworks for higher-order network analysis.
 
-## Session 1: Introduction to Higher-Order Network Analytics
+## Part I: Higher-Order Network Anlytics with [`pathpy`](http://www.pathpy.net)
+
+### Session: Introduction to Higher-Order Network Analytics
 *08:30 - 10:00*
 
 Tutor: [Ingo Scholtes, Data Analytics Group, University of Zurich](http://ifi.uzh.ch/dag)
@@ -45,7 +51,7 @@ Unit | Topic | Notebook | Live Solution
 ### Coffee break
 *10:00 - 10:30*
 
-## Session 2: Multi-order Representation Learning
+### Session: Multi-order Representation Learning
 *10:30 - 12:00*
 
 Tutor: [Ingo Scholtes, Data Analytics Group, University of Zurich](http://ifi.uzh.ch/dag)
@@ -67,16 +73,10 @@ Unit | Topic | Notebook | Live Solution
 ### Lunch break
 *12:00 - 13:30*
 
-## Session 3: Variable-order Models with BuildHON and HONViz
-*13:30 - 14:30*
+## Part II: Introduction to Higher-Order Graph Clustering with [`InfoMap`](http://www.mapequation.org)
 
-Tutor: [Nitesh Chawla, University of Notre Dame](https://www3.nd.edu/~nchawla/)
-
-### Coffee break
-*14:30 - 15:00*
-
-## Session 4: Graph Clustering with InfoMap
-*15:00 - 16:30*
+### Session: Introduction to MapEquation and InfoMap
+*13:30 - 15:00*
 
 Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-edler/)
 
@@ -93,10 +93,10 @@ Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-
 - Exploration: ... 
 
 ### Coffee break
-*16:30 - 17:00*
+*15:00 - 15:30*
 
-## Session 5: Higher-order Graph Clustering and Visualisation
-*17:00 - 18:30*
+### Session: Higher-order Graph Clustering and Visualisation
+*15:30 - 17:00*
 
 Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-edler/)
 
@@ -108,6 +108,13 @@ Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-
 
 *Hands-on Coding Session* (60 minutes)
 - Interactive Visualisation with InfoBaleen
+
+
+## Part III: Variable-order Analytics with HONVis
+
+Tutor: [Nitesh Chawla, University of Notre Dame](https://www3.nd.edu/~nchawla/)
+
+Unfortunately, due to unforeseen circumstances, the tutor could not attend KDD'18. This part will thus be a virtual self-study session. Participants can find the tutorial material in the gitHub repository.
 
 # Data sets
 
