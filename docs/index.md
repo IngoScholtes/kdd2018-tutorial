@@ -77,7 +77,7 @@ Unit | Topic | Notebook | Live Solution
 
 Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-edler/)
 
-**Introduction** Flow Compression with the MapEquation* (45 minutes) | [slides](http://...)
+**Intro:** Flow Compression with the MapEquation (45 minutes) | [slides](http://...)
 - Introduction to graph clustering
 - Flow Compression: The MapEquation
 - Minimisation of Modular Description Length
