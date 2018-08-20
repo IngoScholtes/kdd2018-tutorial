@@ -6,9 +6,7 @@ def md(str):
 
 #%%
 md("""
-# Higher-Order Data Analytics for Temporal Network Data
-
-## 1.4 Exploration: Higher-order analysis of real-world pathway data
+# 1.4 Exploration: Higher-order analysis of real-world pathway data
 
 **Ingo Scholtes**  
 Data Analytics Group  
@@ -20,7 +18,7 @@ University of Zurich
 
 In the last (open-ended) exploration of this first tutorial session, you have the chance to use higher-order network analytics to study three real data sets for yourself:
 
-- Passenger itineraries constructed from London Metro Oystercard origin-destination data
+- Passenger itineraries constructed from London Tube Oystercard origin-destination data
 - Flight itineraries of US airline passengers
 - Wikipedia clickstream data
 
@@ -28,7 +26,6 @@ Details on the origin of these data can be found [here](https://github.com/IngoS
 
 - Repeat the analysis of higher-order centralities in the toy example from 1.3 with the closeness centrality of nodes. What do you observe?
 - Test the prediction performance of higher-order models for the London Tube and/or the Wikipedia clickstream data set. Does the prediction performance saturate at k=2 as it does for the US Flight data?
-- Generate higher-order visualisations of the US Flight data and visually compare the graph layouts calculated for the first and the second-order model. For which airports does the position change the most?
 - Use the higher-order framework to identify those paths of length k that show "anomalous statistics" (compared to a memoryless null model). Which are these paths and how can we interpret the result?
 
 Please consider the data sets as well as the questions above as mere **suggestions for your exploration of higher-order network analytics**. You are welcome to study other data sets or questions instead. Please reach out to me if you encounter any problems or questions (also after KDD). You can reach me at `scholtes@ifi.uzh.ch`.
