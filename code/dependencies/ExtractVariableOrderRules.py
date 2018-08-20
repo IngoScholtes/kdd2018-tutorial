@@ -1,7 +1,6 @@
 ### Major update: parameter free and magnitudes faster than previous versions.
 ### Paper and pseudocode: https://arxiv.org/abs/1712.09658
 
-
 ### This file: line-by-line translation from Algorithm 1
 ### in the paper "Representing higher-order dependencies in networks"
 ### Code written by Jian Xu, Apr 2017
@@ -104,7 +103,6 @@ def BuildDistributions(MinSupport, order):
 def GenerateAllRules(MaxOrder, Trajectory, MinSupport):
     VPrint('generating rules')
     progress = len(Distribution)
-    VPrint('Total number of first-order states:')
     VPrint(progress)
     LoopCounter = 0
     for Source in tuple(Distribution.keys()):
@@ -159,9 +157,7 @@ def AddToRules(Source):
         #print(s, Source)
         if not s in Distribution or len(Distribution[s]) == 0:
             ExtendSourceFast(s[1:])
-        for t in Count[s]:
-            if Count[s][t] > 0:
-                Rules[s][t] = Count[s][t]
+        Rules[s] = Distribution[s]
     # while len(Source) > 0:
     #     # To output frequencies instead of probabilities, change "Distribution" to "Count"
     #     # and filter out zero values
