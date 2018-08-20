@@ -72,13 +72,13 @@ Unit | Topic | Notebook | Live Solution
 
 Tutor: [Nitesh Chawla, University of Notre Dame](https://www3.nd.edu/~nchawla/)
 
-*Representing variable orders in networks* (30 minutes) | [slides](jianxu.net/en/files/HON_Xu_KDD_2018.ppsx)
+*Representing variable orders in networks* (30 minutes) | [slides](http://www.jianxu.net/en/files/HON_Xu_KDD_2018.ppsx)
 - Introduction to higher-order network
 - Why variable orders?
 - BuildHON algorithm in a nutshell
 - Real-world applications
 
-*Hands-on Coding Session* (30 minutes) | [slides](http://...)
+*Hands-on Coding Session* (30 minutes) | [slides](http://www.jianxu.net/en/files/HON_Xu_KDD_2018_HandsOnTasks.ppsx)
 - Synthesizing trajectories with known variable orders of dependencies
 - Use BuildHON+ (parameter-free) to extract variable orders of dependencies and build HON
 - Use HONVis to visualize and interactively explore the higher-order network of NYC taxi data
