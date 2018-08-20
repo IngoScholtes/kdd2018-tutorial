@@ -50,8 +50,8 @@ def convert(ipynb_file, output_file=None, blank_code = False, todo_msg = '# TODO
                 output += cell_output
             elif cell['cell_type'] == 'code':
                 cell_output = '#%% In [' + str(cell['execution_count']) + ']\n'
-                if not blank_code:
-                    for line in cell['source']:        
+                if not blank_code or cell['source'][0].startswith('%NOREMOVE'):
+                    for line in cell['source']:
                         # remap relative path data directory from jupyter notebook to VS Code                
                         cell_output += line.replace('../', '')
                 elif todo_msg is not None:
