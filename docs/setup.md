@@ -47,6 +47,8 @@ To apply higher-order data analytics to real data, we need to set up additional 
 
 Sessions 1 and 2 will introduce [pathpy](http://www.pathpy.net), an OpenSource `python` package providing higher-order network analysis and visualisation tools for sequence, path, and temporal network data.
 
+Sessions 3 will introduce [HON](http://www.higherordernetwork.com), an OpenSource `python` package extracting variable orders of dependencies from sequential data, and building a higher-order network from the dependency rules; [HONVis](http://www.higherordernetwork.com/visualization/), an interactive software package that facilitates exploration of higher-order networks.
+
 Sessions 4 and 5 will introduce [InfoMap](http://www.mapequation.org), an OpenSource package that can be used to reveal overlapping modular patterns in higher-order network flows through complex systems. In the following, we explain how you can set up these two packages:
 
 ## Setting up pathpy
@@ -74,7 +76,7 @@ For more detailed information about the installation and usage of `InfoMap`, see
 
 ### Verifying your environment
 
-Now that we have installed all necessary tools and packages, let us verify that our environment is set up properly. 
+Now that we have installed all necessary tools and packages, let us verify that our environment is set up properly.
 
 For this, you can either create a new file in Visual Studio Code and copy the following code:
 
@@ -94,3 +96,23 @@ If the `python` extension of Visual Studio Code has been installed correctly, yo
 Click the top-most `Run cell` code lens. A menu will appear, asking you whether to start a new notebook or whether to select an existing `jupyter` notebook server. Select `Start a new Notebook` and wait for the status line `Python 3 Kernel (idle)` to appear in Visual Studio Code's status bar. Now click the second `Run cell` code lens. A new window should pop up that shows the output of your code, in our example a list frequencies of paths of different lengths.
 
 If you see this output, all is set up properly, and you are all set to complete the first two sessions of the hands-on tutorial.
+
+## Setting up BuildHON+
+
+`BuildHON+` is pure python code. It has no platform-specific dependencies and thus work on all platforms. It runs with Python3.
+
+Usage: under the code/ folder of the tutorial package, run
+```
+python3 3_1_buildhon.py
+```
+
+## Setting up HONVis
+
+`HONVis` is built with C++ and available in binaries. It is compiled separately for Windows, Mac and Linux. It is under code/3_2_HONVis
+
+For Windows, double click `HONVis_NYC_Taxi_Case_Jul_Aug.exe`, and follow the video tutorial on [www.higherordernetwork.com/visualization/](http://www.higherordernetwork.com/visualization/) at 5 mins.
+
+For Mac or Linux, run the following in Terminal (or your favorite shell)
+```
+./Jul_Aug
+```

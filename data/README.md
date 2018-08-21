@@ -7,9 +7,10 @@ For your convenience, in this repository we provide preprocessed (excerpts) from
 | US_flights.ngram | Contains flight itineraries of American Airlines passengers between US airports. This is an excerpt from the [Airline Origin and Destination Survey (DB1B)](https://www.transtats.bts.gov/Tables.asp?DB_ID=125&DB_Name=Airline%20Origin%20and%20Destination%20Survey%20%28DB1B%29&DB_Short_Name=Origin%20and%20Destination%20Survey). | N/A | [link](https://www.transtats.bts.gov/Fields.asp) |
 | tube.edges | Contains direct links between stations in the London Tube Metro Network. This data file was generated based on publicly available Wikipedia data. | N/A | [link]() |
 | tube_od.csv | Contains the volume of passengers between origin and destination stations in the London Tube Metro Network. This data set is an excerpt from the Rolling Origin Destination Survey available from the [OpenData page of Transport for London](https://tfl.gov.uk/info-for/open-data-users/our-open-data#on-this-page-9) | N/A | [link](https://tfl.gov.uk/cdn/static/cms/documents/rods-access-mode-2010-sample.csv) |
-| temporal_clusters.tedges | Synthetically generated data set | N/A | N/A | 
+| temporal_clusters.tedges | Synthetically generated data set | N/A | N/A |
 | toy_paths.ngram | Toy example generated in unit 1.2  | N/A | N/A
-
+| SyntheticTrajectoriesVariableOrders.csv | Synthetic data for task 3.1  | [link](https://arxiv.org/pdf/1712.09658) | [link](http://www.higherordernetwork.com/)
+| NYC-data | New York City trajectories data for task 3.2  | N/A | [link](https://chriswhong.com/open-data/foil_nyc_taxi/)
 
 In addition to these datafiles, the SQLite database file `temporal_networks.db` contains dynamic social networks stored in the following tables:
 

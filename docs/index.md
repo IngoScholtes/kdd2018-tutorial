@@ -41,6 +41,7 @@ Tutor: [Ingo Scholtes, Data Analytics Group, University of Zurich](http://ifi.uz
 - From graphs to higher-order generative models
 - Representation learning in temporal network data
 
+
 **Live Coding** (60 min)  
 
 Unit | Topic | Notebook | Live Solution
@@ -72,9 +73,6 @@ Unit | Topic | Notebook | Live Solution
 
 ## Block II: Introduction to Higher-Order Graph Clustering with [InfoMap](http://www.mapequation.org)
 
-### Session: Introduction to MapEquation and InfoMap
-*13:30 - 15:00*
-
 Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-edler/)
 
 **Intro:** Flow Compression with the MapEquation (45 minutes) | [slides](http://...)
@@ -99,12 +97,23 @@ Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-
 - Higher-order clustering with InfoMap
 - Interactive Visualisation of hierarchical clusters
 
-
-## Block III: Variable-order Analytics with HONVis
+## Block III: Variable-order Analytics with BuildHON/HONVis
 
 Tutor: [Nitesh Chawla, University of Notre Dame](https://www3.nd.edu/~nchawla/)
 
-Due to unforeseen circumstances, the tutor could not attend KDD'18. This block will thus be a virtual self-study session. Participants can find the tutorial material in the gitHub repository.
+Due to unforeseen circumstances, the tutor could not attend KDD'18. This block will thus be a 1 hour virtual self-study session. Participants can find the tutorial material in the gitHub repository.
+
+*Representing variable orders in networks* (30 minutes) | [slides](http://www.jianxu.net/en/files/HON_Xu_KDD_2018.ppsx)
+- Introduction to higher-order network
+- Why variable orders?
+- BuildHON algorithm in a nutshell
+- Real-world applications
+
+*Hands-on Coding Session* (30 minutes) | [slides](http://www.jianxu.net/en/files/HON_Xu_KDD_2018_HandsOnTasks.ppsx)
+- Synthesizing trajectories with known variable orders of dependencies
+- Use BuildHON+ (parameter-free) to extract variable orders of dependencies and build HON
+- Use HONVis to visualize and interactively explore the higher-order network of NYC taxi data
+
 
 # Data sets
 
