@@ -66,13 +66,8 @@ The above should be at least `1.0.0-beta.11`.
 #%%
 md("""
 ### Output
-In this tutorial, we will write files to an `output` in the main repo, which is ignored by git. Make sure it exist or create if not.
-**TODO:** Create the `../output` folder. (Hit: with `pathlib.Path` you can do `Path(dir).mkdir(exist_ok=True)`.)
+Write all files during the tutorials to the `../output` folder, where git will ignore them.
 """)
-
-#%% In [3]
-# TODO: Fill code here
-
 
 #%%
 md("""
@@ -86,7 +81,7 @@ md("""
 **TODO:** Try run the command line version of Infomap installed with the python package. Command line programs can be called directly from jupyter by adding `!` in front, like `!ls`. Run Infomap on the `ninetriangles.net` network in the `data` folder and direct output to the `output` folder. Run it with `5` trials to see the effect of the stochastic nature of Infomap.
 """)
 
-#%% In [20]
+#%% In [2]
 # TODO: Fill code here
 
 
@@ -101,10 +96,10 @@ The input network above was formed as nine triangles clustered in three levels, 
 #%%
 md("""
 **TODO:** 
-- Print the input network from above to see the standard input format for Infomap. (Hint: `Path(dir)` has a method `read_text()` to give back the whole string.)
+- Print the input network from above to see the standard input format for Infomap. (Hint: `pathlib.Path(dir)` has a method `read_text()` to give back the whole string.)
 """)
 
-#%% In [21]
+#%% In [3]
 # TODO: Fill code here
 
 
@@ -115,7 +110,7 @@ By default on command line, Infomap writes an output file with the same name as 
 **TODO:** Print the result from running Infomap above.
 """)
 
-#%% In [22]
+#%% In [4]
 # TODO: Fill code here
 
 
@@ -130,7 +125,7 @@ The python API gives more flexibility, but we can still work with files in a sim
 - Let Infomap write a [flow tree](http://www.mapequation.org/code.html#FTree-format) file to `ninetriangles.ftree` in the output folder and print the result.
 """)
 
-#%% In [4]
+#%% In [5]
 # TODO: Fill code here
 
 
@@ -143,7 +138,7 @@ md("""
 - Run the clustering and iterate over the result and print the tree path to the node, the flow and, if a leaf node, the node id. (Hint: All leaf nodes has a unique `stateId` property and a `physicalId` property, that is identical on first-order networks)
 """)
 
-#%% In [26]
+#%% In [6]
 # TODO: Fill code here
 
 
@@ -163,7 +158,7 @@ according to the community structure found by Infomap.
 # TODO: Fill code here
 
 
-#%% In [9]
+#%% In [8]
 # TODO: Fill code here
 
 
@@ -214,7 +209,7 @@ md("""
 - What happened to state node 1 and 3?
 """)
 
-#%% In [11]
+#%% In [9]
 # TODO: Fill code here
 
 
@@ -231,7 +226,7 @@ Infomap can generate a higher-order state network from path data, specifying a c
 - Did you get any overlapping modules on the physical nodes?
 """)
 
-#%% In [36]
+#%% In [10]
 # TODO: Fill code here
 
 
@@ -244,7 +239,7 @@ md("""
 - Check that the codelength is the same
 """)
 
-#%% In [37]
+#%% In [11]
 # TODO: Fill code here
 
 

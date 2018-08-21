@@ -4,18 +4,18 @@ from IPython.core.display import display, HTML
 def md(str):
     display(HTML(markdown.markdown(str + "<br />")))
 
-#%% In [2]
+#%% In [1]
 from state_lumping_network import StateNetwork
 
-#%% In [3]
+#%% In [2]
 net = StateNetwork()
 net.readFromFile("data/toy_states.net")
 
-#%% In [4]
+#%% In [3]
 X, rowToStateId = net.getFeatureMatrix(1)
 print("Feature matrix for the central physical node: \n{}\n rowToStateId: {}".format(X, rowToStateId))
 
-#%% In [19]
+#%% In [4]
 import numpy as np
 from sklearn.metrics import pairwise_distances
 
@@ -38,10 +38,10 @@ def jensen_shannon_distances(X):
 print(jensen_shannon_distance(X[0], X[1]))
 print(jensen_shannon_distance(X[1], X[2]))
 
-#%% In [11]
+#%% In [5]
 from sklearn import cluster
 
-#%% In [12]
+#%% In [6]
 model = cluster.AgglomerativeClustering(
     linkage="complete",
     # affinity=jensen_shannon_distances,
@@ -55,7 +55,7 @@ print("Cluster labels in feature matrix space: {}\nCluster labels in state node 
     {rowToStateId[i]:clusterId for i,clusterId in enumerate(labels)}
 ))
 
-#%% In [20]
+#%% In [7]
 def getFeatureClusterFunction(clusterRate=0.5):
     def calcClusters(X):
         numStates, numFeatures = X.shape
@@ -78,12 +78,12 @@ def getFeatureClusterFunction(clusterRate=0.5):
 
 net.clusterStateNodes(clusterFeatureMatrix=getFeatureClusterFunction())
 
-#%% In [21]
+#%% In [8]
 h1 = net.calcEntropyRate()
 h2 = net.calcLumpedEntropyRate()
 print("Entropy rate before: {}, after: {}".format(h1, h2))
 
-#%% In [22]
+#%% In [9]
 from pathlib import Path
 net.writeLumpedStateNetwork("output/toy_lumped.net")
 print(Path('output/toy_lumped.net').read_text())

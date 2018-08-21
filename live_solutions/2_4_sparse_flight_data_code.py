@@ -46,7 +46,7 @@ def generateStateNetworkFromPaths(inputFilename, outputFilename, markovOrder):
 generateStateNetworkFromPaths("output/paths_training.net", "output/states_training_order_2.net", 2)
 generateStateNetworkFromPaths("output/paths_validation.net", "output/states_validation_order_2.net", 2)
 
-#%% In [4]
+#%% In [3]
 import matplotlib.pyplot as plt
 import numpy as np
 from state_lumping_network import StateNetwork
@@ -71,7 +71,7 @@ for i, clusterRate in enumerate(clusterRates):
     numStates.append(s)
     entropyRate.append(h)
 
-#%% In [5]
+#%% In [4]
 plt.plot(numStates, entropyRate, marker='o')
 plt.xlabel("number of lumped states")
 plt.ylabel("entropy rate")

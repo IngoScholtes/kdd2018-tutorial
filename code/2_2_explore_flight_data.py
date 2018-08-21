@@ -14,7 +14,7 @@ Path data for this tutorial is available on `data/air2015_{q}_paths.net` for eac
 - Check how one of those files look like (Hint: Use can use `!head [file]` to list the first rows of a file)
 """)
 
-#%% In [2]
+#%% In [1]
 # TODO: Fill code here
 
 
@@ -28,15 +28,15 @@ md("""
 - Generate first and second order state networks for all four quarters
 """)
 
-#%% In [1]
+#%% In [2]
 # TODO: Fill code here
 
 
-#%% In [3]
+#%% In [11]
 # TODO: Fill code here
 
 
-#%% In [4]
+#%% In [12]
 # TODO: Fill code here
 
 
@@ -53,11 +53,11 @@ md("""
 - Load the `.map` files into the [Alluvial Generator](http://www.mapequation.org/apps/MapGenerator.html) and explore the modular structure over time
 """)
 
-#%% In [12]
+#%% In [5]
 # TODO: Fill code here
 
 
-#%% In [13]
+#%% In [6]
 # TODO: Fill code here
 
 
@@ -73,7 +73,7 @@ In first-order, the network appears too well connected for any modular structure
 - Checkout the changes in the Alluvial Generator
 """)
 
-#%% In [14]
+#%% In [7]
 # TODO: Fill code here
 
 
@@ -90,11 +90,11 @@ The current Alluvial Generator doesn't support overlapping or multi-level modula
 - Load an `.ftree` file into the [Network Navigator](http://navigator.mapequation.org) and explore the second-order hierarchical structure interactively.
 """)
 
-#%% In [21]
+#%% In [8]
 # TODO: Fill code here
 
 
-#%% In [22]
+#%% In [9]
 # TODO: Fill code here
 
 

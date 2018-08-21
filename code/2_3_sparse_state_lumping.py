@@ -11,9 +11,9 @@ Second-order dynamics on a physical network can be described by first-order dyna
 
 We can represent this second-order network by it's _state transition matrix_ $P_{ij}$ with the probabilities for the random walker to transition from state node $i$ to state node $j$.
 
-In this view, we may note that some rows have similar probability distributions. We can measure how similar two probability distributions are with the [Jensen-Shannon Distance](https://en.wikipedia.org/wiki/Jensen%E2%80%93Shannon_divergence).
+In this view, we may note that some rows have similar probability distributions. We can measure how much information we lose when merging two state nodes with the [Jensen-Shannon Distance](https://en.wikipedia.org/wiki/Jensen%E2%80%93Shannon_divergence).
 
-The idea behind sparse state networks is that we can lump state nodes (within each physical node) that constrain the network flow in a similar way without loosing (much) information.
+The idea behind sparse state networks is that we can lump state nodes (within each physical node) that constrain the network flow in a similar way without losing (much) information.
 """)
 
 #%%
@@ -29,11 +29,11 @@ In order to do that, we have to transform the state network into features usable
 - use the `.readFromFile(filename)` method to read in `data/toy_states.net`
 """)
 
-#%% In [2]
+#%% In [1]
 # TODO: Fill code here
 
 
-#%% In [3]
+#%% In [2]
 # TODO: Fill code here
 
 
@@ -56,7 +56,7 @@ To simplify, there is a `getFeatureMatrix` method that removes all all-zero rows
 - Print the two items
 """)
 
-#%% In [4]
+#%% In [3]
 # TODO: Fill code here
 
 
@@ -75,7 +75,7 @@ Tips, using numpy:
 - `np.log2(x)` can be modified to `np.log2(x, where = x>0)` to handle zeros
 """)
 
-#%% In [19]
+#%% In [4]
 # TODO: Fill code here
 
 
@@ -90,11 +90,11 @@ Now we can use general [scikit-learn clustering algorithm](http://scikit-learn.o
 - Use the row-to-stateId map to check which state nodes are clustered together (the red left ones are state node 1 and 2, the blue right ones are state node 7 and 8).
 """)
 
-#%% In [11]
+#%% In [5]
 # TODO: Fill code here
 
 
-#%% In [12]
+#%% In [6]
 # TODO: Fill code here
 
 
@@ -108,13 +108,13 @@ Now we are ready to run this on the whole network. For convenience, `StateNetwor
 - Cluster the whole state network using the method above
 """)
 
-#%% In [20]
+#%% In [7]
 # TODO: Fill code here
 
 
 #%%
 md("""
-## Did we loose any information?
+## Did we lose any information?
 The state network has two methods `calcEntropyRate()` and `calcLumpedEntropyRate()` to calculate the average number of bits required to encode the random walk on each physical node.
 
 **TODO:**
@@ -122,11 +122,11 @@ The state network has two methods `calcEntropyRate()` and `calcLumpedEntropyRate
 - Write lumped state network to file with `writeLumpedStateNetwork(filename)` and check that it matches the sparse network in the figure below
 """)
 
-#%% In [21]
+#%% In [8]
 # TODO: Fill code here
 
 
-#%% In [22]
+#%% In [9]
 # TODO: Fill code here
 
 
