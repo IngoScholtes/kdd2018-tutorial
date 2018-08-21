@@ -104,8 +104,8 @@ Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-
 - Higher-order clustering with Infomap
 - Interactive visualisation of hierarchical clusters
 
-### Tutorial Closing
-*17:00 - 17:10**
+### Tutorial Closing 
+*17:00 - 17:10*
 
 ## Block III: Variable-order Analytics with BuildHON/HONVis
 
