@@ -12,3 +12,17 @@ print(paths)
 t = pp.TemporalNetwork.read_file('data/temporal_clusters.tedges')
 print(t)
 
+
+#%% validate that infomap is installed correctly
+import infomap
+print("Infomap version:", infomap.Infomap().version)
+print("Make sure it is at least 1.0.0-beta.11")
+
+#%% check that relative read and write works
+from pathlib import Path
+Path('output').mkdir(exist_ok=True)
+im = infomap.Infomap("")
+im.network().readInputData("data/ninetriangles.net")
+im.run()
+im.writeClu("output/ninetriangles.clu")
+print(im.maxTreeDepth()) # Should print 3
