@@ -17,9 +17,10 @@ In addition to these datafiles, the SQLite database file `temporal_networks.db` 
 
 | Table name | Description | Citation | Weblink |
 |------------|-------------|----------|---------|
-| eu_email_dept3 | E-Mail exchanges in one department of a European institution | A Paranjape, AR Benson, J Leskovec: **Motifs in Temporal Networks**, In Proceedings of the Tenth ACM International Conference on Web Search and Data Mining, 2017. | [link](https://snap.stanford.edu/data/email-Eu-core-temporal.html)
+| haggle | social contacts measures by wireless devices | A Chaintreau, P Hui, J Crowcroft, C Diot, R Gass, J Scott. **Impact of human mobility on opportunistic forwarding algorithms**. IEEE Trans. on Mobile Computing, 6(6):606--620, 2007.  | [link](http://konect.uni-koblenz.de/networks/contact)
 | manufacturing_email |  E-Mail exchanges in Polish manufacturing company, prepared and published by [Radoslaw Michalski](https://www.ii.pwr.edu.pl/~michalski/) | R Michalski, S Palus, P Kazienko: **Matching Organizational Structure and Social Network Extracted from Email Communication**, Lecture Notes in Business Information Processing LNBIP, vol. 87, pp. 197-206, Springer, Berlin Heidelberg (2011)  |[link](https://www.ii.pwr.edu.pl/~michalski/index.php?content=datasets) |
 | sociopatterns_ho |  Temporal network of contacts between patients and health-care workers in a hospital, collected via the [SocioPatterns project](http://www.sociopatterns.org) |  P Vanhems et al.: **Estimating Potential Infection Transmission Routes in Hospital Wards Using Wearable Proximity Sensors**, PLoS ONE 8(9): e73970 (2013) |[link](http://www.sociopatterns.org/datasets/hospital-ward-dynamic-contact-network/) |
+| sociopatterns_primary school |  Temporal network of contacts between children in a primary school, collected via the [SocioPatterns project](http://www.sociopatterns.org) | J Stehle et al. **High-Resolution Measurements of Face-to-Face Contact Patterns in a Primary School**, In PLOS ONE 6(8): e23176 (2011) |[link](http://www.sociopatterns.org/datasets/primary-school-temporal-network-data/) |
 | lotr |  Character co-occurrence within same sentence in the text of the Lord of the Rings Trilogy  | N/A | N/A |
 
 # Accesssing data files
