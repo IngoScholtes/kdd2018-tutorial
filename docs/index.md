@@ -29,7 +29,7 @@ The tutorial consists of three separate blocks, in which we give an overview of 
 ## Block I: Higher-Order Network Analytics with [pathpy](http://www.pathpy.net)
 
 ### Session: Introduction to Higher-Order Network Analytics
-*08:30 - 10:00*
+*08:30 - 09:30*
 
 Tutor: [Ingo Scholtes, Data Analytics Group, University of Zurich](http://ifi.uzh.ch/dag)
 
@@ -42,70 +42,67 @@ Tutor: [Ingo Scholtes, Data Analytics Group, University of Zurich](http://ifi.uz
 - Representation learning in temporal network data
 
 
-**Live Coding** (60 min)  
+**Live Coding** (30 min)  
 
 Unit | Topic | Notebook | Live Solution
 ----|----|----|----
-1.1 | A Primer to Data Science with `python`, `jupyter`, `git` and `VS Code` (10 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_1_vscode_jupyter.py) | N/A
+1.1 | A Primer to Data Science with `python`, `jupyter`, `git` and `VS Code` (15 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_1_vscode_jupyter.py) | N/A
 1.2 | Analysis and Visualisation of Path Data in [`pathpy`](http://www.pathpy.net) (15 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_2_pathpy.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_2_pathpy.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/1_2_pathpy.py)  
-1.3 | Fitting and Visualising Higher-order Network Models (15 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_3_higher_order.py),  [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_3_higher_order.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/1_3_higher_order.py)
-1.4 | Exploration: Higher-order Analysis of [real-world data](https://github.com/IngoScholtes/kdd2018-tutorial/tree/master/data) (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_4_exploration.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_4_exploration.ipynb) | N/A
 
-### Coffee break
-*10:00 - 10:30*
+### KDD Coffee break
+*09:30 - 10:00*
 
 ### Session: Multi-order Representation Learning
-*10:30 - 12:00*
+*10:00 - 12:00*
 
 Tutor: [Ingo Scholtes, Data Analytics Group, University of Zurich](http://ifi.uzh.ch/dag)
 
-**Live Coding** (90 min)
+**Live Coding** (120 min)
 
 Unit | Topic | Notebook | Live Solution
 ----|----|----|----
+1.3 | Fitting and Visualising Higher-order Network Models (15 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_3_higher_order.py),  [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_3_higher_order.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/1_3_higher_order.py)
+1.4 | Exploration: Higher-order Analysis of [real-world data](https://github.com/IngoScholtes/kdd2018-tutorial/tree/master/data) (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_4_exploration.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_4_exploration.ipynb) | N/A
 2.1 | Time-stamped Network Analysis in [`pathpy`](http://www.pathpy.net) (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_1_temporal_networks.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_1_temporal_networks.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_1_temporal_networks.py)
 2.2 | Multi-order Representation Learning (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_2_multi_order.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_2_multi_order.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_2_multi_order.py)  
 2.3 | Optimal Higher-order Analytics for Temporal Data (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_3_cross_validation.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_3_cross_validation.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_3_cross_validation.py)
 2.4 | Exploration: Multi-order Analysis of [Time-stamped Social Networks](https://github.com/IngoScholtes/kdd2018-tutorial/tree/master/data) (30 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_4_exploration.py),  [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_4_exploration.ipynb) | N/A
 
-### Lunch break
+### KDD Lunch break
 *12:00 - 13:30*
 
 ## Block II: Introduction to Higher-Order Graph Clustering with [Infomap](http://www.mapequation.org)
 
+###Session: Introduction to Flow Compression
+*13:30 - 15:30*
+
 Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-edler/)
 
-All slides: [Mapping higher-order
-network flows
-with the minimum description length principle](https://www.dropbox.com/s/wd48ejqjohrviss/KDD2018mapequation.pdf?dl=0)
-
-**Intro:** Flow Compression with the MapEquation (45 minutes)
+**Intro:** Flow Compression with the MapEquation (45 minutes) | [Slides](https://www.dropbox.com/s/wd48ejqjohrviss/KDD2018mapequation.pdf?dl=0)
 - Coding theory: The minimum description length principle
 - Compression of modular network flows: The MapEquation
 - Multilevel partitions
 
-**Live Coding** (45 min)
+**Live Coding** (75 min)
 - Introducing `Infomap`
 - Community detection in first-order models
 - Mapping change in modular networks
 - Generation of first- and second order networks from paths
 - Interactive Visualisation of second-order hierarchical clusters
 
-### Coffee break
-*15:00 - 15:30*
+### KDD Coffee break
+*15:30 - 16:00*
 
 ### Session: Higher-order Graph Clustering and Visualisation
-*15:30 - 17:00*
+*16:00 - 17:00*
 
 Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-edler/)
 
-**Intro:** Higer-order flows and Sparse Markov models (15 minutes)
+**Live Coding** (60 min)
 - From pathways to networks with and without memory
 - Sparse Markov chain models
-
-**Live Coding** (60 min)
 - Higher-order clustering with Infomap
-- Interactive Visualisation of hierarchical clusters
+- Interactive visualisation of hierarchical clusters
 
 ## Block III: Variable-order Analytics with BuildHON/HONVis
 
