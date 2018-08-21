@@ -68,12 +68,12 @@ Unit | Topic | Notebook | Live Solution
 2.3 | Optimal Higher-order Analytics for Temporal Data (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_3_cross_validation.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_3_cross_validation.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_3_cross_validation.py)
 2.4 | Exploration: Multi-order Analysis of [Time-stamped Social Networks](https://github.com/IngoScholtes/kdd2018-tutorial/tree/master/data) (30 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_4_exploration.py),  [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_4_exploration.ipynb) | N/A
 
-### KDD Lunch break
+### KDD Lunch break 
 *12:00 - 13:30*
 
 ## Block II: Introduction to Higher-Order Graph Clustering with [Infomap](http://www.mapequation.org)
 
-###Session: Introduction to Flow Compression
+### Session: Introduction to Flow Compression 
 *13:30 - 15:30*
 
 Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-edler/)
