@@ -33,21 +33,21 @@ The tutorial consists of three separate blocks, in which we give an overview of 
 
 Tutor: [Ingo Scholtes, Data Analytics Group, University of Zurich](http://ifi.uzh.ch/dag)
 
-**Welcome Note and Tutorial Overview**  
+**Welcome Note and Tutorial Overview**
 
-**Intro: Higher-Order Network Analytics for Time Series Data** (30 min) | [slides](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/talks/)  
+**Intro: Higher-Order Network Analytics for Time Series Data** (30 min) | [slides](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/talks/)
 - Causal paths in temporal network data
 - Ordering matters in time series data
 - Higher-order generative models for causal paths
 - Representation learning in temporal network data
 
 
-**Live Coding** (30 min)  
+**Live Coding** (30 min)
 
 Unit | Topic | Notebook | Live Solution
 ----|----|----|----
 1.1 | A Primer to Data Science with `python`, `jupyter`, `git` and `VS Code` (15 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_1_vscode_jupyter.py) | N/A
-1.2 | Analysis and Visualisation of Path Data in [`pathpy`](http://www.pathpy.net) (15 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_2_pathpy.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_2_pathpy.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/1_2_pathpy.py)  
+1.2 | Analysis and Visualisation of Path Data in [`pathpy`](http://www.pathpy.net) (15 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_2_pathpy.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_2_pathpy.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/1_2_pathpy.py)
 
 ### KDD Coffee break
 *09:30 - 10:00*
@@ -64,16 +64,16 @@ Unit | Topic | Notebook | Live Solution
 1.3 | Fitting and Visualising Higher-order Network Models (15 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_3_higher_order.py),  [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_3_higher_order.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/1_3_higher_order.py)
 1.4 | Exploration: Higher-order Analysis of [real-world data](https://github.com/IngoScholtes/kdd2018-tutorial/tree/master/data) (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_4_exploration.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_4_exploration.ipynb) | N/A
 2.1 | Time-stamped Network Analysis in [`pathpy`](http://www.pathpy.net) (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_1_temporal_networks.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_1_temporal_networks.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_1_temporal_networks.py)
-2.2 | Multi-order Representation Learning (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_2_multi_order.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_2_multi_order.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_2_multi_order.py)  
+2.2 | Multi-order Representation Learning (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_2_multi_order.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_2_multi_order.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_2_multi_order.py)
 2.3 | Optimal Higher-order Analytics for Temporal Data (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_3_cross_validation.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_3_cross_validation.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_3_cross_validation.py)
 2.4 | Exploration: Multi-order Analysis of [Time-stamped Social Networks](https://github.com/IngoScholtes/kdd2018-tutorial/tree/master/data) (30 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_4_exploration.py),  [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_4_exploration.ipynb) | N/A
 
-### KDD Lunch break 
+### KDD Lunch break
 *12:00 - 13:30*
 
 ## Block II: Introduction to Higher-Order Graph Clustering with [Infomap](http://www.mapequation.org)
 
-### Session: Introduction to Flow Compression 
+### Session: Introduction to Flow Compression
 *13:30 - 15:30*
 
 Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-edler/)
@@ -113,13 +113,13 @@ Tutor: [Nitesh Chawla, University of Notre Dame](https://www3.nd.edu/~nchawla/)
 
 Due to unforeseen circumstances, the tutor could not attend KDD'18. This block will thus be a 1 hour virtual self-study session. Participants can find the tutorial material in the gitHub repository.
 
-**Intro:** Representing variable orders in networks (30 min) | [slides](http://www.jianxu.net/en/files/HON_Xu_KDD_2018.ppsx)
+**Intro:** Representing variable orders in networks (30 min) | [slides](http://www.jianxu.net/en/files/HON_Xu_KDD_2018.ppsx) [website](http://www.higherordernetwork.com)
 - Introduction to higher-order network
 - Why variable orders?
 - BuildHON algorithm in a nutshell
 - Real-world applications
 
-**Live Demo** (30 min) | [slides](http://www.jianxu.net/en/files/HON_Xu_KDD_2018_HandsOnTasks.ppsx)
+**Live Demo** (30 min) | [slides](http://www.jianxu.net/en/files/HON_Xu_KDD_2018_HandsOnTasks.ppsx) [video](http://www.higherordernetwork.com/visualization)
 - Synthesising trajectories with known variable orders of dependencies
 - Use BuildHON+ (parameter-free) to extract variable orders of dependencies and build HON
 - Use HONVis to visualize and interactively explore the higher-order network of NYC taxi data
