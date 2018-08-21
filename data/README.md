@@ -10,6 +10,7 @@ For your convenience, in this repository we provide preprocessed (excerpts) from
 | temporal_clusters.tedges | Synthetically generated data set | N/A | N/A |
 | toy_paths.ngram | Toy example generated in unit 1.2  | N/A | N/A
 | SyntheticTrajectoriesVariableOrders.csv | Synthetic data for task 3.1  | [link](https://arxiv.org/pdf/1712.09658) | [link](http://www.higherordernetwork.com/)
+| NYC-data | New York City trajectories data for task 3.2  | N/A | [link](https://chriswhong.com/open-data/foil_nyc_taxi/)
 
 In addition to these datafiles, the SQLite database file `temporal_networks.db` contains dynamic social networks stored in the following tables:
 
