@@ -13,6 +13,45 @@ def remove_code(ipynb_file, output_file):
         json.dump(notebook, f)  
     print('Done.')
 
+def extract_code(ipynb_file, output_file=None):
+    """
+    Converts an ipython notebook file to a plain .py file that 
+    only contains the code cells. Nice to use as a template for 
+    generating the live solution.
+
+    Parameters:
+    -----------
+    ipynb_file: str
+        filename of ipynb jupyter notebook file
+    output_file: str
+        where to store the .py output file
+    blank_code: bool
+        if True, this will generate blank code cells, resulting in 
+        files that can be used as exercise skeletons. If False (default), 
+        all code cells will be populated with actual code.
+    todo_msg: str
+        A string text by which code cells will be replaced if blank_code 
+        is set to True. If set to None, no todo message will be created.
+    """
+    print('Converting ipynb file ...')
+    output = '#%%\nimport markdown\n' \
+             'from IPython.core.display import display, HTML\n'\
+             'def md(str):\n'\
+             '    display(HTML(markdown.markdown(str + "<br />")))\n\n'
+    with open(ipynb_file, 'r') as f:
+        notebook = json.load(f)
+        for cell in notebook['cells']:
+           if cell['cell_type'] == 'code':
+                cell_output = '#%% In [' + str(cell['execution_count']) + ']\n'
+                for line in cell['source']:
+                    # remap relative path data directory from jupyter notebook to VS Code                
+                    cell_output += line.replace('../', '')                
+                cell_output += '\n\n'
+                output += cell_output
+    with open(output_file, 'w') as f:
+        f.write(output)    
+    print('Done.')
+
 def convert(ipynb_file, output_file=None, blank_code = False, todo_msg = '# TODO: Fill code here'):
     """
     Converts an ipython notebook file to a plain .py file that 
@@ -66,16 +105,19 @@ def convert(ipynb_file, output_file=None, blank_code = False, todo_msg = '# TODO
 # To apply the script to the sample solutions, just execute the following cells:
 #%% Unit 1.2
 convert('solutions/1_2_pathpy.ipynb', 'code/1_2_pathpy.py', blank_code=True, todo_msg=None)
+extract_code('solutions/1_2_pathpy.ipynb', 'live_solutions/1_2_pathpy_code.py')
 remove_code('solutions/1_2_pathpy.ipynb', 'code/1_2_pathpy.ipynb')
 convert('solutions/1_2_pathpy.ipynb', 'solutions/1_2_pathpy.py', blank_code=False, todo_msg=None)
 
 #%% Unit 1.3
 convert('solutions/1_3_higher_order.ipynb', 'code/1_3_higher_order.py', blank_code=True, todo_msg=None)
+extract_code('solutions/1_3_higher_order.ipynb', 'live_solutions/1_3_higher_order_code.py')
 remove_code('solutions/1_3_higher_order.ipynb', 'code/1_3_higher_order.ipynb')
 convert('solutions/1_3_higher_order.ipynb', 'solutions/1_3_higher_order.py', blank_code=False, todo_msg=None)
 
 #%% Unit 1.4
 convert('solutions/1_4_temporal_networks.ipynb', 'code/1_4_temporal_networks.py', blank_code=True, todo_msg=None)
+extract_code('solutions/1_4_temporal_networks.ipynb', 'live_solutions/1_4_temporal_networks_code.py')
 remove_code('solutions/1_4_temporal_networks.ipynb', 'code/1_4_temporal_networks.ipynb')
 convert('solutions/1_4_temporal_networks.ipynb', 'solutions/1_4_temporal_networks.py', blank_code=False, todo_msg=None)
 
@@ -85,11 +127,13 @@ convert('solutions/1_5_exploration.ipynb', 'solutions/1_5_exploration.py', blank
 
 #%% Unit 1.6
 convert('solutions/1_6_multi_order.ipynb', 'code/1_6_multi_order.py', blank_code=True, todo_msg=None)
+extract_code('solutions/1_6_multi_order.ipynb', 'live_solutions/1_6_multi_order_code.py')
 remove_code('solutions/1_6_multi_order.ipynb', 'code/1_6_multi_order.ipynb')
 convert('solutions/1_6_multi_order.ipynb', 'solutions/1_6_multi_order.py', blank_code=False, todo_msg=None)
 
 #%% Unit 1.7
 convert('solutions/1_7_optimal_analysis.ipynb', 'code/1_7_optimal_analysis.py', blank_code=True, todo_msg=None)
+extract_code('solutions/1_7_optimal_analysis.ipynb', 'live_solutions/1_7_optimal_analysis_code.py')
 remove_code('solutions/1_7_optimal_analysis.ipynb', 'code/1_7_optimal_analysis.ipynb')
 convert('solutions/1_7_optimal_analysis.ipynb', 'solutions/1_7_optimal_analysis.py', blank_code=False, todo_msg=None)
 
