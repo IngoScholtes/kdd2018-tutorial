@@ -11,8 +11,11 @@
 ### Major update: parameter free and magnitudes faster than previous versions.
 ### Paper and pseudocode: https://arxiv.org/abs/1712.09658
 
-from dependencies.ExtractVariableOrderRules import *
-from dependencies.NetworkRewiring import *
+import sys
+sys.path.insert(0, './5_2_HONVis/dependencies/')
+
+from ExtractVariableOrderRules import *
+from NetworkRewiring import *
 import itertools
 
 
