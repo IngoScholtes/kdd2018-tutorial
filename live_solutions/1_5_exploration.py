@@ -6,7 +6,7 @@ def md(str):
 
 #%%
 md("""
-# 1.4 Exploration: Higher-order analysis of real-world pathway data
+# 1.5 Exploration: Higher-order analysis of real-world pathway data
 
 **Ingo Scholtes**  
 Data Analytics Group  
@@ -16,7 +16,7 @@ University of Zurich
 
 **August 22 2018**
 
-In the last (open-ended) exploration of this first tutorial session, you have the chance to use higher-order network analytics to study three real data sets for yourself:
+In this exploration session, you have the chance to use higher-order network analytics to study three real data sets for yourself:
 
 - Passenger itineraries constructed from London Tube Oystercard origin-destination data
 - Flight itineraries of US airline passengers

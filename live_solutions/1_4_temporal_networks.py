@@ -6,7 +6,7 @@ def md(str):
 
 #%%
 md("""
-# 1.5 Temporal Network Analysis and Visualisation in `pathpy`
+# 1.4 Temporal Network Analysis and Visualisation in `pathpy`
 
 **Ingo Scholtes**  
 Data Analytics Group  
