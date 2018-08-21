@@ -7,7 +7,9 @@ permalink: /setup
 
 While you can manually download all necessary [`code`](https://github.com/IngoScholtes/kdd2018-tutorial/tree/master/code) and [`data`](https://github.com/IngoScholtes/kdd2018-tutorial/tree/master/code) files from our [gitHub repository](https://github.com/IngoScholtes/kdd2018-tutorial), we strongly recommend to clone this repository with `git` to obtain a local, sychronised copy of all material. Assuming you have a working `git` installation, you can simply do this by executing the following command in the terminal:
 
-`git clone https://github.com/IngoScholtes/kdd2018-tutorial`
+```
+git clone https://github.com/IngoScholtes/kdd2018-tutorial
+```
 
 If you don't have `git` installed already, here you can find information on [how to set up git](https://help.github.com/articles/set-up-git/).
 
@@ -41,7 +43,7 @@ Once the installation is finished, open Visual Studio Code, click `File -> Open 
 
 Conveniently, Visual Studio Code comes with integrated support for `git`. This means you can fetch the current, growing sample solution simply by navigating to the *Source Control* panel (the fork symbol in the left bar). In the *...* menu extension you just have to click *Pull*.
 
-# Installing higher-order data analytics packages for python
+# Installing higher-order data analytics packages
 
 To apply higher-order data analytics to real data, we need to set up additional ``python`` packages.
 
@@ -51,9 +53,9 @@ Sessions 3 will introduce [HON](http://www.higherordernetwork.com), an OpenSourc
 
 Sessions 4 and 5 will introduce [InfoMap](http://www.mapequation.org), an OpenSource package that can be used to reveal overlapping modular patterns in higher-order network flows through complex systems. In the following, we explain how you can set up these two packages:
 
-## Setting up pathpy
+## Setting up [pathpy](http://www.pathpy.net)
 
-`pathpy` is pure python code. It has no platform-specific dependencies and thus work on all platforms. It builds on `numpy` and `scipy` which come preinstalled in the Anaconda 5.2 environment. Assuming that a `python 3.x` environment has been successfully installed as described above, the latest version of `pathpy` can be installed via the [python package index pypi](https://pypi.org/). For this, you just need to open a terminal window of your operating system. Make sure that you have a `python` 3.x environment properly set up. Then run the command:
+`pathpy` is pure python code. It has no platform-specific dependencies and thus work on all platforms. It builds on `numpy` and `scipy` which come preinstalled in the Anaconda 5.2 environment. Assuming that a `python 3.x` environment has been successfully installed as described above, the latest version of `pathpy` can be installed via the [python package index pypi](https://pypi.org/project/pathpy2/). For this, just open a terminal window. Make sure that you have a `python` 3.x environment properly set up. Then run the command:
 
 ```
 pip install pathpy2
@@ -74,7 +76,7 @@ If you are running on Windows 10, the easiest way to get the compilation tools n
 For more detailed information about the installation and usage of `InfoMap`, see [www.mapequation.org/code.html](http://www.mapequation.org/code.html).
 
 
-### Verifying your environment
+## Verifying your environment
 
 Now that we have installed all necessary tools and packages, let us verify that our environment is set up properly.
 
@@ -97,22 +99,26 @@ Click the top-most `Run cell` code lens. A menu will appear, asking you whether 
 
 If you see this output, all is set up properly, and you are all set to complete the first two sessions of the hands-on tutorial.
 
-## Setting up BuildHON+
+## Setting up BuildHON+ and HONVis
 
-`BuildHON+` is pure python code. It has no platform-specific dependencies and thus work on all platforms. It runs with Python3.
+In order to complete the virtual tutorial session, you will need to install the software `BuildHON+` and `HONVis`. 
 
-Usage: under the code/ folder of the tutorial package, run
+`BuildHON+` is pure python code. It has no platform-specific dependencies and thus works on all platforms. It runs with python 3.X.
+
+To use it, change to the `code` directory of the tutorial repository and run
+
 ```
 python3 3_1_buildhon.py
 ```
 
-## Setting up HONVis
+in a terminal.
 
-`HONVis` is built with C++ and available in binaries. It is compiled separately for Windows, Mac and Linux. It is under code/3_2_HONVis
+`HONVis` is built with C++ and we provide it in binary form. It is compiled separately for Windows, Mac and Linux. You can find it in the directory `code/5_2_HONVis`.
 
-For Windows, double click `HONVis_NYC_Taxi_Case_Jul_Aug.exe`, and follow the video tutorial on [www.higherordernetwork.com/visualization/](http://www.higherordernetwork.com/visualization/) at 5 mins.
+For Windows, double click `HONVis_NYC_Taxi_Case_Jul_Aug.exe` and follow the video tutorial available on [www.higherordernetwork.com/visualization/](http://www.higherordernetwork.com/visualization/) (5 mins).
 
 For Mac or Linux, run the following in Terminal (or your favorite shell)
+
 ```
 ./Jul_Aug
 ```
