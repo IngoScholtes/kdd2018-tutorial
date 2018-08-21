@@ -46,8 +46,8 @@ Tutor: [Ingo Scholtes, Data Analytics Group, University of Zurich](http://ifi.uz
 
 Unit | Topic | Notebook | Live Solution
 ----|----|----|----
-1.1 | A Primer to Data Science with `python`, `jupyter`, `git` and `VS Code` (15 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_1_vscode_jupyter.py) | N/A
-1.2 | Analysis and Visualisation of Path Data in [`pathpy`](http://www.pathpy.net) (15 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_2_pathpy.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_2_pathpy.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/1_2_pathpy.py)
+1.1 | A Primer to Data Science with `python`, `jupyter`, `git` and `VS Code` (10 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_1_vscode_jupyter.py) | N/A
+1.2 | Analysis and Visualisation of Path Data in [`pathpy`](http://www.pathpy.net) (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_2_pathpy.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_2_pathpy.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/1_2_pathpy.py)
 
 ### KDD Coffee break
 *09:30 - 10:00*
@@ -61,12 +61,12 @@ Tutor: [Ingo Scholtes, Data Analytics Group, University of Zurich](http://ifi.uz
 
 Unit | Topic | Notebook | Live Solution
 ----|----|----|----
-1.3 | Fitting and Visualising Higher-order Network Models (15 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_3_higher_order.py),  [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_3_higher_order.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/1_3_higher_order.py)
-1.4 | Exploration: Higher-order Analysis of [real-world data](https://github.com/IngoScholtes/kdd2018-tutorial/tree/master/data) (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_4_exploration.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_4_exploration.ipynb) | N/A
-2.1 | Time-stamped Network Analysis in [`pathpy`](http://www.pathpy.net) (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_1_temporal_networks.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_1_temporal_networks.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_1_temporal_networks.py)
-2.2 | Multi-order Representation Learning (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_2_multi_order.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_2_multi_order.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_2_multi_order.py)
-2.3 | Optimal Higher-order Analytics for Temporal Data (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_3_cross_validation.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_3_cross_validation.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_3_cross_validation.py)
-2.4 | Exploration: Multi-order Analysis of [Time-stamped Social Networks](https://github.com/IngoScholtes/kdd2018-tutorial/tree/master/data) (30 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_4_exploration.py),  [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_4_exploration.ipynb) | N/A
+1.3 | Fitting and Visualising Higher-order Network Models (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_3_higher_order.py),  [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_3_higher_order.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/1_3_higher_order.py)
+1.4 | Time-stamped Network Analysis in [`pathpy`](http://www.pathpy.net) (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_4_temporal_networks.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_4_temporal_networks.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/1_4_temporal_networks.py)
+1.5 | Exploration: Higher-order Analysis of [real-world data](https://github.com/IngoScholtes/kdd2018-tutorial/tree/master/data) (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_5_exploration.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_5_exploration.ipynb) | N/A
+1.5 | Multi-order Representation Learning (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_6_multi_order.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_6_multi_order.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/1_6_multi_order.py)  
+1.7 | Optimal Higher-order Analytics for Temporal Data (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_7_optimal_analysis.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_7_optimal_analysis.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/1_7_optimal_analysis.py)
+1.8 | Exploration: Multi-order Analysis of [Time-stamped Social Networks](https://github.com/IngoScholtes/kdd2018-tutorial/tree/master/data) (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_8_exploration.py),  [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_8_exploration.ipynb) | N/A
 
 ### KDD Lunch break
 *12:00 - 13:30*
@@ -84,11 +84,12 @@ Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-
 - Multilevel partitions
 
 **Live Coding** (75 min)
-- Introducing `Infomap`
-- Community detection in first-order models
-- Mapping change in modular networks
-- Generation of first- and second order networks from paths
-- Interactive Visualisation of second-order hierarchical clusters
+
+Unit | Topic | Notebook | Live Solution
+----|----|----|----
+2.1 | Introduction to [`Infomap`](http://www.mapequation.org) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_1_infomap_intro.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_1_infomap_intro.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_1_infomap_intro.py)
+2.2 | Explore flight path data with Infomap and [`interactive visualisations`](http://www.mapequation.org/apps.html) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_2_explore_flight_data.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_2_explore_flight_data.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_2_explore_flight_data.py)
+
 
 ### KDD Coffee break
 *15:30 - 16:00*
@@ -98,14 +99,20 @@ Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-
 
 Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-edler/)
 
-**Live Coding** (60 min)
+**Intro:** Higher-order flows (15 minutes) | [Slides](https://www.dropbox.com/s/wd48ejqjohrviss/KDD2018mapequation.pdf?dl=0)
 - From pathways to networks with and without memory
-- Sparse Markov chain models
-- Higher-order clustering with Infomap
-- Interactive visualisation of hierarchical clusters
+- Sparse Markov model
 
-### Tutorial Closing
-*17:00 - 17:10**
+**Live Coding** (60 min)
+
+Unit | Topic | Notebook | Live Solution
+----|----|----|----
+2.3 | Introduction to [`sparse higher-order networks`](http://www.mapequation.org/publications.html#Edler-Etal-2017-MappingHigherOrder) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_3_sparse_state_lumping.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_3_sparse_state_lumping.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_3_sparse_state_lumping.py)
+2.4 | Sparse networks for flight data | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_4_sparse_flight_data.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_4_sparse_flight_data.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_4_sparse_flight_data.py)
+
+
+### Tutorial Closing 
+*17:00 - 17:10*
 
 ## Block III: Variable-order Analytics with BuildHON/HONVis
 

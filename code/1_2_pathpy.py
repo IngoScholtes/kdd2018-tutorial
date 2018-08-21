@@ -15,10 +15,7 @@ University of Zurich
 
 
 **August 22 2018**
-""")
 
-#%%
-md("""
 In the introduction we have seen that higher-order modelling, visualisation, and analysis techniques are useful for all sorts of **temporal network data** that provide us with **statistics of paths in complex networks**. But how can we apply higher-order network analytics to such such data in practice?
 
 In the first two sessions of our tutorial we introduce [``pathpy``](http://www.pathpy.net), an OpenSource `python` package that provides higher-order data analytics and representation learning techniques. It contains data structures, algorithms, data import/export methods, and visualisation techniques for various types of time series data on complex networks.
@@ -167,7 +164,7 @@ Note that you can interact with the generated graph using the mouse. We can drag
 <span style="color:red">**TODO**: Visualise the network `toy_graph`, drag a node, hover above a node, and pan and zoom.</span>
 """)
 
-#%% In [13]
+#%% In [18]
 
 
 #%%
