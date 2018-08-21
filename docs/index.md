@@ -75,7 +75,7 @@ Unit | Topic | Notebook | Live Solution
 
 Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-edler/)
 
-**Intro:** Flow Compression with the MapEquation (45 minutes) | [slides](http://...)
+**Intro:** Flow Compression with the MapEquation (45 min) | [slides](http://...)
 - Introduction to graph clustering
 - Flow Compression: The MapEquation
 - Minimisation of Modular Description Length
@@ -103,13 +103,13 @@ Tutor: [Nitesh Chawla, University of Notre Dame](https://www3.nd.edu/~nchawla/)
 
 Due to unforeseen circumstances, the tutor could not attend KDD'18. This block will thus be a 1 hour virtual self-study session. Participants can find the tutorial material in the gitHub repository.
 
-*Representing variable orders in networks* (30 minutes) | [slides](http://www.jianxu.net/en/files/HON_Xu_KDD_2018.ppsx)
+**Intro:** Representing variable orders in networks (30 min) | [slides](http://www.jianxu.net/en/files/HON_Xu_KDD_2018.ppsx)
 - Introduction to higher-order network
 - Why variable orders?
 - BuildHON algorithm in a nutshell
 - Real-world applications
 
-*Hands-on Coding Session* (30 minutes) | [slides](http://www.jianxu.net/en/files/HON_Xu_KDD_2018_HandsOnTasks.ppsx)
+**Live Demo** (30 min) | [slides](http://www.jianxu.net/en/files/HON_Xu_KDD_2018_HandsOnTasks.ppsx)
 - Synthesizing trajectories with known variable orders of dependencies
 - Use BuildHON+ (parameter-free) to extract variable orders of dependencies and build HON
 - Use HONVis to visualize and interactively explore the higher-order network of NYC taxi data
