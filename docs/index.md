@@ -36,9 +36,9 @@ Tutor: [Ingo Scholtes, Data Analytics Group, University of Zurich](http://ifi.uz
 **Welcome Note and Tutorial Overview**  
 
 **Intro: Higher-Order Network Analytics for Time Series Data** (30 min) | [slides](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/talks/)  
-- The arrow of time in temporal networks
-- Higher-order dependencies in causal paths
-- From graphs to higher-order generative models
+- Causal paths in temporal network data
+- Ordering matters in time series data
+- Higher-order generative models for causal paths
 - Representation learning in temporal network data
 
 
@@ -71,19 +71,25 @@ Unit | Topic | Notebook | Live Solution
 ### Lunch break
 *12:00 - 13:30*
 
-## Block II: Introduction to Higher-Order Graph Clustering with [InfoMap](http://www.mapequation.org)
+## Block II: Introduction to Higher-Order Graph Clustering with [Infomap](http://www.mapequation.org)
 
 Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-edler/)
 
-**Intro:** Flow Compression with the MapEquation (45 min) | [slides](http://...)
-- Introduction to graph clustering
-- Flow Compression: The MapEquation
-- Minimisation of Modular Description Length
-- Second-order Flow Compression in trigram data
+All slides: [Mapping higher-order
+network flows
+with the minimum description length principle](https://www.dropbox.com/s/wd48ejqjohrviss/KDD2018mapequation.pdf?dl=0)
+
+**Intro:** Flow Compression with the MapEquation (45 minutes)
+- Coding theory: The minimum description length principle
+- Compression of modular network flows: The MapEquation
+- Multilevel partitions
 
 **Live Coding** (45 min)
-- Introducing `InfoMap`
+- Introducing `Infomap`
 - Community detection in first-order models
+- Mapping change in modular networks
+- Generation of first- and second order networks from paths
+- Interactive Visualisation of second-order hierarchical clusters
 
 ### Coffee break
 *15:00 - 15:30*
@@ -93,8 +99,12 @@ Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-
 
 Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-edler/)
 
-**Live Coding** (90 min)
-- Higher-order clustering with InfoMap
+**Intro:** Higer-order flows and Sparse Markov models (15 minutes)
+- From pathways to networks with and without memory
+- Sparse Markov chain models
+
+**Live Coding** (60 min)
+- Higher-order clustering with Infomap
 - Interactive Visualisation of hierarchical clusters
 
 ## Block III: Variable-order Analytics with BuildHON/HONVis
@@ -110,7 +120,7 @@ Due to unforeseen circumstances, the tutor could not attend KDD'18. This block w
 - Real-world applications
 
 **Live Demo** (30 min) | [slides](http://www.jianxu.net/en/files/HON_Xu_KDD_2018_HandsOnTasks.ppsx)
-- Synthesizing trajectories with known variable orders of dependencies
+- Synthesising trajectories with known variable orders of dependencies
 - Use BuildHON+ (parameter-free) to extract variable orders of dependencies and build HON
 - Use HONVis to visualize and interactively explore the higher-order network of NYC taxi data
 
