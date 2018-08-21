@@ -73,7 +73,7 @@ def convert(ipynb_file, output_file=None, blank_code = False, todo_msg = '# TODO
         A string text by which code cells will be replaced if blank_code 
         is set to True. If set to None, no todo message will be created.
     """
-    print('Converting ipynb file ...')
+    print('Converting ipynb file {} to {} ...'.format(ipynb_file, output_file))
     output = '#%%\nimport markdown\n' \
              'from IPython.core.display import display, HTML\n'\
              'def md(str):\n'\
@@ -140,3 +140,27 @@ convert('solutions/1_7_optimal_analysis.ipynb', 'solutions/1_7_optimal_analysis.
 #%% Unit 1.8
 convert('solutions/1_8_exploration.ipynb', 'code/1_8_exploration.py', blank_code=False, todo_msg=None)
 convert('solutions/1_8_exploration.ipynb', 'solutions/1_8_exploration.py', blank_code=False, todo_msg=None)
+
+#%% Unit 2.1
+convert('solutions/2_1_infomap_intro.ipynb', 'code/2_1_infomap_intro.py', blank_code=True)
+extract_code('solutions/2_1_infomap_intro.ipynb', 'live_solutions/2_1_infomap_intro_code.py')
+remove_code('solutions/2_1_infomap_intro.ipynb', 'code/2_1_infomap_intro.ipynb')
+convert('solutions/2_1_infomap_intro.ipynb', 'solutions/2_1_infomap_intro.py', blank_code=False, todo_msg=None)
+
+#%% Unit 2.2
+convert('solutions/2_2_explore_flight_data.ipynb', 'code/2_2_explore_flight_data.py', blank_code=True)
+extract_code('solutions/2_2_explore_flight_data.ipynb', 'live_solutions/2_2_explore_flight_data_code.py')
+remove_code('solutions/2_2_explore_flight_data.ipynb', 'code/2_2_explore_flight_data.ipynb')
+convert('solutions/2_2_explore_flight_data.ipynb', 'solutions/2_2_explore_flight_data.py', blank_code=False, todo_msg=None)
+
+#%% Unit 2.3
+convert('solutions/2_3_sparse_state_lumping.ipynb', 'code/2_3_sparse_state_lumping.py', blank_code=True)
+extract_code('solutions/2_3_sparse_state_lumping.ipynb', 'live_solutions/2_3_sparse_state_lumping_code.py')
+remove_code('solutions/2_3_sparse_state_lumping.ipynb', 'code/2_3_sparse_state_lumping.ipynb')
+convert('solutions/2_3_sparse_state_lumping.ipynb', 'solutions/2_3_sparse_state_lumping.py', blank_code=False, todo_msg=None)
+
+#%% Unit 2.4
+convert('solutions/2_4_sparse_flight_data.ipynb', 'code/2_4_sparse_flight_data.py', blank_code=True)
+extract_code('solutions/2_4_sparse_flight_data.ipynb', 'live_solutions/2_4_sparse_flight_data_code.py')
+remove_code('solutions/2_4_sparse_flight_data.ipynb', 'code/2_4_sparse_flight_data.ipynb')
+convert('solutions/2_4_sparse_flight_data.ipynb', 'solutions/2_4_sparse_flight_data.py', blank_code=False, todo_msg=None)
