@@ -84,11 +84,12 @@ Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-
 - Multilevel partitions
 
 **Live Coding** (75 min)
-- Introducing `Infomap`
-- Community detection in first-order models
-- Mapping change in modular networks
-- Generation of first- and second order networks from paths
-- Interactive Visualisation of second-order hierarchical clusters
+
+Unit | Topic | Notebook | Live Solution
+----|----|----|----
+2.1 | Introduction to [`Infomap`](http://www.mapequation.org) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_1_infomap_intro.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_1_infomap_intro.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_1_infomap_intro.py)
+2.2 | Explore flight path data with Infomap and [`interactive visualisations`](http://www.mapequation.org/apps.html) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_2_explore_flight_data.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_2_explore_flight_data.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_2_explore_flight_data.py)
+
 
 ### KDD Coffee break
 *15:30 - 16:00*
@@ -98,11 +99,17 @@ Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-
 
 Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-edler/)
 
-**Live Coding** (60 min)
+**Intro:** Higher-order flows (15 minutes) | [Slides](https://www.dropbox.com/s/wd48ejqjohrviss/KDD2018mapequation.pdf?dl=0)
 - From pathways to networks with and without memory
-- Sparse Markov chain models
-- Higher-order clustering with Infomap
-- Interactive visualisation of hierarchical clusters
+- Sparse Markov model
+
+**Live Coding** (60 min)
+
+Unit | Topic | Notebook | Live Solution
+----|----|----|----
+2.3 | Introduction to [`sparse higher-order networks`](http://www.mapequation.org/publications.html#Edler-Etal-2017-MappingHigherOrder) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_3_sparse_state_lumping.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_3_sparse_state_lumping.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_3_sparse_state_lumping.py)
+2.4 | Sparse networks for flight data | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_4_sparse_flight_data.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/2_4_sparse_flight_data.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/2_4_sparse_flight_data.py)
+
 
 ### Tutorial Closing 
 *17:00 - 17:10*
