@@ -16,7 +16,7 @@ A detailed summary of the topics, literature, and tools covered in this hands-on
 
 # When and where
 
-The tutorial will take place on **Wednesday August 22, 2018** in ICC Capital Suite Room 2+3+4 of the [ExCel London](https://www.excel.london/organiser/venue-map), 1 Western Gateway, Royal Victoria Dock, London, E16 1FR.
+The tutorial will take place on **Wednesday August 22, 2018** from **08:30 - 17:10** in ICC Capital Suite Room 2+3+4 of the [ExCel London](https://www.excel.london/organiser/venue-map), 1 Western Gateway, Royal Victoria Dock, London, E16 1FR.
 
 # Prerequisites
 
@@ -103,6 +103,9 @@ Tutor: [Daniel Edler, Ume&aring; University](https://www.umu.se/en/staff/daniel-
 - Sparse Markov chain models
 - Higher-order clustering with Infomap
 - Interactive visualisation of hierarchical clusters
+
+### Tutorial Closing
+*17:00 - 17:10**
 
 ## Block III: Variable-order Analytics with BuildHON/HONVis
 
