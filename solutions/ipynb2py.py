@@ -34,10 +34,7 @@ def extract_code(ipynb_file, output_file=None):
         is set to True. If set to None, no todo message will be created.
     """
     print('Converting ipynb file ...')
-    output = '#%%\nimport markdown\n' \
-             'from IPython.core.display import display, HTML\n'\
-             'def md(str):\n'\
-             '    display(HTML(markdown.markdown(str + "<br />")))\n\n'
+    output = ''
     with open(ipynb_file, 'r') as f:
         notebook = json.load(f)
         for cell in notebook['cells']:
