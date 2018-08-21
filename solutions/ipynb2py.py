@@ -75,13 +75,13 @@ remove_code('solutions/1_3_higher_order.ipynb', 'code/1_3_higher_order.ipynb')
 convert('solutions/1_3_higher_order.ipynb', 'solutions/1_3_higher_order.py', blank_code=False, todo_msg=None)
 
 #%% Unit 1.4
-convert('solutions/1_4_exploration.ipynb', 'code/1_4_exploration.py', blank_code=False, todo_msg=None)
-convert('solutions/1_4_exploration.ipynb', 'solutions/1_4_exploration.py', blank_code=False, todo_msg=None)
+convert('solutions/1_4_temporal_networks.ipynb', 'code/1_4_temporal_networks.py', blank_code=True, todo_msg=None)
+remove_code('solutions/1_4_temporal_networks.ipynb', 'code/1_4_temporal_networks.ipynb')
+convert('solutions/1_4_temporal_networks.ipynb', 'solutions/1_4_temporal_networks.py', blank_code=False, todo_msg=None)
 
 #%% Unit 1.5
-convert('solutions/1_5_temporal_networks.ipynb', 'code/1_5_temporal_networks.py', blank_code=True, todo_msg=None)
-remove_code('solutions/1_5_temporal_networks.ipynb', 'code/1_5_temporal_networks.ipynb')
-convert('solutions/1_5_temporal_networks.ipynb', 'solutions/1_5_temporal_networks.py', blank_code=False, todo_msg=None)
+convert('solutions/1_5_exploration.ipynb', 'code/1_5_exploration.py', blank_code=False, todo_msg=None)
+convert('solutions/1_5_exploration.ipynb', 'solutions/1_5_exploration.py', blank_code=False, todo_msg=None)
 
 #%% Unit 1.6
 convert('solutions/1_6_multi_order.ipynb', 'code/1_6_multi_order.py', blank_code=True, todo_msg=None)
