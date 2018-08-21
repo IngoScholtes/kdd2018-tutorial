@@ -6,10 +6,7 @@ def md(str):
 
 #%%
 md("""
-# Higher-Order Data Analytics for Temporal Network Data
-
-
-## 1.2 Introducing `pathpy`
+# 1.2 Introducing `pathpy`
 
 **Ingo Scholtes**  
 Data Analytics Group  
@@ -22,11 +19,17 @@ University of Zurich
 
 #%%
 md("""
-In the introductory pitch we have seen that higher-order modelling, visualisation, and analysis techniques are useful for **temporal network data** that provide us with **path statistics**. But how can we deal with such data in practice? 
+In the introduction we have seen that higher-order modelling, visualisation, and analysis techniques are useful for all sorts of **temporal network data** that provide us with **statistics of paths in complex networks**. But how can we apply higher-order network analytics to such such data in practice?
 
-In the first two sessions of our tutorial we introduce ``pathpy``, an OpenSource `python` package that provides higher-order data analytics and representation learning techniques. It contains data structures, algorithms, data import/export methods, and visualisation techniques for various types of time series data on complex networks.
+In the first two sessions of our tutorial we introduce [``pathpy``](http://www.pathpy.net), an OpenSource `python` package that provides higher-order data analytics and representation learning techniques. It contains data structures, algorithms, data import/export methods, and visualisation techniques for various types of time series data on complex networks.
 
-`pathpy` is pure `python` code with no platform-specific dependencies, so it is easy to install. You can find detailed setup instructions on the [tutorial website](https://ingoscholtes.github.io/kdd2018-tutorial/setup).
+`pathpy` is pure `python` code with no platform-specific dependencies. It only depends on `numpy` and `scipy`, which come with `Anaconda`, so it should be very easy to install. In principle installing the latest 2.0 version of `pathpy` should be as easy as running
+
+```
+pip install pathpy2
+```
+
+on the terminal. In any case, you can find more detailed setup instructions on the [tutorial website](https://ingoscholtes.github.io/kdd2018-tutorial/setup).
 
 <span style="color:red">**TODO:** Import the package `pathpy` and rename it to `pp`</span>
 """)
@@ -36,7 +39,7 @@ In the first two sessions of our tutorial we introduce ``pathpy``, an OpenSource
 
 #%%
 md("""
-A core functionality of `pathpy` is to read, calculate, store, manipulate, and model path statistics from different kinds of data on complex networks. For this `pathpy` provides the class `Paths`, which can store collections of paths of varying length. All classes and methods in `pathpy` are documented using `python`'s docstring feature and we can access this documentation using the standard `help` function. 
+A core functionality of `pathpy` is to read, calculate, store, manipulate, and model path statistics extracted from different kinds of temporal data on complex networks. For this `pathpy` provides the class `Paths`, which can store collections of paths with varying lengths. All classes and methods in `pathpy` are documented using `python`'s docstring feature so we can access the documentation using the standard `help` function. 
 
 <span style="color:red">**TODO:** Use the `help` function to obtain a description of the class `Paths`.</span>
 """)
@@ -46,7 +49,7 @@ A core functionality of `pathpy` is to read, calculate, store, manipulate, and m
 
 #%%
 md("""
-In Visual Studio Code, the documentation of classes, methods, and properties is automatically shown as a tooltip as you type. If you use the browser-based editor of the `jupyter` notebook server, you can bring up the integrated documentation by pressing `Shift`+`Tab` as you type. You can try this with the `Paths` class. 
+In Visual Studio Code, the documentation of classes, methods, and properties is automatically shown as a tooltip as you type. If you use the browser-based `jupyter notebook` editor, you can bring up the documentation by pressing `Shift`+`Tab` as you type. You can try this with the `Paths` class. 
 
 <span style="color:red">**TODO:** Create an empty `Paths` instance `toy_paths` by calling the constructor with no arguments.</span>
 """)
@@ -56,7 +59,7 @@ In Visual Studio Code, the documentation of classes, methods, and properties is 
 
 #%%
 md("""
-We now have an empty `Paths` instance `toy_paths` that we can use to add path statistics using a small toy example. We can add paths using the method `add_path`. As the first parameter, it accepts any iterable (list, string, etc.) of `string` variables, where each entry in the iterable is one step (i.e. node) on a path. The `frequency` parameter captures the number of times a specific path has been observed.
+We now have an empty `Paths` instance `toy_paths` that we can use to add path statistics to generate a small toy example. We can add paths using the method `add_path`. As the first parameter, it accepts any iterable (list, string, etc.) of `string` variables (or objects that can be cast to `string)`, where each entry in the iterable is one step (i.e. node) on a path. The optional `frequency` parameter captures the number of times a specific path has been observed.
 
 <span style="color:red">**TODO:** Add 10 observations of a path $a \rightarrow c \rightarrow e$ between three nodes $a$, $c$, and $e$ to the `toy_paths` instance.</span>
 """)
@@ -103,8 +106,16 @@ We obtain a `Paths` object with 10 observations of path $b\rightarrow c \rightar
 
 #%%
 md("""
-We obtain a new `Paths` instance with $20$ observed paths between five nodes $a$, $b$, $c$, $d$, and $e$ across four edges $(a,c)$, $(c,d)$, $(b,c)$ and $(c,e)$. 
+We obtain a new `Paths` instance with $20$ observed paths between five nodes $a$, $b$, $c$, $d$, and $e$ across four edges $(a,c)$, $(c,d)$, $(b,c)$ and $(c,e)$. Let us first use the function `Paths.write_file` to save these paths for later use.
 
+<span style="color:red">**TODO:** Save the paths to an ngram file `data/toy_paths.ngram`.</span>
+""")
+
+#%% In [8]
+
+
+#%%
+md("""
 We often analyse or visualise graph or network topologies in which the observed paths have occurred. For this, `pathpy` provides the class `Network`, which you can use to read, manipulate, analyse, and visualise directed, undirected, weighted, and unweighted networks.
 
 We can easily turn any `Paths` instance into a network by using the class method `Network.from_paths`. This will cut each path $v_0 \rightarrow v_1 \rightarrow v_2 \rightarrow$  into directed *dyadic relations* $(v_i, v_{i+1})$ that are represented by directed edges.
@@ -112,7 +123,7 @@ We can easily turn any `Paths` instance into a network by using the class method
 <span style="color:red">**TODO**: Create a `Network` instance `toy_graph` from the `toy_paths` instance and print a summary of the network.</span>
 """)
 
-#%% In [8]
+#%% In [9]
 
 
 #%%
@@ -122,7 +133,7 @@ We obtain a network with five nodes $a$, $b$, $c$, $d$, and $e$ and four directe
 <span style="color:red">**TODO:** Print the `weight` of edge `(a, c)` in `toy_graph`.</span>
 """)
 
-#%% In [9]
+#%% In [10]
 
 
 #%%
@@ -132,7 +143,7 @@ In fact, since each edge can be viewed as a path of length one, the edge weights
 <span style="color:red">**TODO:** Verify that the sub-path frequency of path `(a,c)` in `toy_paths` coincides with the weight of edge `(a,c)` in `toy_graph`.</span>
 """)
 
-#%% In [10]
+#%% In [11]
 
 
 #%%
@@ -144,7 +155,7 @@ The attribute `x` of a node `v` or an edge `e` in a network instance `net` can b
 <span style="color:red">**TODO:** Set the node and edge attributes of some nodes and edges in `toy_graph`, and use `find_nodes` and `find_edges` to identify nodes and edges that have certain attributes.</span>
 """)
 
-#%% In [11]
+#%% In [12]
 
 
 #%%
@@ -156,7 +167,7 @@ Note that you can interact with the generated graph using the mouse. We can drag
 <span style="color:red">**TODO**: Visualise the network `toy_graph`, drag a node, hover above a node, and pan and zoom.</span>
 """)
 
-#%% In [12]
+#%% In [18]
 
 
 #%%
@@ -170,7 +181,7 @@ We can also programmatically style our network by using the generic `plot` funct
 <span style="color:red">**TODO**: Check the documentation of `pp.visualisation.plot` and change the color of nodes to red.</span>
 """)
 
-#%% In [13]
+#%% In [14]
 
 
 #%%
@@ -182,7 +193,7 @@ Let us explore some of the features supported by `pathpy`'s default visualisatio
 <span style="color:red">**TODO**: Use the `help` function to show which parameters are supported by the function `pp.visualisation.plot`.</span>
 """)
 
-#%% In [14]
+#%% In [15]
 
 
 #%%
@@ -190,7 +201,7 @@ md("""
 <span style="color:red">**TODO**: Create a parameter dictionary `style` that changes the plot size, switches off edge arrows, assigns individual colors to nodes, changes label position, color and font size, and adjust node size and edge width.</span>
 """)
 
-#%% In [15]
+#%% In [16]
 
 
 #%%
@@ -199,9 +210,6 @@ Once we are satsfied with our visualisation, we can use the method `pp.visualisa
 
 <span style="color:red">**TODO**: Save your visualisation to a file `test_network.html`. Reuse the visualisation parameters from above.</span>
 """)
-
-#%% In [16]
-
 
 #%% In [17]
 
