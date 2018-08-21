@@ -31,7 +31,7 @@ Details on the origin of these data can be found [here](https://github.com/IngoS
 Please consider the data sets as well as the questions above as mere **suggestions for your exploration of higher-order network analytics**. You are welcome to study other data sets or questions instead. Please reach out to me if you encounter any problems or questions (also after KDD). You can reach me at `scholtes@ifi.uzh.ch`.
 """)
 
-#%% In [None]
+#%% In [1]
 import pathpy as pp
 
 # Flight data  

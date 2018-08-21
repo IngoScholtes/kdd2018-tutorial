@@ -15,16 +15,13 @@ University of Zurich
 
 
 **August 22 2018**
-""")
 
-#%%
-md("""
 So far, we have focused on network representations, but the real **purpose of `pathpy` is to fit and analyse higher-order network models for paths in time series data on complex networks**. For this we can use the class `HigherOrderNetwork`. Let us look at the `docstring` of this class.
 
 <span style="color:red">**TODO:** Import the module pathpy and use the `help` function to print the documentation of class `pp.HigherOrderNetwork`.</span>
 """)
 
-#%% In [2]
+#%% In [1]
 
 
 #%%
@@ -81,7 +78,7 @@ We can generalise this idea to **k-th-order models** for paths, where **nodes ar
 <span style="color:red">**TODO:** Create a second-order model `hon_2` for `toy_paths`. Visualise the model and print the weights of all edges.</span>
 """)
 
-#%% In [4]
+#%% In [5]
 
 
 #%%
@@ -97,7 +94,7 @@ Another way to express this independence assumption is to consider Markov chain 
 <span style="color:red">**TODO:** Use the `null_model` parameter in the constructor of `HigherOrderNetwork` to generate a second-order null model `hon_2_null` for `toy_paths`. Visualise the model and output all edge weights.</span>
 """)
 
-#%% In [5]
+#%% In [6]
 
 
 #%%
@@ -109,7 +106,7 @@ We can easily find out which of the paths of length two occur more or less often
 <span style="color:green">**Hint:** Use the function `HigherOrderNetwork.node_to_name_map()` to map node names to matrix indices.</span>
 """)
 
-#%% In [6]
+#%% In [7]
 
 
 #%%
@@ -125,7 +122,7 @@ Let us consider the betweenness value of a node $v$, which (in its unnormalized 
 <span style="color:red">**TODO:** Use the method `pp.algorithms.centralities.betweenness` to calculate the betweenness of node `c` in the first-order network model of `toy_paths`.</span>
 """)
 
-#%% In [7]
+#%% In [8]
 
 
 #%%
@@ -135,7 +132,7 @@ This is easy to understand, as there are four pairs $(b,e)$, $(b,d)$, $(a,e)$, $
 <span style="color:red">**TODO:** Use the method `pp.algorithms.centralities.betweenness` to calculate the betweenness of node `c` in the paths observed in `toy_paths`.</span>
 """)
 
-#%% In [8]
+#%% In [9]
 
 
 #%%
@@ -145,7 +142,7 @@ Not surprisingly, the betweenness of node $c$ in the actual paths is two, as $c$
 <span style="color:red">**TODO:** Use the method `pp.algorithms.centralities.betweenness` to calculate the betweenness of node `c` in a second-order model for `toy_paths`.</span>
 """)
 
-#%% In [9]
+#%% In [10]
 
 
 #%%
@@ -155,7 +152,7 @@ We see that in this example (since we **only** have second-order dependencies) t
 <span style="color:red">**TODO:** Use the method `pp.algorithms.centralities.betweenness` to calculate the betweenness of node `c` in the second-order null model for `toy_paths`.</span>
 """)
 
-#%% In [10]
+#%% In [11]
 
 
 #%%
@@ -172,7 +169,7 @@ For your convenience, we have partitioned the data set into a training and a val
 <span style="color:red">**TODO:** Use the `Paths.read_file` function to read path statistics from the ngram data file `US_flights_train.ngram`. Set the parameter `frequency` of the read_file function to `False`. Generate a first-, second-, and third-order model for the paths. Use `pp.algorithms.centralities.pagerank` to calculate the PageRank of nodes in the higher-order models.</span>
 """)
 
-#%% In [11]
+#%% In [13]
 
 
 #%%
@@ -182,7 +179,7 @@ We can now use the values as a prediction for the ranking of airports based on a
 <span style="color:red">**TODO:** Use the `Paths.read_file` function to read path statistics from the ngram data file `US_flights_validate.ngram`. Set the parameter `frequency` of the read_file function to `False`. Use the method `pp.algorithms.centralities.node_traversals` to calculate the number of passengers that through each airport in the validation data set.</span>
 """)
 
-#%% In [12]
+#%% In [14]
 
 
 #%%
@@ -192,7 +189,7 @@ We can validate our models by calculating the Kendall-Tau rank correlations betw
 <span style="color:red">**TODO:** Use the function `kendalltau` from the package `scipy.stats` to calculate the rank correlation between (i) the ground truth ranking in the validation data, and (ii) the rankings obtained based on the first-, second-, and third-order models respectively.</span>
 """)
 
-#%% In [13]
+#%% In [15]
 
 
 #%%
@@ -216,7 +213,7 @@ In the example above, the data provide us with full knowledge about the exact it
 <span style="color:red">**TODO:** Generate a directed network with six nodes and six edges $(a,c), (b,c), (c,d), (d,f), (d,g)$. Plot the network. Based on a list of tuples $(a, f, 5), (b, g, 10)$ capturing origin destination statistics, use the method `pp.path_extraction.paths_from_origin_destination` to generate a `Paths` object and print the result.</span>
 """)
 
-#%% In [3]
+#%% In [16]
 
 
 #%%

@@ -78,21 +78,21 @@ convert('solutions/1_3_higher_order.ipynb', 'solutions/1_3_higher_order.py', bla
 convert('solutions/1_4_exploration.ipynb', 'code/1_4_exploration.py', blank_code=False, todo_msg=None)
 convert('solutions/1_4_exploration.ipynb', 'solutions/1_4_exploration.py', blank_code=False, todo_msg=None)
 
-#%% Unit 2.1
-convert('solutions/2_1_temporal_networks.ipynb', 'code/2_1_temporal_networks.py', blank_code=True, todo_msg=None)
-remove_code('solutions/2_1_temporal_networks.ipynb', 'code/2_1_temporal_networks.ipynb')
-convert('solutions/2_1_temporal_networks.ipynb', 'solutions/2_1_temporal_networks.py', blank_code=False, todo_msg=None)
+#%% Unit 1.5
+convert('solutions/1_5_temporal_networks.ipynb', 'code/1_5_temporal_networks.py', blank_code=True, todo_msg=None)
+remove_code('solutions/1_5_temporal_networks.ipynb', 'code/1_5_temporal_networks.ipynb')
+convert('solutions/1_5_temporal_networks.ipynb', 'solutions/1_5_temporal_networks.py', blank_code=False, todo_msg=None)
 
-#%% Unit 2.2
-convert('solutions/2_2_multi_order.ipynb', 'code/2_2_multi_order.py', blank_code=True, todo_msg=None)
-remove_code('solutions/2_2_multi_order.ipynb', 'code/2_2_multi_order.ipynb')
-convert('solutions/2_2_multi_order.ipynb', 'solutions/2_2_multi_order.py', blank_code=False, todo_msg=None)
+#%% Unit 1.6
+convert('solutions/1_6_multi_order.ipynb', 'code/1_6_multi_order.py', blank_code=True, todo_msg=None)
+remove_code('solutions/1_6_multi_order.ipynb', 'code/1_6_multi_order.ipynb')
+convert('solutions/1_6_multi_order.ipynb', 'solutions/1_6_multi_order.py', blank_code=False, todo_msg=None)
 
-#%% Unit 2.3
-convert('solutions/2_3_cross_validation.ipynb', 'code/2_3_cross_validation.py', blank_code=True, todo_msg=None)
-remove_code('solutions/2_3_cross_validation.ipynb', 'code/2_3_cross_validation.ipynb')
-convert('solutions/2_3_cross_validation.ipynb', 'solutions/2_3_cross_validation.py', blank_code=False, todo_msg=None)
+#%% Unit 1.7
+convert('solutions/1_7_optimal_analysis.ipynb', 'code/1_7_optimal_analysis.py', blank_code=True, todo_msg=None)
+remove_code('solutions/1_7_optimal_analysis.ipynb', 'code/1_7_optimal_analysis.ipynb')
+convert('solutions/1_7_optimal_analysis.ipynb', 'solutions/1_7_optimal_analysis.py', blank_code=False, todo_msg=None)
 
-#%% Unit 2.4
-convert('solutions/2_4_exploration.ipynb', 'code/2_4_exploration.py', blank_code=False, todo_msg=None)
-convert('solutions/2_4_exploration.ipynb', 'solutions/2_4_exploration.py', blank_code=False, todo_msg=None)
+#%% Unit 1.8
+convert('solutions/1_8_exploration.ipynb', 'code/1_8_exploration.py', blank_code=False, todo_msg=None)
+convert('solutions/1_8_exploration.ipynb', 'solutions/1_8_exploration.py', blank_code=False, todo_msg=None)

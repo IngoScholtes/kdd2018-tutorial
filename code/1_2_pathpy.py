@@ -167,7 +167,7 @@ Note that you can interact with the generated graph using the mouse. We can drag
 <span style="color:red">**TODO**: Visualise the network `toy_graph`, drag a node, hover above a node, and pan and zoom.</span>
 """)
 
-#%% In [13]
+#%% In [18]
 
 
 #%%
