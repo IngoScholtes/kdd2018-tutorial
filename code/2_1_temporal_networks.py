@@ -6,10 +6,7 @@ def md(str):
 
 #%%
 md("""
-# Higher-Order Data Analytics for Temporal Network Data
-
-
-## 2.1 Temporal Network Analysis and Visualisation in `pathpy`
+# 2.1 Temporal Network Analysis and Visualisation in `pathpy`
 
 **Ingo Scholtes**  
 Data Analytics Group  
@@ -301,6 +298,9 @@ md("""
 """)
 
 #%% In [24]
+
+
+#%% In [None]
 
 
 #%%

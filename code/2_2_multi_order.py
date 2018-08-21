@@ -6,10 +6,7 @@ def md(str):
 
 #%%
 md("""
-# Higher-Order Data Analytics for Temporal Network Data
-
-
-## 2.2 Multi-Order Representation Learning
+# 2.2 Multi-order Representation Learning
 
 **Ingo Scholtes**  
 Data Analytics Group  
@@ -136,7 +133,7 @@ Even more importantly, in more complex examples the model selection will actuall
 <span style="color:red">Generate a first-order model, as well as a second- and fifth-order **null** model for the data. Compare the likelihoods between the three models.</span>
 """)
 
-#%% In [18]
+#%% In [19]
 
 
 #%%
@@ -222,7 +219,7 @@ We can now generate a higher-order visualisation of the three model layers as sh
 <span style="color:red">**TODO:** Apply the `pp.visualisation.plot` method on the layers of the multi-order model to generate a higher-order network visualisation. Make sure to set the `plot_higher_order_nodes` parameter to `False`.</span>
 """)
 
-#%% In [19]
+#%% In [15]
 
 
 #%%
@@ -234,7 +231,7 @@ But neither of these layouts is ideal, if we want to understand the relevant str
 <span style="color:red">**TODO:** Apply the `pp.visualisation.plot` method on the multi-order model. Make sure to set the `plot_higher_order_nodes` parameter to `False`.</span>
 """)
 
-#%% In [22]
+#%% In [16]
 
 
 #%%

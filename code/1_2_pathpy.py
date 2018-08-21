@@ -6,10 +6,7 @@ def md(str):
 
 #%%
 md("""
-# Higher-Order Data Analytics for Temporal Network Data
-
-
-## 1.2 Introducing `pathpy`
+# 1.2 Introducing `pathpy`
 
 **Ingo Scholtes**  
 Data Analytics Group  
@@ -22,11 +19,17 @@ University of Zurich
 
 #%%
 md("""
-In the introductory pitch we have seen that higher-order modelling, visualisation, and analysis techniques are useful for **temporal network data** that provide us with **path statistics**. But how can we deal with such data in practice? 
+In the introduction we have seen that higher-order modelling, visualisation, and analysis techniques are useful for all sorts of **temporal network data** that provide us with **statistics of paths in complex networks**. But how can we apply higher-order network analytics to such such data in practice?
 
-In the first two sessions of our tutorial we introduce ``pathpy``, an OpenSource `python` package that provides higher-order data analytics and representation learning techniques. It contains data structures, algorithms, data import/export methods, and visualisation techniques for various types of time series data on complex networks.
+In the first two sessions of our tutorial we introduce [``pathpy``](http://www.pathpy.net), an OpenSource `python` package that provides higher-order data analytics and representation learning techniques. It contains data structures, algorithms, data import/export methods, and visualisation techniques for various types of time series data on complex networks.
 
-`pathpy` is pure `python` code with no platform-specific dependencies, so it is easy to install. You can find detailed setup instructions on the [tutorial website](https://ingoscholtes.github.io/kdd2018-tutorial/setup).
+`pathpy` is pure `python` code with no platform-specific dependencies. It only depends on `numpy` and `scipy`, which come with `Anaconda`, so it should be very easy to install. In principle installing the latest 2.0 version of `pathpy` should be as easy as running
+
+```
+pip install pathpy2
+```
+
+on the terminal. In any case, you can find more detailed setup instructions on the [tutorial website](https://ingoscholtes.github.io/kdd2018-tutorial/setup).
 
 <span style="color:red">**TODO:** Import the package `pathpy` and rename it to `pp`</span>
 """)
@@ -36,7 +39,7 @@ In the first two sessions of our tutorial we introduce ``pathpy``, an OpenSource
 
 #%%
 md("""
-A core functionality of `pathpy` is to read, calculate, store, manipulate, and model path statistics from different kinds of data on complex networks. For this `pathpy` provides the class `Paths`, which can store collections of paths of varying length. All classes and methods in `pathpy` are documented using `python`'s docstring feature and we can access this documentation using the standard `help` function. 
+A core functionality of `pathpy` is to read, calculate, store, manipulate, and model path statistics extracted from different kinds of temporal data on complex networks. For this `pathpy` provides the class `Paths`, which can store collections of paths with varying lengths. All classes and methods in `pathpy` are documented using `python`'s docstring feature so we can access the documentation using the standard `help` function. 
 
 <span style="color:red">**TODO:** Use the `help` function to obtain a description of the class `Paths`.</span>
 """)
@@ -46,7 +49,7 @@ A core functionality of `pathpy` is to read, calculate, store, manipulate, and m
 
 #%%
 md("""
-In Visual Studio Code, the documentation of classes, methods, and properties is automatically shown as a tooltip as you type. If you use the browser-based editor of the `jupyter` notebook server, you can bring up the integrated documentation by pressing `Shift`+`Tab` as you type. You can try this with the `Paths` class. 
+In Visual Studio Code, the documentation of classes, methods, and properties is automatically shown as a tooltip as you type. If you use the browser-based `jupyter notebook` editor, you can bring up the documentation by pressing `Shift`+`Tab` as you type. You can try this with the `Paths` class. 
 
 <span style="color:red">**TODO:** Create an empty `Paths` instance `toy_paths` by calling the constructor with no arguments.</span>
 """)
@@ -56,7 +59,7 @@ In Visual Studio Code, the documentation of classes, methods, and properties is 
 
 #%%
 md("""
-We now have an empty `Paths` instance `toy_paths` that we can use to add path statistics using a small toy example. We can add paths using the method `add_path`. As the first parameter, it accepts any iterable (list, string, etc.) of `string` variables, where each entry in the iterable is one step (i.e. node) on a path. The `frequency` parameter captures the number of times a specific path has been observed.
+We now have an empty `Paths` instance `toy_paths` that we can use to add path statistics to generate a small toy example. We can add paths using the method `add_path`. As the first parameter, it accepts any iterable (list, string, etc.) of `string` variables (or objects that can be cast to `string)`, where each entry in the iterable is one step (i.e. node) on a path. The optional `frequency` parameter captures the number of times a specific path has been observed.
 
 <span style="color:red">**TODO:** Add 10 observations of a path $a \rightarrow c \rightarrow e$ between three nodes $a$, $c$, and $e$ to the `toy_paths` instance.</span>
 """)

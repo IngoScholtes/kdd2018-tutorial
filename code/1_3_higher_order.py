@@ -6,9 +6,7 @@ def md(str):
 
 #%%
 md("""
-# Higher-Order Data Analytics for Temporal Network Data
-
-## 1.3 Higher-order analysis of path data in `pathpy`
+# 1.3 Higher-order analysis of path data in `pathpy`
 
 **Ingo Scholtes**  
 Data Analytics Group  
@@ -21,17 +19,17 @@ University of Zurich
 
 #%%
 md("""
-The real purpose of `pathpy` is to fit and analyse higher-order network models for paths in complex networks. For this we can use the class `HigherOrderNetwork`. Let us look at the `docstring` of this class.
+So far, we have focused on network representations, but the real **purpose of `pathpy` is to fit and analyse higher-order network models for paths in time series data on complex networks**. For this we can use the class `HigherOrderNetwork`. Let us look at the `docstring` of this class.
 
 <span style="color:red">**TODO:** Import the module pathpy and use the `help` function to print the documentation of class `pp.HigherOrderNetwork`.</span>
 """)
 
-#%% In [1]
+#%% In [2]
 
 
 #%%
 md("""
-From a higher-order network analytic point of view, standard graphs or networks are **first-order probabilistic generative models** for paths in complex networks. As we have seen in 1.2, these models only consider **first-order dyad statistics** (i.e. edge frequencies) thus ignoring higher-order dependencies in real-world path, sequence, or time series data.
+From a higher-order network analytic point of view, standard graphs or networks are **first-order probabilistic generative models** for paths in complex networks. As we have seen in 1.2, they can be viewed as **maximum entropy models that consider first-order dyad statistics** (i.e. edge frequencies), while ignoring higher-order dependencies in real-world path, sequence, or time series data.
 
 In the following works, we have studied measures for higher-order correlations in such data and we generalised network models to higher-order models with arbitrary order:
 
@@ -218,7 +216,7 @@ In the example above, the data provide us with full knowledge about the exact it
 <span style="color:red">**TODO:** Generate a directed network with six nodes and six edges $(a,c), (b,c), (c,d), (d,f), (d,g)$. Plot the network. Based on a list of tuples $(a, f, 5), (b, g, 10)$ capturing origin destination statistics, use the method `pp.path_extraction.paths_from_origin_destination` to generate a `Paths` object and print the result.</span>
 """)
 
-#%% In [16]
+#%% In [3]
 
 
 #%%

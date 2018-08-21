@@ -69,7 +69,9 @@ Infomap is written in C++ but inludes a python interface. The easiest way to ins
 pip install infomap
 ```
 
-For more information about installation and usage, see [www.mapequation.org/code.html](http://www.mapequation.org/code.html).
+If you are running on Windows 10, the easiest way to get the compilation tools needed to complete the installation is to [install the Ubuntu bash](https://docs.microsoft.com/en-us/windows/wsl/install-win10). This will set up a Linux subsystem on your Windows machine. After you have installed the distribution, just start the Ubuntu bash terminal and run the command above.
+
+For more detailed information about the installation and usage of `InfoMap`, see [www.mapequation.org/code.html](http://www.mapequation.org/code.html).
 
 
 ### Verifying your environment

@@ -6,9 +6,7 @@ def md(str):
 
 #%%
 md("""
-# Higher-Order Data Analytics for Temporal Network Data
-
-## 2.4 Exploration: Multi-order analysis of [paths and time-stamped social networks](https://github.com/IngoScholtes/kdd2018-tutorial/tree/master/data)
+# 2.4 Exploration: Multi-order analysis of [paths and time-stamped social networks](https://github.com/IngoScholtes/kdd2018-tutorial/tree/master/data)
 
 **Ingo Scholtes**  
 Data Analytics Group  
@@ -49,6 +47,7 @@ print(t)
 md("""
 Using these data and the methods introduced in our tutorial, we suggest to study the following problems (in ascending order of difficulty):
 
+- Generate higher-order visualisations of the US Flight and London Tube data and visually compare the graph layouts calculated for the first and optimal-order models.
 - Use the `MultiOrderModel` class to learn the optimal order of a temporal network. How does the detected optimal order change with the time scale $\delta$ that you use in the extraction of causal paths?
 - Use the `MultiOrderModel` class to learn the optimal order of the London Tube data set. How does the detected optimal order compare to the prediction performance studied in exploration 1.4?
 - Study the change in the algebraic connectivity between the second-order model and the second-order null model for (i) a temporal network data set and (ii) the US Flights data.
