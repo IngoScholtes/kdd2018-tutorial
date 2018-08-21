@@ -25,7 +25,7 @@ in the directory of your local copy to receive a *sample solution* that is growi
 
 To complete the hands-on exercises, you will need a working `python 3.x` environment running on an operating system of your choice. For Windows, MacOS, and Linux users we recommend [Anaconda 5.2](https://www.anaconda.com/download/) distribution, an OpenSource `python` 3.6 distribution that comes pre-configured for data science and machine learning tasks.
 
-The only additional package that you may need for this tutorial is the package [markdown](https://pypi.org/project/Markdown/). We use it to produce nicely formatted output with the python skeleton files. You can just install it by typing: 
+The only additional package that you may need for this tutorial is the package [markdown](https://pypi.org/project/Markdown/). We use it to produce nicely formatted output with the python skeleton files. You can just install it by typing:
 
 ```
 pip install markdown
@@ -49,7 +49,7 @@ To apply higher-order data analytics to real data, we need to set up additional 
 
 Sessions 1 and 2 in block I will introduce [`pathpy`](http://www.pathpy.net), an OpenSource `python` package providing higher-order network analysis and visualisation tools for sequence, path, and temporal network data.
 
-Sessions 3 and 4 in block II will introduce [InfoMap](http://www.mapequation.org), an OpenSource package that can be used to reveal overlapping modular patterns in higher-order network flows through complex systems. 
+Sessions 3 and 4 in block II will introduce [InfoMap](http://www.mapequation.org), an OpenSource package that can be used to reveal overlapping modular patterns in higher-order network flows through complex systems.
 
 The virtual session 5 in block III will introduce [HON](http://www.higherordernetwork.com), an OpenSource `python` package extracting variable orders of dependencies from sequential data, and building a higher-order network from the dependency rules, as well as [HONVis](http://www.higherordernetwork.com/visualization/), an interactive software package that facilitates the exploration of higher-order networks.
 
@@ -85,7 +85,7 @@ Now that we have installed all necessary tools and packages, let us verify that 
 For this, you can either create a new file in Visual Studio Code and copy the following code:
 
 ```
-#%%  
+#%%
 import pathpy as pp
 paths = pp.Paths()
 paths.add_path('a,b,c')
@@ -108,7 +108,7 @@ In order to complete the virtual tutorial session in block III, you will need to
 `BuildHON+` is pure python code with no platform-specific dependencies. It works with python 3.X. To use it, change to the `code` directory of the tutorial repository and run
 
 ```
-python3 3_1_buildhon.py
+python3 5_1_buildhon.py
 ```
 
 in a terminal.
@@ -117,7 +117,7 @@ in a terminal.
 
 For Windows, double click `HONVis_NYC_Taxi_Case_Jul_Aug.exe` and follow the video tutorial available on [www.higherordernetwork.com/visualization/](http://www.higherordernetwork.com/visualization/) (5 mins).
 
-For Mac or Linux, run the following in Terminal (or your favorite shell)
+For Mac or Linux, download the binary executable here [link](http://jianxu.net/en/files/Jul_Aug) (right click and save target as file). Then put the binary under code/5_2_HONVis. Lastly, navigate to code/5_2_HONVis in Terminal (or your favorite shell) and run the following:
 
 ```
 ./Jul_Aug

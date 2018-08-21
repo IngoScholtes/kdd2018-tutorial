@@ -8,20 +8,17 @@ def md(str):
 import infomap
 print(infomap.Infomap().version)
 
-#%% In [3]
-from pathlib import Path
-Path('output').mkdir(exist_ok=True)
-
-#%% In [20]
+#%% In [2]
 !infomap data/ninetriangles.net output/ -N5
 
-#%% In [21]
+#%% In [3]
+from pathlib import Path
 print(Path('data/ninetriangles.net').read_text())
 
-#%% In [22]
+#%% In [4]
 print(Path('output/ninetriangles.tree').read_text())
 
-#%% In [4]
+#%% In [5]
 infomapFileIO = infomap.Infomap("-N5")
 
 # Read from file
@@ -39,7 +36,7 @@ print("Done!")
 print("\n.ftree file:")
 print(Path('output/ninetriangles.ftree').read_text())
 
-#%% In [26]
+#%% In [6]
 infomap1 = infomap.Infomap("--directed")
 
 # Use the default network, which got configured as directed by Infomap
@@ -77,7 +74,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import matplotlib.colors as colors
 
-#%% In [9]
+#%% In [8]
 def findCommunities(G):
     """
     Partition network with the Infomap algorithm.
@@ -144,7 +141,7 @@ findCommunities(G)
 
 drawNetwork(G)
 
-#%% In [11]
+#%% In [9]
 infomapStates = infomap.Infomap("")
 
 network = infomapStates.network()
@@ -183,7 +180,7 @@ for node in infomapStates.iterTreePhysical():
 
 print("\nNote that state nodes 1 and 3 within module 0 is part of the same physical node 2 and merged above")
 
-#%% In [36]
+#%% In [10]
 infomapPaths = infomap.Infomap("")
 
 network = infomapPaths.network()
@@ -213,7 +210,7 @@ for node in infomapPaths.iterTreePhysical():
 
 print("\nHere physical nodes 2 and 3 have overlapping modules")
 
-#%% In [37]
+#%% In [11]
 infomapStates2 = infomap.Infomap("")
 
 infomapStates2.network().readInputData("output/paths_states.net")

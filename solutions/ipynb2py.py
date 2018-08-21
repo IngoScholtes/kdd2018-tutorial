@@ -89,7 +89,7 @@ def convert(ipynb_file, output_file=None, blank_code = False, todo_msg = '# TODO
                 if not blank_code or cell['source'][0].startswith('%NOREMOVE'):
                     for line in cell['source']:
                         # remap relative path data directory from jupyter notebook to VS Code                
-                        cell_output += line.replace('../', '')
+                        cell_output += line.replace('../', '').replace('from state_lumping_network', 'from solutions.state_lumping_network')
                 elif todo_msg is not None:
                     cell_output += todo_msg + '\n'
                 cell_output += '\n\n'

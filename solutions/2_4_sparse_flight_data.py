@@ -8,7 +8,7 @@ def md(str):
 md("""
 ## Sparse flight data
 
-A key question for the generation of sparse state networks is _how_ sparse. If we lump all state nodes with each physical node, we loose all higher-order information and may underfit. On the other hand, keeping all second-order state nodes may overfit.
+A key question for the generation of sparse state networks is _how_ sparse. If we lump all state nodes with each physical node, we lose all higher-order information and may underfit. On the other hand, keeping all second-order state nodes may overfit.
 
 In this tutorial we will generate second-order state networks from path data and from there generate multiple sparse networks with different number of (lumped) state nodes and evaluate the result with Infomap
 """)
@@ -85,10 +85,10 @@ Here we will generate multiple lumped state networks with different amount of st
 - Save the number of lumped state nodes and the lumped entropy rate
 """)
 
-#%% In [4]
+#%% In [3]
 import matplotlib.pyplot as plt
 import numpy as np
-from state_lumping_network import StateNetwork
+from solutions.state_lumping_network import StateNetwork
 
 sparseNet = StateNetwork()
 sparseNet.readFromFile("output/states_training_order_2.net")
@@ -112,14 +112,14 @@ for i, clusterRate in enumerate(clusterRates):
 
 #%%
 md("""
-#### How much information do we loose as we reduce the number of state nodes?
+#### How much information do we lose as we reduce the number of state nodes?
 
 **TODO:**
 - Plot the entropy rate against the number of state nodes
 - Check that the entropy rates approaches the original one and coincides at cluster rate $r = 1$
 """)
 
-#%% In [5]
+#%% In [4]
 plt.plot(numStates, entropyRate, marker='o')
 plt.xlabel("number of lumped states")
 plt.ylabel("entropy rate")
