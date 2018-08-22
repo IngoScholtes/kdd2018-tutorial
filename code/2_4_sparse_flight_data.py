@@ -19,6 +19,7 @@ md("""
 To get a bigger network, we can merge the flight path data from the four quarters (`"data/air2015_{q}_paths.net" for q in [1,2,3,4]`). But to evaluate the goodness of fit, we can split each path randomly in either a _training_ or a _validation_ set and write a path data file for each of the data set.
 
 **TODO:**
+
 - Write a function that merges all paths of the year and writes it to a _training_ paths file with 50% chance and to a _validation_ paths file otherwise. Skip the '*vertices' section
 """)
 
@@ -31,6 +32,7 @@ md("""
 #### Generate state networks from paths
 
 **TODO:**
+
 - Use Infomap to generate second-order state networks from the two paths data files.
 """)
 
@@ -45,6 +47,7 @@ md("""
 Here we will generate multiple lumped state networks with different amount of state nodes. A simple way is to parameterise this with a cluster rate $r$ going from 0.1 to 1, where `n_clusters = max(1, int(r * numStateNodes)`. For convenience, you can just send in the argument `clusterRate` to `clusterStateNodes` to achieve this, instead of the cluster function in the previous tutorial.
 
 **TODO:**
+
 - Read in the training network with `StateNetwork`
 - Calculate entropy rate
 - Cluster the network for all cluster rates $r$ in for example `np.linspace(0.1, 1, 10)`.
@@ -79,6 +82,7 @@ md("""
 The goal here is to calculate the codelength for the validation network, given the different partitions found on the lumped training networks.
 
 **TODO:**
+
 - Run Infomap on all lumped state networks and write a `.clu` file for each and store codelength
 - Run Infomap on the validation network but with cluster data from external file for all `.clu` files generated from the lumped networks and store the codelength
 - Plot the training and validation codelengths against the number of state nodes and check if there is an optimum that balances underfit and overfit

@@ -24,6 +24,7 @@ We will here solve the problem using standard [clustering algorithms](http://sci
 In order to do that, we have to transform the state network into features usable for machine learning. We can do this with the help of the code in [state_lumping_network.py](./state_lumping_network.py).
 
 **TODO:**
+
 - import StateNetwork from state_lumping_network
 - Create a new StateNetwork
 - use the `.readFromFile(filename)` method to read in `data/toy_states.net`
@@ -52,6 +53,7 @@ The feature matrix for a physical node is simply the rows of the state transitio
 To simplify, there is a `getFeatureMatrix` method that removes all all-zero rows and columns in the feature matrix and provides a mapping back to the original state network. It takes the physical node id as input parameter and returns a tuple `(X, T)`, where `X` is the feature matrix (np.array) of size (numNonDanglingStateNodes, numLinkedNodes) and `T` is a dictionary transforming row index in the feature matrix to state node id.
 
 **TODO:**
+
 - Use the method above and get the feature matrix and rowToStateId map
 - Print the two items
 """)
@@ -66,11 +68,13 @@ md("""
 Now we can compare rows pairwise and cluster the most similar rows together. The Jensen-Shannon distance is unfortunately not implemented in scikit-learn (though it exist in a [pull request](https://github.com/scikit-learn/scikit-learn/pull/4191)), so let's create it.
 
 **TODO:**
+
 - Write a function that takes two equally sized arrays of probabilities as input and returns the Jensen-Shannon distance between them
 - Write a function that takes a vector array as input and returns a [pairwise_distances](http://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.pairwise_distances.html) from sklearn.metrics with your Jensen-Shannon distance function as metric
 - Compute the Jensen-Shannon distance between the two different rows of the feature matrix, and check that at gives zero for same input
 
 Tips, using numpy:
+
 - Work with `np.asarray(x)` in the function to allow for both a numpy array and an ordinary python list as input
 - `np.log2(x)` can be modified to `np.log2(x, where = x>0)` to handle zeros
 """)
@@ -86,6 +90,7 @@ md("""
 Now we can use general [scikit-learn clustering algorithm](http://scikit-learn.org/stable/modules/clustering.html) that takes a custom pairwise distance function as a metric, like [Agglomerative Clustering](http://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html#sklearn.cluster.AgglomerativeClustering). We can also use for example `cosine` instead with similar result. Many take as input the number of clusters you want. For the example feature matrix, it's two.
 
 **TODO:**
+
 - Create a AgglomerativeClustering model and find two clusters based on the Jensen-Shannon distance
 - Use the row-to-stateId map to check which state nodes are clustered together (the red left ones are state node 1 and 2, the blue right ones are state node 7 and 8).
 """)
@@ -104,6 +109,7 @@ md("""
 Now we are ready to run this on the whole network. For convenience, `StateNetwork` provides a method `clusterStateNodes` that takes an argument `clusterFeatureMatrix` where you can send in a custom clustering function. This function gets a feature matrix as input argument and expects an array of cluster labels back.
 
 **TODO:**
+
 - Write a clustering method that takes a feature matrix as input, tries to cluster it in a certain number of clusters (half the number of state nodes would fit this toy network), using the Jensen-Shannon distance, and returns an array of cluster labels.
 - Cluster the whole state network using the method above
 """)
@@ -118,6 +124,7 @@ md("""
 The state network has two methods `calcEntropyRate()` and `calcLumpedEntropyRate()` to calculate the average number of bits required to encode the random walk on each physical node.
 
 **TODO:**
+
 - Run the methods above and check that the entropy rates stayed the same
 - Write lumped state network to file with `writeLumpedStateNetwork(filename)` and check that it matches the sparse network in the figure below
 """)
