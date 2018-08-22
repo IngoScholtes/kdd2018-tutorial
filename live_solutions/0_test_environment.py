@@ -16,7 +16,7 @@ print(t)
 #%% validate that infomap is installed correctly
 import infomap
 print("Infomap version:", infomap.Infomap().version)
-print("Make sure it is at least 1.0.0-beta.11")
+print("Make sure it is at least 1.0.0-beta.14")
 
 #%% check that relative read and write works
 from pathlib import Path

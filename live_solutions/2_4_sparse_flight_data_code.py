@@ -1,9 +1,3 @@
-#%%
-import markdown
-from IPython.core.display import display, HTML
-def md(str):
-    display(HTML(markdown.markdown(str + "<br />")))
-
 #%% In [1]
 from random import random
 
@@ -83,7 +77,7 @@ plt.axhline(y=h0, color='r', linestyle='-')
 # plt.axvline(x=sparseNet.numStateNodes(), color='r')
 plt.show()
 
-#%% In [8]
+#%% In [12]
 trainingCodelengths = []
 validationCodelengths = []
 
@@ -114,7 +108,7 @@ for i, clusterRate in enumerate(clusterRates):
 
 
 
-#%% In [10]
+#%% In [13]
 plt.plot(numStates, trainingCodelengths, marker='o')
 plt.plot(numStates, validationCodelengths, marker='x')
 plt.legend(["training", "validation"])

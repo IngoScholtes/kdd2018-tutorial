@@ -51,7 +51,7 @@ pip install --upgrade infomap
 
 #%%
 md("""
-**TODO:** Import infomap. Show the version by running `infomap.Infomap().version` if infomap is imported as `infomap` and check that it is at least `1.0.0-beta.11`.
+**TODO:** Import infomap. Show the version by running `infomap.Infomap().version` if infomap is imported as `infomap` and check that it is at least `1.0.0-beta.14`.
 """)
 
 #%% In [1]
