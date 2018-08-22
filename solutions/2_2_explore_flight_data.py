@@ -32,6 +32,7 @@ md("""
 ## Generate state networks of first and second order
 
 **TODO:**
+
 - Import infomap
 - Write a function to generate a state network of specified Markov order from path data and write to output dir
 - Generate first and second order state networks for all four quarters
@@ -62,6 +63,7 @@ md("""
 
 
 **TODO:**
+
 - Write a function that takes an input network filename, clusters the network and writes a `.map` file
 - Generate `.map` files for all four first-order state networks
 - Load the `.map` files into the [Alluvial Generator](http://www.mapequation.org/apps/MapGenerator.html) and explore the modular structure over time
@@ -90,7 +92,9 @@ md("""
 In first-order, the network appears too well connected for any modular structure to be revealed. That can be solved in the second-order networks where physical nodes can have overlapping modules. But we may uncover some modular structure even in the first-order networks by scaling down the markov-time to increase the cost of moving between clusters.
 
 #### Reveal first-order structure in tightly connected networks using Markov time
+
 **TODO:**
+
 - Modify the `.map` generating method above to take Infomap flags as input
 - Re-run with `--markov-time 0.75`
 - Checkout the changes in the Alluvial Generator, any interesting stories?
@@ -109,6 +113,7 @@ The current Alluvial Generator doesn't support overlapping or multi-level modula
 ![Network Navigator](http://www.mapequation.org/assets/img/InfomapNetworkNavigator.png)
 
 **TODO:**
+
 - Write a function that takes an input network filename, clusters the network and writes a `.ftree` file
 - Generate `.ftree` files for at least one second-order state networks
 - Load an `.ftree` file into the [Network Navigator](http://navigator.mapequation.org) and explore the second-order hierarchical structure interactively.

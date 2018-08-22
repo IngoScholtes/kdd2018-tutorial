@@ -94,7 +94,8 @@ The input network above was formed as nine triangles clustered in three levels, 
 
 #%%
 md("""
-**TODO:** 
+**TODO:**
+
 - Print the input network from above to see the standard input format for Infomap. (Hint: `pathlib.Path(dir)` has a method `read_text()` to give back the whole string.)
 """)
 
@@ -106,6 +107,7 @@ print(Path('data/ninetriangles.net').read_text())
 md("""
 ### Output format
 By default on command line, Infomap writes an output file with the same name as the input by with the `.tree` extension. This file contains the multi-level modular structure of the input network.
+
 **TODO:** Print the result from running Infomap above.
 """)
 
@@ -118,6 +120,7 @@ md("""
 The python API gives more flexibility, but we can still work with files in a similar way as the cli use above.
 
 **TODO:** 
+
 - Cluster the same network as above but through the Infomap python interface.
 - Print the number of levels found and the codelength
 - Let Infomap write a [flow tree](http://www.mapequation.org/code.html#FTree-format) file to `ninetriangles.ftree` in the output folder and print the result.
@@ -146,6 +149,7 @@ md("""
 ## Basic programmatic use
 
 **TODO:**
+
 - Create an Infomap instance and add some links programmatically
 - Run the clustering and iterate over the result and print the tree path to the node, the flow and, if a leaf node, the node id. (Hint: All leaf nodes has a unique `stateId` property and a `physicalId` property, that is identical on first-order networks)
 """)
@@ -190,6 +194,7 @@ Generate and draw a network with NetworkX, colored
 according to the community structure found by Infomap.
 
 **TODO:**
+
 - Create a networkx graph (Hint: `karate_club_graph()` is available on `networkx`)
 - Write a function that takes a networkx graph as input, runs a two-level Infomap clustering and sets clusters as node attributes on the networkx graph, mapped by the node id (physicalId).
 - Render the networkx graph with nodes colored by the Infomap clustering
@@ -308,6 +313,7 @@ md("""
 #### Programmatically creating a state network
 
 **TODO**:
+
 - Create the above network programmatically with Infomap
 - Run the clustering and iterate over the underlying state network to print out space separated list of `#stateId physicalId moduleIndex flow` for each leaf node.
 - Iterate over the physical network and print `#physicalId moduleIndex flow` for each node
@@ -360,6 +366,7 @@ md("""
 Infomap can generate a higher-order state network from path data, specifying a certain markov order. Markov order 1 corresponds to an ordinary network where the memory is discarded.
 
 **TODO:**
+
 - Programmatically create a state network of certain order from path data
 - Write the state network to file
 - Partition the state network and print the codelength and the physical tree as above
@@ -401,6 +408,7 @@ md("""
 #### Running on the generated state network will give the same result
 
 **TODO:**
+
 - Run Infomap on the generated state network from above
 - Check that the codelength is the same
 """)
@@ -423,6 +431,7 @@ md("""
 ### Visualising the multi-level modular network
 
 **TODO:**
+
 - Use the [Network Navigator](http://navigator.mapequation.org) to load the `.ftree` file generated earlier from the triangular network.
 """)
 
