@@ -5,26 +5,23 @@ def md(str):
     display(HTML(markdown.markdown(str + "<br />")))
 
 #%% In [1]
-!head data/air2015_1_paths.net
-
-#%% In [2]
 import infomap
 
-#%% In [11]
+#%% In [2]
 def generateStateNetworkFromPaths(inputFilename, outputFilename, markovOrder):
     network = infomap.Network(infomap.Config("--directed --path-markov-order {}".format(markovOrder)))
     network.readInputData(inputFilename)
     network.writeStateNetwork(outputFilename)
     print("State network of order {} written to {}".format(markovOrder, outputFilename))
 
-#%% In [12]
+#%% In [3]
 for quarter in [1,2,3,4]:
     inputFilename = "data/air2015_{}_paths.net".format(quarter)
     for order in [1,2]:
         outputFilename = "output/air2015_{}_order_{}.net".format(quarter, order)
         generateStateNetworkFromPaths(inputFilename, outputFilename, order)
 
-#%% In [5]
+#%% In [4]
 def createMap(inputFilename, flags = "--directed"):
     print("Cluster '{}'...".format(inputFilename))
     name = inputFilename.rsplit(".", maxsplit=1)[0].split('/')[-1]
@@ -36,17 +33,17 @@ def createMap(inputFilename, flags = "--directed"):
     infomap1.writeMap(mapFilename)
     print(" -> Wrote .map file to '{}'".format(mapFilename))
 
-#%% In [6]
+#%% In [5]
 for quarter in [1,2,3,4]:
     inputFilename = "output/air2015_{}_order_1.net".format(quarter)
     createMap(inputFilename)
 
-#%% In [7]
+#%% In [6]
 for quarter in [1,2,3,4]:
     inputFilename = "output/air2015_{}_order_1.net".format(quarter)
-    createMap(inputFilename, flags="--directed --markov-time 0.8")
+    createMap(inputFilename, flags="--directed --markov-time 0.75")
 
-#%% In [8]
+#%% In [7]
 def createFlowTree(inputFilename, flags = "--directed"):
     print("Cluster '{}'...".format(inputFilename))
     name = inputFilename.rsplit(".", maxsplit=1)[0].split('/')[-1]
@@ -58,7 +55,7 @@ def createFlowTree(inputFilename, flags = "--directed"):
     infomap2.writeFlowTree(ftreeFilename)
     print(" -> Wrote .ftree file to '{}'".format(ftreeFilename))
 
-#%% In [9]
+#%% In [8]
 for quarter in [1,2,3,4]:
     inputFilename = "output/air2015_{}_order_2.net".format(quarter)
     createFlowTree(inputFilename)

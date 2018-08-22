@@ -9,13 +9,23 @@ md("""
 # Mapping quarterly flight path data
 Here we make use public data from the Airline Origin and Destination Survey (DB1B) from Bureau of Transportation Statistics (transtats.bts.gov). See https://github.com/mapequation/airline-data for scripts to download and generate this data.
 
-Path data for this tutorial is available on `data/air2015_{q}_paths.net` for each q in [1,2,3,4].
-**TODO:**
-- Check how one of those files look like (Hint: Use can use `!head [file]` to list the first rows of a file)
-""")
+Path data for this tutorial is available on `data/air2015_{q}_paths.net` for each q in [1,2,3,4] and looks like this:
 
-#%% In [1]
-!head data/air2015_1_paths.net
+```
+*vertices 345
+11618 "Newark, NJ: Newark Liberty International"
+11057 "Charlotte, NC: Charlotte Douglas International"
+11617 "New Bern/Morehead/Beaufort, NC: Coastal Carolina Regional"
+...
+*paths
+11618 11618 11057 11617 11057 22
+11618 11618 11057 10994 11057 47
+11618 11618 11057 12323 11057 52
+11618 11618 11057 13495 11057 82
+...
+```
+The last column is assumed to be the weight of the path, unless `--unweighted-paths` is provided to Infomap.
+""")
 
 #%%
 md("""
@@ -27,17 +37,17 @@ md("""
 - Generate first and second order state networks for all four quarters
 """)
 
-#%% In [2]
+#%% In [1]
 import infomap
 
-#%% In [11]
+#%% In [2]
 def generateStateNetworkFromPaths(inputFilename, outputFilename, markovOrder):
     network = infomap.Network(infomap.Config("--directed --path-markov-order {}".format(markovOrder)))
     network.readInputData(inputFilename)
     network.writeStateNetwork(outputFilename)
     print("State network of order {} written to {}".format(markovOrder, outputFilename))
 
-#%% In [12]
+#%% In [3]
 for quarter in [1,2,3,4]:
     inputFilename = "data/air2015_{}_paths.net".format(quarter)
     for order in [1,2]:
@@ -57,7 +67,7 @@ md("""
 - Load the `.map` files into the [Alluvial Generator](http://www.mapequation.org/apps/MapGenerator.html) and explore the modular structure over time
 """)
 
-#%% In [5]
+#%% In [4]
 def createMap(inputFilename, flags = "--directed"):
     print("Cluster '{}'...".format(inputFilename))
     name = inputFilename.rsplit(".", maxsplit=1)[0].split('/')[-1]
@@ -69,7 +79,7 @@ def createMap(inputFilename, flags = "--directed"):
     infomap1.writeMap(mapFilename)
     print(" -> Wrote .map file to '{}'".format(mapFilename))
 
-#%% In [6]
+#%% In [5]
 for quarter in [1,2,3,4]:
     inputFilename = "output/air2015_{}_order_1.net".format(quarter)
     createMap(inputFilename)
@@ -82,14 +92,14 @@ In first-order, the network appears too well connected for any modular structure
 #### Reveal first-order structure in tightly connected networks using Markov time
 **TODO:**
 - Modify the `.map` generating method above to take Infomap flags as input
-- Re-run with `--markov-time 0.8`
-- Checkout the changes in the Alluvial Generator
+- Re-run with `--markov-time 0.75`
+- Checkout the changes in the Alluvial Generator, any interesting stories?
 """)
 
-#%% In [7]
+#%% In [6]
 for quarter in [1,2,3,4]:
     inputFilename = "output/air2015_{}_order_1.net".format(quarter)
-    createMap(inputFilename, flags="--directed --markov-time 0.8")
+    createMap(inputFilename, flags="--directed --markov-time 0.75")
 
 #%%
 md("""
@@ -104,7 +114,7 @@ The current Alluvial Generator doesn't support overlapping or multi-level modula
 - Load an `.ftree` file into the [Network Navigator](http://navigator.mapequation.org) and explore the second-order hierarchical structure interactively.
 """)
 
-#%% In [8]
+#%% In [7]
 def createFlowTree(inputFilename, flags = "--directed"):
     print("Cluster '{}'...".format(inputFilename))
     name = inputFilename.rsplit(".", maxsplit=1)[0].split('/')[-1]
@@ -116,7 +126,7 @@ def createFlowTree(inputFilename, flags = "--directed"):
     infomap2.writeFlowTree(ftreeFilename)
     print(" -> Wrote .ftree file to '{}'".format(ftreeFilename))
 
-#%% In [9]
+#%% In [8]
 for quarter in [1,2,3,4]:
     inputFilename = "output/air2015_{}_order_2.net".format(quarter)
     createFlowTree(inputFilename)

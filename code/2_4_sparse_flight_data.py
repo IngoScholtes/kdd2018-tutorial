@@ -19,10 +19,10 @@ md("""
 To get a bigger network, we can merge the flight path data from the four quarters (`"data/air2015_{q}_paths.net" for q in [1,2,3,4]`). But to evaluate the goodness of fit, we can split each path randomly in either a _training_ or a _validation_ set and write a path data file for each of the data set.
 
 **TODO:**
-- Write a function that merges all paths of the year and writes it to a _training_ paths file with 50% chance and to a _validation_ paths file otherwise.
+- Write a function that merges all paths of the year and writes it to a _training_ paths file with 50% chance and to a _validation_ paths file otherwise. Skip the '*vertices' section
 """)
 
-#%% In [1]
+#%% In [5]
 # TODO: Fill code here
 
 
@@ -34,7 +34,7 @@ md("""
 - Use Infomap to generate second-order state networks from the two paths data files.
 """)
 
-#%% In [2]
+#%% In [6]
 # TODO: Fill code here
 
 
@@ -51,7 +51,7 @@ Here we will generate multiple lumped state networks with different amount of st
 - Save the number of lumped state nodes and the lumped entropy rate
 """)
 
-#%% In [3]
+#%% In [11]
 # TODO: Fill code here
 
 
@@ -64,13 +64,13 @@ md("""
 - Check that the entropy rates approaches the original one and coincides at cluster rate $r = 1$
 """)
 
-#%% In [4]
+#%% In [13]
 # TODO: Fill code here
 
 
 #%%
 md("""
-Note that the original number of state nodes (close to 16k) is much more than the maximum in the lumped state networks. This gap is due to the existence of dangling nodes wich are lumped implicitly.
+Note that the original number of state nodes can be much larger than the maximum in the lumped state networks due to dangling nodes which are lumped implicitly.
 """)
 
 #%%

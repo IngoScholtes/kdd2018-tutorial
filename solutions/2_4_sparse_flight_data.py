@@ -19,10 +19,10 @@ md("""
 To get a bigger network, we can merge the flight path data from the four quarters (`"data/air2015_{q}_paths.net" for q in [1,2,3,4]`). But to evaluate the goodness of fit, we can split each path randomly in either a _training_ or a _validation_ set and write a path data file for each of the data set.
 
 **TODO:**
-- Write a function that merges all paths of the year and writes it to a _training_ paths file with 50% chance and to a _validation_ paths file otherwise.
+- Write a function that merges all paths of the year and writes it to a _training_ paths file with 50% chance and to a _validation_ paths file otherwise. Skip the '*vertices' section
 """)
 
-#%% In [1]
+#%% In [5]
 from random import random
 
 def generateData(inputFilenames):
@@ -34,9 +34,13 @@ def generateData(inputFilenames):
     for filename in inputFilenames:
         print("Parsing paths from '{}'...".format(filename))
         with open(filename, mode='r') as infile:
-            # Skip heading
-            next(infile)
+            isPath = False
             for row in infile:
+                if not isPath and row[:6] == "*paths":
+                    isPath = True
+                    continue
+                if not isPath:
+                    continue
                 if random() < 0.5:
                     data['validation'].append(row)
                 else:
@@ -44,7 +48,7 @@ def generateData(inputFilenames):
     # Write path data
     for name, paths in data.items():
         outFilename = "output/paths_{}.net".format(name)
-        print("Writing {} paths to {}...".format(len(paths), outFilename))
+        print("-> Writing {} paths to {}...".format(len(paths), outFilename))
         with open(outFilename, mode='w') as outfile:
             outfile.write("*paths\n")
             for p in paths:
@@ -61,12 +65,13 @@ md("""
 - Use Infomap to generate second-order state networks from the two paths data files.
 """)
 
-#%% In [2]
+#%% In [6]
 import infomap
-
 def generateStateNetworkFromPaths(inputFilename, outputFilename, markovOrder):
-    network = infomap.Network(infomap.Config("--directed --path-markov-order {}".format(markovOrder)))
+    network = infomap.Network("--directed --path-markov-order {}".format(markovOrder))
+    print("Reading {}...".format(inputFilename))
     network.readInputData(inputFilename)
+    print("Writing {}...".format(outputFilename))
     network.writeStateNetwork(outputFilename)
 
 generateStateNetworkFromPaths("output/paths_training.net", "output/states_training_order_2.net", 2)
@@ -85,7 +90,7 @@ Here we will generate multiple lumped state networks with different amount of st
 - Save the number of lumped state nodes and the lumped entropy rate
 """)
 
-#%% In [3]
+#%% In [11]
 import matplotlib.pyplot as plt
 import numpy as np
 from solutions.state_lumping_network import StateNetwork
@@ -94,11 +99,10 @@ sparseNet = StateNetwork()
 sparseNet.readFromFile("output/states_training_order_2.net")
 
 h0 = sparseNet.calcEntropyRate()
-print("Original average entropy rate:", h0)
+print("\nOriginal average entropy rate:", h0)
+print("Original number of state nodes:", sparseNet.numStateNodes())
 
 clusterRates = np.linspace(0.1, 1, 10)
-# clusterRates = [0.25, 0.5, 0.75]
-# clusterRates = [0.5]
 numStates = []
 entropyRate = []
 
@@ -119,7 +123,7 @@ md("""
 - Check that the entropy rates approaches the original one and coincides at cluster rate $r = 1$
 """)
 
-#%% In [4]
+#%% In [13]
 plt.plot(numStates, entropyRate, marker='o')
 plt.xlabel("number of lumped states")
 plt.ylabel("entropy rate")
@@ -129,7 +133,7 @@ plt.show()
 
 #%%
 md("""
-Note that the original number of state nodes (close to 16k) is much more than the maximum in the lumped state networks. This gap is due to the existence of dangling nodes wich are lumped implicitly.
+Note that the original number of state nodes can be much larger than the maximum in the lumped state networks due to dangling nodes which are lumped implicitly.
 """)
 
 #%%
