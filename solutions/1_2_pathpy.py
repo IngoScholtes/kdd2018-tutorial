@@ -53,7 +53,6 @@ In Visual Studio Code, the documentation of classes, methods, and properties is 
 
 #%% In [3]
 toy_paths = pp.Paths()
-print(toy_paths)
 
 #%%
 md("""
@@ -89,9 +88,9 @@ Apart from adding paths as a tuple, we can also add them as string-encoded n-gra
 """)
 
 #%% In [6]
-n_gram = pp.Paths()
-n_gram.add_path('b,c,e', 10)
-print(n_gram)
+ngram_paths = pp.Paths()
+ngram_paths.add_path('b-c-e',  separator='-', frequency=10)
+print(ngram_paths)
 
 #%%
 md("""
@@ -102,7 +101,7 @@ We obtain a `Paths` object with 10 observations of path $b\rightarrow c \rightar
 """)
 
 #%% In [7]
-toy_paths += n_gram
+toy_paths += ngram_paths
 print(toy_paths)
 
 #%%
@@ -113,7 +112,7 @@ We obtain a new `Paths` instance with $20$ observed paths between five nodes $a$
 """)
 
 #%% In [8]
-
+toy_paths.write_file('data/toy_paths.ngram')
 
 #%%
 md("""
@@ -136,7 +135,7 @@ We obtain a network with five nodes $a$, $b$, $c$, $d$, and $e$ and four directe
 """)
 
 #%% In [10]
-
+print('Weight of edge (a,c) is {0}'.format(toy_graph.edges[('a', 'c')]['weight']))
 
 #%%
 md("""
@@ -146,21 +145,7 @@ In fact, since each edge can be viewed as a path of length one, the edge weights
 """)
 
 #%% In [11]
-toy_graph.edges[('a', 'c')]['edge_property'] = 'some value'
-toy_graph.edges[('c', 'd')]['edge_property'] = 'some other value'
-toy_graph.nodes['a']['node_property'] = 42.0
-toy_graph.nodes['b']['node_property'] = 0.0
-toy_graph.edges[('a', 'c')]['label'] = 'my_label'
-
-#%%
-# return edges with a given attribute value
-print('Edges that satisfy edge_propery == "some value": ' + \
-      str(toy_graph.find_edges(select_edges = lambda e: 'edge_property' in e and e['edge_property'] == 'some value')))
-
-#%%
-# return nodes with a given attribute value
-print('Nodes that satisfy node_property > 40.0: ' + \
-      str(toy_graph.find_nodes(select_node = lambda v: 'node_property' in v and v['node_property'] > 40.0)))
+print('Frequency of path (a,c) as subpath of length one is {0}'.format(toy_paths.paths[1][('a', 'c')][0]))
 
 #%%
 md("""
@@ -172,7 +157,20 @@ The attribute `x` of a node `v` or an edge `e` in a network instance `net` can b
 """)
 
 #%% In [12]
+# we can assign arbitrary additional attribute values to nodes and edges
+toy_graph.edges[('a', 'c')]['edge_property'] = 'some value'
+toy_graph.edges[('c', 'd')]['edge_property'] = 'some other value'
+toy_graph.nodes['a']['node_property'] = 42.0
+toy_graph.nodes['b']['node_property'] = 0.0
+toy_graph.edges[('a', 'c')]['label'] = 'my_label'
 
+# return edges with a given attribute value
+print('Edges that satisfy edge_propery == "some value": ' + \
+      str(toy_graph.find_edges(select_edges = lambda e: 'edge_property' in e and e['edge_property'] == 'some value')))
+
+# return nodes with a given attribute value
+print('Nodes that satisfy node_property > 40.0: ' + \
+      str(toy_graph.find_nodes(select_node = lambda v: 'node_property' in v and v['node_property'] > 40.0)))
 
 #%%
 md("""
@@ -198,6 +196,26 @@ We can also programmatically style our network by using the generic `plot` funct
 """)
 
 #%% In [14]
+pp.visualisation.plot(toy_graph, node_color='red')
+
+#%%
+md("""
+We often want to reuse the same visualisation parameters in multiple plots. For this, it is convenient to store our parameters in a dictionary and then pass all of them at once. 
+
+Let us explore some of the features supported by `pathpy`'s default visualisation templates. In the second session we will learn more about **custom visualisation templates** that can be defined by the user, and which can take arbitrary visualisation parameters.
+
+<span style="color:red">**TODO**: Use the `help` function to show which parameters are supported by the function `pp.visualisation.plot`.</span>
+""")
+
+#%% In [15]
+help(pp.visualisation.plot)
+
+#%%
+md("""
+<span style="color:red">**TODO**: Create a parameter dictionary `style` that changes the plot size, switches off edge arrows, assigns individual colors to nodes, changes label position, color and font size, and adjust node size and edge width.</span>
+""")
+
+#%% In [16]
 style = {'width': 300, 
           'height': 300,
           'node_size': 18.0,
@@ -218,31 +236,11 @@ pp.visualisation.plot(toy_graph, **style)
 
 #%%
 md("""
-We often want to reuse the same visualisation parameters in multiple plots. For this, it is convenient to store our parameters in a dictionary and then pass all of them at once. 
-
-Let us explore some of the features supported by `pathpy`'s default visualisation templates. In the second session we will learn more about **custom visualisation templates** that can be defined by the user, and which can take arbitrary visualisation parameters.
-
-<span style="color:red">**TODO**: Use the `help` function to show which parameters are supported by the function `pp.visualisation.plot`.</span>
-""")
-
-#%% In [15]
-
-
-#%%
-md("""
-<span style="color:red">**TODO**: Create a parameter dictionary `style` that changes the plot size, switches off edge arrows, assigns individual colors to nodes, changes label position, color and font size, and adjust node size and edge width.</span>
-""")
-
-#%% In [16]
-
-
-#%%
-md("""
 Once we are satsfied with our visualisation, we can use the method `pp.visualisation.export_html` to save it as a stand-alone HTML file. This file will run in any HTML5 browser and we can share or publish as an interactive visualisation on the web.
 
 <span style="color:red">**TODO**: Save your visualisation to a file `test_network.html`. Reuse the visualisation parameters from above.</span>
 """)
 
 #%% In [17]
-pp.visualisation.export_html(toy_graph, filename='test.html', **style)
+pp.visualisation.export_html(toy_graph, filename='visualisations/1_2_simple_network.html', **style)
 
