@@ -42,7 +42,7 @@ A core functionality of `pathpy` is to read, calculate, store, manipulate, and m
 """)
 
 #%% In [2]
-
+help(pp.Paths)
 
 #%%
 md("""
@@ -52,7 +52,8 @@ In Visual Studio Code, the documentation of classes, methods, and properties is 
 """)
 
 #%% In [3]
-
+toy_paths = pp.Paths()
+print(toy_paths)
 
 #%%
 md("""
@@ -62,7 +63,7 @@ We now have an empty `Paths` instance `toy_paths` that we can use to add path st
 """)
 
 #%% In [4]
-
+toy_paths.add_path(('a', 'c', 'd'), frequency=10)
 
 #%%
 md("""
@@ -72,7 +73,7 @@ Each class in `pathpy` provides a properly formatted string representation, whic
 """)
 
 #%% In [5]
-
+print(toy_paths)
 
 #%%
 md("""
@@ -88,7 +89,9 @@ Apart from adding paths as a tuple, we can also add them as string-encoded n-gra
 """)
 
 #%% In [6]
-
+n_gram = pp.Paths()
+n_gram.add_path('b,c,e', 10)
+print(n_gram)
 
 #%%
 md("""
@@ -99,7 +102,8 @@ We obtain a `Paths` object with 10 observations of path $b\rightarrow c \rightar
 """)
 
 #%% In [7]
-
+toy_paths += n_gram
+print(toy_paths)
 
 #%%
 md("""
@@ -121,7 +125,8 @@ We can easily turn any `Paths` instance into a network by using the class method
 """)
 
 #%% In [9]
-
+toy_graph = pp.Network.from_paths(toy_paths)
+print(toy_graph)
 
 #%%
 md("""
@@ -141,7 +146,21 @@ In fact, since each edge can be viewed as a path of length one, the edge weights
 """)
 
 #%% In [11]
+toy_graph.edges[('a', 'c')]['edge_property'] = 'some value'
+toy_graph.edges[('c', 'd')]['edge_property'] = 'some other value'
+toy_graph.nodes['a']['node_property'] = 42.0
+toy_graph.nodes['b']['node_property'] = 0.0
+toy_graph.edges[('a', 'c')]['label'] = 'my_label'
 
+#%%
+# return edges with a given attribute value
+print('Edges that satisfy edge_propery == "some value": ' + \
+      str(toy_graph.find_edges(select_edges = lambda e: 'edge_property' in e and e['edge_property'] == 'some value')))
+
+#%%
+# return nodes with a given attribute value
+print('Nodes that satisfy node_property > 40.0: ' + \
+      str(toy_graph.find_nodes(select_node = lambda v: 'node_property' in v and v['node_property'] > 40.0)))
 
 #%%
 md("""
@@ -165,7 +184,7 @@ Note that you can interact with the generated graph using the mouse. We can drag
 """)
 
 #%% In [18]
-
+toy_graph
 
 #%%
 md("""
@@ -179,7 +198,23 @@ We can also programmatically style our network by using the generic `plot` funct
 """)
 
 #%% In [14]
-
+style = {'width': 300, 
+          'height': 300,
+          'node_size': 18.0,
+          'edge_width' : 4.0,
+          'node_color' : {'a': '#aacc99', 'b': '#aacc99', 'd': '#aacc99', 'e': '#aacc99', 'c': '#cc6666'},
+          'edge_color' : '#ffaaaa',
+          'edge_arrows': False,
+          'label_color': '#000000',
+          'label_opacity': 1,
+          'label_offset': [0,0],
+          'label_size': '20px',
+          'edge_opacity': 1, 
+          'force_charge': -10.0, 
+          'force_repel': -550, 
+          'force_alpha': 0.01
+         }
+pp.visualisation.plot(toy_graph, **style)
 
 #%%
 md("""
@@ -209,5 +244,5 @@ Once we are satsfied with our visualisation, we can use the method `pp.visualisa
 """)
 
 #%% In [17]
-
+pp.visualisation.export_html(toy_graph, filename='test.html', **style)
 
