@@ -4,7 +4,7 @@ from IPython.core.display import display, HTML
 def md(str):
     display(HTML(markdown.markdown(str + "<br />")))
 
-#%% In [5]
+#%% In [1]
 from random import random
 
 def generateData(inputFilenames):
@@ -39,7 +39,7 @@ def generateData(inputFilenames):
 inputFilenames = ["data/air2015_{}_paths.net".format(quarter) for quarter in [1,2,3,4]]
 generateData(inputFilenames)
 
-#%% In [6]
+#%% In [2]
 import infomap
 def generateStateNetworkFromPaths(inputFilename, outputFilename, markovOrder):
     network = infomap.Network("--directed --path-markov-order {}".format(markovOrder))
@@ -51,7 +51,7 @@ def generateStateNetworkFromPaths(inputFilename, outputFilename, markovOrder):
 generateStateNetworkFromPaths("output/paths_training.net", "output/states_training_order_2.net", 2)
 generateStateNetworkFromPaths("output/paths_validation.net", "output/states_validation_order_2.net", 2)
 
-#%% In [11]
+#%% In [3]
 import matplotlib.pyplot as plt
 import numpy as np
 from state_lumping_network import StateNetwork
@@ -75,11 +75,51 @@ for i, clusterRate in enumerate(clusterRates):
     numStates.append(s)
     entropyRate.append(h)
 
-#%% In [13]
+#%% In [4]
 plt.plot(numStates, entropyRate, marker='o')
 plt.xlabel("number of lumped states")
 plt.ylabel("entropy rate")
 plt.axhline(y=h0, color='r', linestyle='-')
 # plt.axvline(x=sparseNet.numStateNodes(), color='r')
+plt.show()
+
+#%% In [8]
+trainingCodelengths = []
+validationCodelengths = []
+
+def calcCodelength(inputFilename, cluInputFile, flags="--directed --two-level"):
+    im = infomap.Infomap("{} --no-infomap --input {} --cluster-data {}".format(flags, inputFilename, cluInputFile))
+    im.run()
+    return im.codelength()
+
+def partition(inputFilename, cluOutputFile=None, flags="--directed --two-level"):
+    im = infomap.Infomap(flags)
+    im.network().readInputData(inputFilename)
+    im.run()
+    if cluOutputFile:
+        # Use second argument True to write the state-level clustering
+        im.writeClu(cluOutputFile, True) # Second parameter shows States
+    return im.codelength()
+
+
+for i, clusterRate in enumerate(clusterRates):
+    trainingCodelength = partition("output/states_training_lumped_{}.net".format(i),
+             "output/states_training_lumped_{}.clu".format(i))
+    validationCodelength = calcCodelength("output/states_validation_order_2.net",
+             "output/states_training_lumped_{}.clu".format(i))
+    trainingCodelengths.append(trainingCodelength)
+    validationCodelengths.append(validationCodelength)
+    print("{}: training codelength: {}, validation codelength: {}".format(i, trainingCodelength, validationCodelength))
+    
+
+
+
+#%% In [10]
+plt.plot(numStates, trainingCodelengths, marker='o')
+plt.plot(numStates, validationCodelengths, marker='x')
+plt.legend(["training", "validation"])
+plt.xlabel("number of lumped states")
+plt.ylabel("codelength")
+plt.ylim(ymin=4)
 plt.show()
 

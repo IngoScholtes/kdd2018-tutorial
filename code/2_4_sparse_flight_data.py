@@ -22,7 +22,7 @@ To get a bigger network, we can merge the flight path data from the four quarter
 - Write a function that merges all paths of the year and writes it to a _training_ paths file with 50% chance and to a _validation_ paths file otherwise. Skip the '*vertices' section
 """)
 
-#%% In [5]
+#%% In [1]
 # TODO: Fill code here
 
 
@@ -34,7 +34,7 @@ md("""
 - Use Infomap to generate second-order state networks from the two paths data files.
 """)
 
-#%% In [6]
+#%% In [2]
 # TODO: Fill code here
 
 
@@ -51,7 +51,7 @@ Here we will generate multiple lumped state networks with different amount of st
 - Save the number of lumped state nodes and the lumped entropy rate
 """)
 
-#%% In [11]
+#%% In [3]
 # TODO: Fill code here
 
 
@@ -64,7 +64,7 @@ md("""
 - Check that the entropy rates approaches the original one and coincides at cluster rate $r = 1$
 """)
 
-#%% In [13]
+#%% In [4]
 # TODO: Fill code here
 
 
@@ -83,4 +83,12 @@ The goal here is to calculate the codelength for the validation network, given t
 - Run Infomap on the validation network but with cluster data from external file for all `.tree` files generated from the lumped networks and store the codelength
 - Plot the training and validation codelengths against the number of state nodes and check if there is an optimum that balances underfit and overfit
 """)
+
+#%% In [8]
+# TODO: Fill code here
+
+
+#%% In [10]
+# TODO: Fill code here
+
 

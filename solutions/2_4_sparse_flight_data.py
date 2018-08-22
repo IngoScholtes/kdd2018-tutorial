@@ -22,7 +22,7 @@ To get a bigger network, we can merge the flight path data from the four quarter
 - Write a function that merges all paths of the year and writes it to a _training_ paths file with 50% chance and to a _validation_ paths file otherwise. Skip the '*vertices' section
 """)
 
-#%% In [5]
+#%% In [1]
 from random import random
 
 def generateData(inputFilenames):
@@ -65,7 +65,7 @@ md("""
 - Use Infomap to generate second-order state networks from the two paths data files.
 """)
 
-#%% In [6]
+#%% In [2]
 import infomap
 def generateStateNetworkFromPaths(inputFilename, outputFilename, markovOrder):
     network = infomap.Network("--directed --path-markov-order {}".format(markovOrder))
@@ -90,7 +90,7 @@ Here we will generate multiple lumped state networks with different amount of st
 - Save the number of lumped state nodes and the lumped entropy rate
 """)
 
-#%% In [11]
+#%% In [3]
 import matplotlib.pyplot as plt
 import numpy as np
 from solutions.state_lumping_network import StateNetwork
@@ -123,7 +123,7 @@ md("""
 - Check that the entropy rates approaches the original one and coincides at cluster rate $r = 1$
 """)
 
-#%% In [13]
+#%% In [4]
 plt.plot(numStates, entropyRate, marker='o')
 plt.xlabel("number of lumped states")
 plt.ylabel("entropy rate")
@@ -146,4 +146,44 @@ The goal here is to calculate the codelength for the validation network, given t
 - Run Infomap on the validation network but with cluster data from external file for all `.tree` files generated from the lumped networks and store the codelength
 - Plot the training and validation codelengths against the number of state nodes and check if there is an optimum that balances underfit and overfit
 """)
+
+#%% In [8]
+trainingCodelengths = []
+validationCodelengths = []
+
+def calcCodelength(inputFilename, cluInputFile, flags="--directed --two-level"):
+    im = infomap.Infomap("{} --no-infomap --input {} --cluster-data {}".format(flags, inputFilename, cluInputFile))
+    im.run()
+    return im.codelength()
+
+def partition(inputFilename, cluOutputFile=None, flags="--directed --two-level"):
+    im = infomap.Infomap(flags)
+    im.network().readInputData(inputFilename)
+    im.run()
+    if cluOutputFile:
+        # Use second argument True to write the state-level clustering
+        im.writeClu(cluOutputFile, True) # Second parameter shows States
+    return im.codelength()
+
+
+for i, clusterRate in enumerate(clusterRates):
+    trainingCodelength = partition("output/states_training_lumped_{}.net".format(i),
+             "output/states_training_lumped_{}.clu".format(i))
+    validationCodelength = calcCodelength("output/states_validation_order_2.net",
+             "output/states_training_lumped_{}.clu".format(i))
+    trainingCodelengths.append(trainingCodelength)
+    validationCodelengths.append(validationCodelength)
+    print("{}: training codelength: {}, validation codelength: {}".format(i, trainingCodelength, validationCodelength))
+    
+
+
+
+#%% In [10]
+plt.plot(numStates, trainingCodelengths, marker='o')
+plt.plot(numStates, validationCodelengths, marker='x')
+plt.legend(["training", "validation"])
+plt.xlabel("number of lumped states")
+plt.ylabel("codelength")
+plt.ylim(ymin=4)
+plt.show()
 
