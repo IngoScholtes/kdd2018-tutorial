@@ -1,9 +1,3 @@
-#%%
-import markdown
-from IPython.core.display import display, HTML
-def md(str):
-    display(HTML(markdown.markdown(str + "<br />")))
-
 #%% In [1]
 from state_lumping_network import StateNetwork
 

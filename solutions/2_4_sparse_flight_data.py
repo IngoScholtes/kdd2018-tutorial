@@ -142,12 +142,14 @@ md("""
 The goal here is to calculate the codelength for the validation network, given the different partitions found on the lumped training networks.
 
 **TODO:**
-- Run Infomap on all lumped state networks and write a `.tree` file for each and store codelength
-- Run Infomap on the validation network but with cluster data from external file for all `.tree` files generated from the lumped networks and store the codelength
+- Run Infomap on all lumped state networks and write a `.clu` file for each and store codelength
+- Run Infomap on the validation network but with cluster data from external file for all `.clu` files generated from the lumped networks and store the codelength
 - Plot the training and validation codelengths against the number of state nodes and check if there is an optimum that balances underfit and overfit
+
+Note: Use the `--two-level` flag to Infomap here to find an optimum two-level solution that will be stored in the `.clu` files. These can be read into infomap with the `--cluster-data [clusters.clu]` option. Add `--no-infomap` to not continue the clustering algorithm after the initial clusters has been incorporated. Then the codelength after the run will be the codelength for the specified input clustering.
 """)
 
-#%% In [8]
+#%% In [12]
 trainingCodelengths = []
 validationCodelengths = []
 
@@ -178,7 +180,7 @@ for i, clusterRate in enumerate(clusterRates):
 
 
 
-#%% In [10]
+#%% In [13]
 plt.plot(numStates, trainingCodelengths, marker='o')
 plt.plot(numStates, validationCodelengths, marker='x')
 plt.legend(["training", "validation"])
