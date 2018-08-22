@@ -95,15 +95,15 @@
     }
 </style>
 
-<svg width="1200" height="1000" id="xHdRzBqY">
+<svg width="1200" height="1000" id="vzlcLOhv">
     <text x="10" y="20" font-family="sans-serif" font-size="14px" fill="darkred" 
-        id='xHdRzBqY_time_txt'>sentence = 0</text>
+        id='vzlcLOhv_time_txt'>sentence = 0</text>
     <text x="10" y="40" font-family="sans-serif" font-size="14px" fill="darkgrey"
-        id='xHdRzBqY_chapter_txt'>The Fellowship of the Ring - Prologue</text>
+        id='vzlcLOhv_chapter_txt'>The Fellowship of the Ring - Prologue</text>
     <text x="170" y="20" font-family="sans-serif" font-size="14px" fill="darkblue" style="cursor: pointer"
-        id='xHdRzBqY_start_txt'>stop</text>
+        id='vzlcLOhv_start_txt'>stop</text>
     <text x="220" y="20" font-family="sans-serif" font-size="14px" fill="darkblue" style="cursor: pointer"
-        id='xHdRzBqY_restart_txt'>restart</text>
+        id='vzlcLOhv_restart_txt'>restart</text>
 </svg>
 
 <script charset="utf-8" src="https://d3js.org/d3.v4.min.js"></script>
@@ -124,7 +124,7 @@
         });
     };
 
-    var svg = d3.select("#xHdRzBqY"),
+    var svg = d3.select("#vzlcLOhv"),
         width = +svg.attr("width"),
         height = +svg.attr("height"),
         radius = 10;
@@ -234,8 +234,8 @@
 
     // build mapping to DOM objects once 
     // for performance reasons
-    var time_txt = d3.select('#xHdRzBqY_time_txt');
-    var chapter_txt = d3.select('#xHdRzBqY_chapter_txt');
+    var time_txt = d3.select('#vzlcLOhv_time_txt');
+    var chapter_txt = d3.select('#vzlcLOhv_chapter_txt');
     var edges_to_dom = {};
     var nodes_to_dom = {};
 
@@ -248,8 +248,8 @@
     });
 
     // attach event handlers
-    d3.select('#xHdRzBqY_start_txt').on("click", pauseAnimation);
-    d3.select('#xHdRzBqY_restart_txt').on("click", restartAnimation);    
+    d3.select('#vzlcLOhv_start_txt').on("click", pauseAnimation);
+    d3.select('#vzlcLOhv_restart_txt').on("click", restartAnimation);    
 
     simulation.nodes(temporal_net.nodes).on("tick", ticked);
 
@@ -347,13 +347,13 @@
         if (run_status) {
             run_status = false;
             clearInterval(intervl);
-            d3.select('#xHdRzBqY_start_txt').html('start');
+            d3.select('#vzlcLOhv_start_txt').html('start');
             console.log('Paused animation.')
         }
         else {
             intervl = setInterval(time_step, msperframe);
             run_status = true;
-            d3.select('#xHdRzBqY_start_txt').html('stop');
+            d3.select('#vzlcLOhv_start_txt').html('stop');
             console.log('Resumed animation.')
         }        
     }
@@ -367,7 +367,7 @@
             clearInterval(intervl);
         time = mintime;
         time_txt.html('t = ' + time);
-        d3.select('#xHdRzBqY_start_txt').html('stop');
+        d3.select('#vzlcLOhv_start_txt').html('stop');
         run_status = true;
         intervl = setInterval(time_step, msperframe);
         console.log('Restarted animation.')

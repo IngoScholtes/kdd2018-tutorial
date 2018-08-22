@@ -22,7 +22,8 @@ So far, we have focused on network representations, but the real **purpose of `p
 """)
 
 #%% In [1]
-
+import pathpy as pp
+help(pp.HigherOrderNetwork)
 
 #%%
 md("""
@@ -55,7 +56,12 @@ The class `HigherOrderNetwork` allows us to generate such higher-order network m
 """)
 
 #%% In [2]
+toy_paths = pp.Paths()
+toy_paths.add_path('a,c,d', frequency=10)
+toy_paths.add_path('b,c,e', frequency=10)
 
+hon_1 = pp.HigherOrderNetwork(toy_paths, k=1)
+hon_1
 
 #%%
 md("""
@@ -79,7 +85,8 @@ We can generalise this idea to **k-th-order models** for paths, where **nodes ar
 """)
 
 #%% In [5]
-
+hon_2 = pp.HigherOrderNetwork(toy_paths, k=2)
+hon_2
 
 #%%
 md("""
@@ -93,9 +100,12 @@ Another way to express this independence assumption is to consider Markov chain 
 
 <span style="color:red">**TODO:** Use the `null_model` parameter in the constructor of `HigherOrderNetwork` to generate a second-order null model `hon_2_null` for `toy_paths`. Visualise the model and output all edge weights.</span>
 """)
+for e in hon_2.edges:
+    print(e, hon_2.edges[e]['weight'])
 
 #%% In [6]
-
+hon_2_null = pp.HigherOrderNetwork(toy_paths, k=2, null_model=True)
+hon_2_null
 
 #%%
 md("""
@@ -107,7 +117,14 @@ We can easily find out which of the paths of length two occur more or less often
 """)
 
 #%% In [7]
+A_2 = hon_2.adjacency_matrix()
+A_2n = hon_2_null.adjacency_matrix()
 
+idx_2 = hon_2.node_to_name_map()
+idx_2n = hon_2_null.node_to_name_map()
+
+for (v,w) in hon_2_null.edges:
+    print((v,w), A_2[idx_2[v],idx_2[w]] - A_2n[idx_2n[v],idx_2n[w]])
 
 #%%
 md("""
@@ -123,7 +140,8 @@ Let us consider the betweenness value of a node $v$, which (in its unnormalized 
 """)
 
 #%% In [8]
-
+print(pp.algorithms.centralities.betweenness(hon_1)['c'])
+hon_1
 
 #%%
 md("""
@@ -133,7 +151,7 @@ This is easy to understand, as there are four pairs $(b,e)$, $(b,d)$, $(a,e)$, $
 """)
 
 #%% In [9]
-
+print(pp.algorithms.centralities.betweenness(toy_paths)['c'])
 
 #%%
 md("""
@@ -153,7 +171,8 @@ We see that in this example (since we **only** have second-order dependencies) t
 """)
 
 #%% In [11]
-
+pp.algorithms.centralities.betweenness(hon_2)['c']
+hon_2
 
 #%%
 md("""
@@ -170,7 +189,8 @@ For your convenience, we have partitioned the data set into a training and a val
 """)
 
 #%% In [13]
-
+print(pp.algorithms.centralities.betweenness(hon_2_null)['c'])
+hon_2_null
 
 #%%
 md("""
