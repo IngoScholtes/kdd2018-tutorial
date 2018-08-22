@@ -44,10 +44,10 @@ Tutor: [Ingo Scholtes, Data Analytics Group, University of Zurich](http://ifi.uz
 
 **Live Coding** (30 min)
 
-Unit | Topic | Notebook | Live Solution
+Unit | Topic | Notebook | Sample Solution
 ----|----|----|----
 1.1 | A Primer to Data Science with `python`, `jupyter`, `git` and `VS Code` (10 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_1_vscode_jupyter.py) | N/A
-1.2 | Analysis and Visualisation of Path Data in [`pathpy`](http://www.pathpy.net) (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_2_pathpy.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_2_pathpy.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/1_2_pathpy.py)
+1.2 | Analysis and Visualisation of Path Data in [`pathpy`](http://www.pathpy.net) (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_2_pathpy.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_2_pathpy.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_2_pathpy.py) [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_2_pathpy.ipynb) [.html](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_2_pathpy.html)
 
 ### KDD Coffee break
 *09:30 - 10:00*
@@ -62,9 +62,9 @@ Tutor: [Ingo Scholtes, Data Analytics Group, University of Zurich](http://ifi.uz
 Unit | Topic | Notebook | Live Solution
 ----|----|----|----
 1.3 | Fitting and Visualising Higher-order Network Models (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_3_higher_order.py),  [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_3_higher_order.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/1_3_higher_order.py)
-1.4 | Time-stamped Network Analysis in [`pathpy`](http://www.pathpy.net) (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_4_temporal_networks.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_4_temporal_networks.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/1_4_temporal_networks.py)
+1.4 | Time-stamped Network Analysis in [`pathpy`](http://www.pathpy.net) (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_4_temporal_networks.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_4_temporal_networks.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_4_temporal_networks.py) [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_4_temporal_networks.ipynb)
 1.5 | Exploration: Higher-order Analysis of [real-world data](https://github.com/IngoScholtes/kdd2018-tutorial/tree/master/data) (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_5_exploration.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_5_exploration.ipynb) | N/A
-1.5 | Multi-order Representation Learning (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_6_multi_order.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_6_multi_order.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/1_6_multi_order.py)  
+1.5 | Multi-order Representation Learning (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_6_multi_order.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_6_multi_order.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_6_multi_order.py) [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_6_multi_order.ipynb)  
 1.7 | Optimal Higher-order Analytics for Temporal Data (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_7_optimal_analysis.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_7_optimal_analysis.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/1_7_optimal_analysis.py)
 1.8 | Exploration: Multi-order Analysis of [Time-stamped Social Networks](https://github.com/IngoScholtes/kdd2018-tutorial/tree/master/data) (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_8_exploration.py),  [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_8_exploration.ipynb) | N/A
 
