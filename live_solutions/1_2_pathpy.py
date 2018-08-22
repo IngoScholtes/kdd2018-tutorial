@@ -32,7 +32,7 @@ on the terminal. In any case, you can find more detailed setup instructions on t
 """)
 
 #%% In [1]
-
+import pathpy as pp
 
 #%%
 md("""
