@@ -44,7 +44,7 @@ Tutor: [Ingo Scholtes, Data Analytics Group, University of Zurich](http://ifi.uz
 
 **Live Coding** (30 min)
 
-Unit | Topic | Notebook | Sample Solution
+Unit | Topic | Tasks | Solution
 ----|----|----|----
 1.1 | A Primer to Data Science with `python`, `jupyter`, `git` and `VS Code` (10 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_1_vscode_jupyter.py) | N/A
 1.2 | Analysis and Visualisation of Path Data in [`pathpy`](http://www.pathpy.net) (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_2_pathpy.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_2_pathpy.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_2_pathpy.py) [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_2_pathpy.ipynb) [.html](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_2_pathpy.html)
@@ -59,7 +59,7 @@ Tutor: [Ingo Scholtes, Data Analytics Group, University of Zurich](http://ifi.uz
 
 **Live Coding** (120 min)
 
-Unit | Topic | Notebook | Sample Solution
+Unit | Topic | Tasks | Solution
 ----|----|----|----
 1.3 | Fitting and Visualising Higher-order Network Models (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_3_higher_order.py),  [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_3_higher_order.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/1_3_higher_order.py) [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/1_3_higher_order.ipynb) [.html](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/live_solutions/1_3_higher_order.html)
 1.4 | Time-stamped Network Analysis in [`pathpy`](http://www.pathpy.net) (20 min) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_4_temporal_networks.py), [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_4_temporal_networks.ipynb) | [.py](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_4_temporal_networks.py) [.ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_4_temporal_networks.ipynb) [.html](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_4_temporal_networks.html)
