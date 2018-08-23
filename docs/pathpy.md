@@ -3,7 +3,7 @@ title: KDD 2018 - Hands-on Tutorial on Higher-Order Data Analytics
 permalink: /pathpy
 ---
 
-# `pathpy` tutorial
+# pathpy Tutorial
 
 In our tutorial, we will given an in-depth introduction to the OpenSource python data analytics package `pathpy`, demonstrating its capabilities in real-world time series data on complex networks. `pathpy` is publicly available on the [python package index](https://pypi.org/project/pathpy2/). You can install it by typing:
 
