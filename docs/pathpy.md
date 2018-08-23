@@ -21,10 +21,10 @@ An introductory video summarising the science behind `pathpy` can be found here:
 
 Having completed the introduction to interactive data science with `python`, `VSCode`, and `jupyter` in [unit 1.1](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/code/1_1_vscode_jupyter.py), the tutorial consists of the following 7 units:
 
-[Unit 1.2 - Introducing `pathpy`](https://htmlpreview.github.io/?https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_2_pathpy.html)  
-[Unit 1.3 - Higher-order analysis of path data](https://htmlpreview.github.io/?https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_3_higher_order.html)  
-[Unit 1.4 - Temporal Network Analysis and Visualisation](https://htmlpreview.github.io/?https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_4_temporal_networks.html)  
-[Unit 1.5 - Data Exploration](https://htmlpreview.github.io/?https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_5_exploration.html)  
-[Unit 1.6 - Multi-order Representation Learning](https://htmlpreview.github.io/?https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_6_multi_order.html)  
-[Unit 1.7 - Optimal higher-order analysis of temporal data](https://htmlpreview.github.io/?https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_7_optimal_analysis.html)  
-[Unit 1.8 - Data Exploration](https://htmlpreview.github.io/?https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_8_exploration.html)  
+[Unit 1.2 - Introducing `pathpy`](https://htmlpreview.github.io/?https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_2_pathpy.html) | [ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_2_pathpy.ipynb)  
+[Unit 1.3 - Higher-order analysis of path data](https://htmlpreview.github.io/?https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_3_higher_order.html) | [ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_3_higher_order.ipynb)  
+[Unit 1.4 - Temporal Network Analysis and Visualisation](https://htmlpreview.github.io/?https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_4_temporal_networks.html) | [ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_4_temporal_networks.ipynb)  
+[Unit 1.5 - Data Exploration](https://htmlpreview.github.io/?https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_5_exploration.html) | [ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_5_exploration.ipynb)  
+[Unit 1.6 - Multi-order Representation Learning](https://htmlpreview.github.io/?https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_6_multi_order.html) | [ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_6_multi_order.ipynb)  
+[Unit 1.7 - Optimal higher-order analysis of temporal data](https://htmlpreview.github.io/?https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_7_optimal_analysis.html)| [ipnyb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_7_optimal_analysis.ipynb)  
+[Unit 1.8 - Data Exploration](https://htmlpreview.github.io/?https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_8_exploration.html) | [ipynb](https://github.com/IngoScholtes/kdd2018-tutorial/blob/master/solutions/1_8_exploration.ipynb)  
