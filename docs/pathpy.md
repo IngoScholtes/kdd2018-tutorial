@@ -1,6 +1,6 @@
 ---
 title: KDD 2018 - Hands-on Tutorial on Higher-Order Data Analytics
-permalink: /
+permalink: /pathpy
 ---
 
 # `pathpy` tutorial
