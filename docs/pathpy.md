@@ -11,11 +11,11 @@ In our tutorial, we will given an in-depth introduction to the OpenSource python
 pip install pathpy2
 ```
 
-`pathpy` is fully integrated with `jupyter` notebooks, providing in-line, interactive and dynamic visualisations of graphs and networks, temporal networks, as well as higher- and multi-order network models. The following teaser introduces some of the features:
+`pathpy` is fully integrated with `jupyter` notebooks, providing in-line, interactive and dynamic visualisations of graphs and networks, temporal networks, as well as higher- and multi-order network models. The following teaser video introduces some of its features:
 
 [![Watch promotional video](https://img.youtube.com/vi/QIPqFaR2Z5c/0.jpg)](https://www.youtube.com/watch?v=QIPqFaR2Z5c)
 
-An introductory video on the science behind `pathpy` can be found here:
+An introductory video summarising the science behind `pathpy` can be found here:
 
 [![Watch promotional video](https://img.youtube.com/vi/CxJkVrD2ZlM/0.jpg)](https://www.youtube.com/watch?v=CxJkVrD2ZlM)
 
