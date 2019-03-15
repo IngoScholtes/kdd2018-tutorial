@@ -38,7 +38,7 @@
 # the beginning of a jupyter cell and a Code Lens 'Run Cell' will appear above that 
 # line. Let's write the following python code below that Code Lens: 
 
-#%% 
+#%%
 x = 'Hello World'
 
 # Let us now add a second comment tag, which marks the start of another cell. 
@@ -72,7 +72,7 @@ print(x)
 # you write your code. Try it by uncommenting 'x := 42' in the next line. Any problems will
 # further appear in the problems window below the code editor.
 
-# x:= 42
+#x:= 42
 
 # VS Code will automatically show documentation extracted from the docstring of 
 # python classes and methods. Try it by typing print(...
@@ -81,6 +81,8 @@ print(x)
 # move the cursor after the dot and hit CTRL+SPACE.
 
 # x.
+
+
 
 # Finally, VS Code comes with integrated support for git repository. In fact, in the bottom left
 # corner of the status bar, you should see a branch symbol "master" and next to it a small 
